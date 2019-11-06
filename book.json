@@ -4,33 +4,77 @@
     "description": "welcome to my docs",
     "language": "zh-hans",
     "gitbook": "3.2.3",
+    "styles": {
+        "website": "./style/website.css"
+    },
     "structure": {
         "readme": "README.md"
     },
     "links": {
         "sidebar": {
-            "古道长亭": "http://blog.zhaojq.top"
+            "回到博客": "http://blog.zhaojq.top"
         }
     },
     "plugins": [
-        "search",
+        "-sharing",
+        "splitter",
+        "expandable-chapters-small",
+        "anchors",
+
         "github",
         "github-buttons",
-        "-sharing"
+        "-donate",
+        "sharing-plus",
+        "anchor-navigation-ex",
+        "favicon",
+        "toggle-chapters"
     ],
     "pluginsConfig": {
         "github": {
             "url": "https://github.com/zhao-xiaoer"
         },
+        "theme-default": {
+            "showLevel": true
+        },
         "github-buttons": {
             "buttons": [{
                 "user": "zhao-xiaoer",
-                "repo": "zhao-xiaoer.github.io",
+                "repo": "gitbook",
                 "type": "star",
                 "size": "small",
                 "count": true
                 }
             ]
+        },
+        "sharing": {
+            "douban": false,
+            "facebook": false,
+            "google": false,
+            "hatenaBookmark": false,
+            "instapaper": false,
+            "line": false,
+            "linkedin": false,
+            "messenger": false,
+            "pocket": false,
+            "qq": false,
+            "qzone": false,
+            "stumbleupon": false,
+            "twitter": false,
+            "viber": false,
+            "vk": false,
+            "weibo": false,
+            "whatsapp": false,
+            "all": [
+                "google", "facebook", "weibo", "twitter",
+                "qq", "qzone", "linkedin", "pocket"
+            ]
+        },
+        "anchor-navigation-ex": {
+            "showLevel": false
+        },
+        "favicon":{
+            "shortcut": "./source/images/favicon-32x32.webp",
+            "bookmark": "./source/images/favicon-32x32.webp"
         }
     }
 }
