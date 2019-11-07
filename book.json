@@ -16,25 +16,59 @@
         }
     },
     "plugins": [
-        "-sharing",
-        "splitter",
-        "expandable-chapters-small",
         "anchors",
-
+        "anchor-navigation-ex",
+        "auto-scroll-table",
+        "advanced-emoji",       
+        "code",
+        "chapter-fold",
+        "donate",
+        "expandable-chapters-small",
+        "favicon",
+        "fontsettings",                        
         "github",
         "github-buttons",
-        "-donate",
+        "insert-logo",
+        "klipse",
+        "livereload",
+        "pageview-count",
+        "page-toc-button",
+        "popup",
         "sharing-plus",
-        "anchor-navigation-ex",
-        "favicon",
-        "toggle-chapters"
+        "-sharing",
+        "splitter",
+        "-search",
+        "search-pro",
+        "toggle-chapters",
+        "tbfed-pagefooter",
+        "todo"
     ],
     "pluginsConfig": {
         "github": {
             "url": "https://github.com/zhao-xiaoer"
         },
+        "insert-logo": {
+		        "url": "/source/images/logo.jpeg",
+		        "style": "background: none; max-height: 60px; min-height: 40px;"
+		    },
         "theme-default": {
             "showLevel": true
+        },
+        "code": {
+            "copyButtons": true
+        },
+        "tbfed-pagefooter": {
+            "copyright": "Copyright © zhaojq 2019",
+            "modify_label": "本书发布时间：",
+            "modify_format": "YYYY-MM-DD HH:mm:ss"
+        },
+        "donate": {
+            "wechat": "/source/images/wechat.jpeg",
+            "alipay": "/source/images/alipay.jpeg",
+            "title": "",
+            "button": "感谢支持",
+            "alipayText": "支付宝打赏",
+            "wechatText": "微信打赏"
         },
         "github-buttons": {
             "buttons": [{
@@ -46,6 +80,10 @@
                 }
             ]
         },
+        "page-toc-button": {
+            "maxTocDepth": 2,
+            "minTocSize": 2
+        },
         "sharing": {
             "douban": false,
             "facebook": false,
@@ -56,17 +94,17 @@
             "linkedin": false,
             "messenger": false,
             "pocket": false,
-            "qq": false,
-            "qzone": false,
+            "qq": true,
+            "qzone": true,
             "stumbleupon": false,
             "twitter": false,
             "viber": false,
             "vk": false,
-            "weibo": false,
+            "weibo": true,
             "whatsapp": false,
             "all": [
-                "google", "facebook", "weibo", "twitter",
-                "qq", "qzone", "linkedin", "pocket"
+                "weibo","qq", "qzone", "douban", "facebook","google",
+							  "linkedin","twitter","whatsapp"
             ]
         },
         "anchor-navigation-ex": {
