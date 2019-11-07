@@ -1,3 +1,7 @@
 .book-summary ul.summary li.header {
     text-transform: none;
 }
+
+#rewardButton span {
+		background: #F0FFF0;	
+}
