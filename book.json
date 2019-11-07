@@ -29,7 +29,7 @@
         "github",
         "github-buttons",
         "klipse",
-        "livereload",
+        "-livereload",
         "-lunr",
         "pageview-count",
         "page-toc-button",
@@ -107,8 +107,8 @@
             "showLevel": false
         },
         "favicon":{
-            "shortcut": "./source/images/favicon-32x32.webp",
-            "bookmark": "./source/images/favicon-32x32.webp"
+            "shortcut": "",
+            "bookmark": ""
         }
     }
 }
