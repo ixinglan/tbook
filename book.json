@@ -59,8 +59,8 @@
             "modify_format": "YYYY-MM-DD HH:mm:ss"
         },
         "donate": {
-            "wechat": "../source/images/wechat.jpeg",
-            "alipay": "../source/images/alipay.jpeg",
+            "wechat": "/gitbook/source/images/wechat.jpeg",
+            "alipay": "/gitbook/source/images/alipay.jpeg",
             "title": "感谢支持",
             "button": "\uD83D\uDE00",
             "alipayText": "支付宝打赏",
