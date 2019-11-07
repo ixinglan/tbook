@@ -48,7 +48,7 @@
             "url": "https://github.com/zhao-xiaoer"
         },
         "insert-logo": {
-		        "url": "./source/images/logo.jpeg",
+		        "url": "../source/images/logo.jpeg",
 		        "style": "background: none; max-height: 60px; min-height: 40px;"
 		    },
         "theme-default": {
@@ -63,8 +63,8 @@
             "modify_format": "YYYY-MM-DD HH:mm:ss"
         },
         "donate": {
-            "wechat": "./source/images/wechat.jpeg",
-            "alipay": "./source/images/alipay.jpeg",
+            "wechat": "../source/images/wechat.jpeg",
+            "alipay": "../source/images/alipay.jpeg",
             "title": "",
             "button": "感谢支持",
             "alipayText": "支付宝打赏",
