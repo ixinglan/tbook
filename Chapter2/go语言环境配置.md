@@ -1,7 +1,7 @@
 #go语言环境配置
 
 1.使用brew安装最新版本的go 1.9
-```shell script
+```
 brew search go
 
 ==> Formulae
@@ -18,7 +18,7 @@ cargo-instruments            go@1.13                      golo                  
 certigo                      go@1.9                       gom                          gosu                         lgogdownloader               wireguard-go
 
 ```
-```shell script
+```
 brew install go@1.9
 
 ==> Downloading https://homebrew.bintray.com/bottles/go@1.9-1.9.7.catalina.bottle.1.tar.gz
@@ -41,7 +41,7 @@ Removing: /Users/zhaojianqiang/Library/Logs/Homebrew/rmtrash... (64B)
 到这一步go即安装完成了  
 
 2.配置go
-```shell script
+```
 go env
 
 GOARCH="amd64"
@@ -67,7 +67,7 @@ CGO_LDFLAGS="-g -O2"
 PKG_CONFIG="pkg-config"
 ```
 将GOROOT, GOPATH配置到.bash_profile中
-```shell script
+```
 vim .bash_profile
 #添加如下 注意GOPATH不要配置到go的安装目录下,可以自定义一个目录
 #GOROOT： go安装目录
