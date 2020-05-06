@@ -98,7 +98,7 @@ vim .bash_profile
 #GOPATH：go工作目录
 #GOBIN：go可执行文件目录
 #PATH：将go可执行文件加入PATH中，使GO命令与我们编写的GO应用可以全局调用
-export GOROOT=/usr/local/opt/go\@1.9
+export GOROOT=/usr/local/opt/go\@1.13
 export GOPATH=/Users/zhaojianqiang/Documents/code/go
 export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOBIN:$GOROOT/bin
