@@ -1,6 +1,6 @@
 #go语言环境配置
 
-1.使用brew安装最新版本的go 1.9
+1.使用brew安装最新稳定版本的go 1.13
 ```
 brew search go
 
@@ -19,24 +19,37 @@ certigo                      go@1.9                       gom                   
 
 ```
 ```
-brew install go@1.9
+brew install go@1.13
 
-==> Downloading https://homebrew.bintray.com/bottles/go@1.9-1.9.7.catalina.bottle.1.tar.gz
-==> Downloading from https://akamai.bintray.com/68/6820e19509cbcdd77f30cb8c16a4ca9e67aa3e9eb6e4c2da33c9f9a7dc223840?__gda__=exp=1588478588~hmac=cc6882a8e0c0e5660b852e1a4b3ee8
+Updating Homebrew...
+==> Downloading https://homebrew.bintray.com/bottles/go@1.13-1.13.10_1.catalina.bottle.tar.gz
+==> Downloading from https://akamai.bintray.com/25/2584dae283ebba63091d06fa1fd15ee9d218b79a60f0c19ba38a7ef8b9e08fdc?__gda__=exp=1588738427~hmac=9ae05b9de1d
 ######################################################################## 100.0%
-==> Pouring go@1.9-1.9.7.catalina.bottle.1.tar.gz
+==> Pouring go@1.13-1.13.10_1.catalina.bottle.tar.gz
 ==> Caveats
-go@1.9 is keg-only, which means it was not symlinked into /usr/local,
+go@1.13 is keg-only, which means it was not symlinked into /usr/local,
 because this is an alternate version of another formula.
 
-If you need to have go@1.9 first in your PATH run:
-  echo 'export PATH="/usr/local/opt/go@1.9/bin:$PATH"' >> ~/.zshrc
+If you need to have go@1.13 first in your PATH run:
+  echo 'export PATH="/usr/local/opt/go@1.13/bin:$PATH"' >> ~/.zshrc
 
 ==> Summary
-🍺  /usr/local/Cellar/go@1.9/1.9.7: 7,670 files, 294.2MB
+🍺  /usr/local/Cellar/go@1.13/1.13.10_1: 9,279 files, 414.5MB
 ==> `brew cleanup` has not been run in 30 days, running now...
-Removing: /Users/zhaojianqiang/Library/Logs/Homebrew/yarn... (64B)
-Removing: /Users/zhaojianqiang/Library/Logs/Homebrew/rmtrash... (64B)
+Removing: /Users/zhaojianqiang/Library/Caches/Homebrew/gcc--9.2.0_2.catalina.bottle.tar.gz... (84.8MB)
+Removing: /Users/zhaojianqiang/Library/Caches/Homebrew/gmp--6.1.2_2.catalina.bottle.1.tar.gz... (996.4KB)
+Removing: /Users/zhaojianqiang/Library/Caches/Homebrew/isl--0.21.catalina.bottle.tar.gz... (1.4MB)
+Removing: /Users/zhaojianqiang/Library/Caches/Homebrew/libmpc--1.1.0.catalina.bottle.tar.gz... (114.4KB)
+Removing: /Users/zhaojianqiang/Library/Caches/Homebrew/mpfr--4.0.2.catalina.bottle.tar.gz... (1.1MB)
+Removing: /Users/zhaojianqiang/Library/Caches/Homebrew/gradle--6.0.1.zip... (134.7MB)
+Removing: /Users/zhaojianqiang/Library/Logs/Homebrew/gmp... (64B)
+Removing: /Users/zhaojianqiang/Library/Logs/Homebrew/mpfr... (64B)
+Removing: /Users/zhaojianqiang/Library/Logs/Homebrew/gcc... (64B)
+Removing: /Users/zhaojianqiang/Library/Logs/Homebrew/gradle... (102B)
+Removing: /Users/zhaojianqiang/Library/Logs/Homebrew/isl... (64B)
+Removing: /Users/zhaojianqiang/Library/Logs/Homebrew/groovy... (64B)
+Removing: /Users/zhaojianqiang/Library/Logs/Homebrew/libmpc... (64B)
+Pruned 14 symbolic links and 1 directories from /usr/local
 ```
 到这一步go即安装完成了  
 
@@ -44,27 +57,38 @@ Removing: /Users/zhaojianqiang/Library/Logs/Homebrew/rmtrash... (64B)
 ```
 go env
 
+GO111MODULE=""
 GOARCH="amd64"
-GOBIN=""
+GOBIN="/Users/zhaojianqiang/Documents/code/go/bin"
+GOCACHE="/Users/zhaojianqiang/Library/Caches/go-build"
+GOENV="/Users/zhaojianqiang/Library/Application Support/go/env"
 GOEXE=""
+GOFLAGS=""
 GOHOSTARCH="amd64"
 GOHOSTOS="darwin"
+GONOPROXY=""
+GONOSUMDB=""
 GOOS="darwin"
-GOPATH="/Users/***/Documents/code/go"
-GORACE=""
-GOROOT="/usr/local/opt/go@1.9"
-GOTOOLDIR="/usr/local/opt/go@1.9/pkg/tool/darwin_amd64"
+GOPATH="/Users/zhaojianqiang/Documents/code/go"
+GOPRIVATE=""
+GOPROXY="https://proxy.golang.org,direct"
+GOROOT="/usr/local/opt/go@1.13/libexec"
+GOSUMDB="sum.golang.org"
+GOTMPDIR=""
+GOTOOLDIR="/usr/local/opt/go@1.13/libexec/pkg/tool/darwin_amd64"
 GCCGO="gccgo"
+AR="ar"
 CC="clang"
-GOGCCFLAGS="-fPIC -m64 -pthread -fno-caret-diagnostics -Qunused-arguments -fmessage-length=0 -fno-common"
 CXX="clang++"
 CGO_ENABLED="1"
+GOMOD=""
 CGO_CFLAGS="-g -O2"
 CGO_CPPFLAGS=""
 CGO_CXXFLAGS="-g -O2"
 CGO_FFLAGS="-g -O2"
 CGO_LDFLAGS="-g -O2"
 PKG_CONFIG="pkg-config"
+GOGCCFLAGS="-fPIC -m64 -pthread -fno-caret-diagnostics -Qunused-arguments -fmessage-length=0 -fdebug-prefix-map=/var/folders/1v/hmp36dtx5wlbpc2zpkk2w2h80000gp/T/go-build469326368=/tmp/go-build -gno-record-gcc-switches -fno-common"
 ```
 将GOROOT, GOPATH配置到.bash_profile中
 ```
