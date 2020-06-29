@@ -1,0 +1,636 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>NIO · 古道长亭</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="古道长亭">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-auto-scroll-table/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-toc-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../style/website.css">
+        
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="缓冲区.html" />
+    
+    
+    <link rel="prev" href="../" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"zhao-xiaoer","repo":"gitbook","type":"star","size":"small","count":true}]};
+    </script>
+
+    
+    
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://blog.zhaojq.top" target="_blank" class="custom-link">回到博客</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                        <b>1.2.</b>
+                    
+                    JAVA技术
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.2.1" data-path="NIO.html">
+            
+                <a href="NIO.html">
+            
+                    
+                        <b>1.2.1.</b>
+                    
+                    NIO
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="缓冲区.html">
+            
+                <a href="缓冲区.html">
+            
+                    
+                        <b>1.2.1.1.</b>
+                    
+                    Buffer(缓冲区)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="通道.html">
+            
+                <a href="通道.html">
+            
+                    
+                        <b>1.2.1.2.</b>
+                    
+                    Channel(通道)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../juc/JUC.html">
+            
+                <a href="../juc/JUC.html">
+            
+                    
+                        <b>1.2.2.</b>
+                    
+                    JUC
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../Chapter2/">
+            
+                <a href="../../Chapter2/">
+            
+                    
+                        <b>1.3.</b>
+                    
+                    GO技术
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../Chapter2/go语言环境配置.html">
+            
+                <a href="../../Chapter2/go语言环境配置.html">
+            
+                    
+                        <b>1.3.1.</b>
+                    
+                    Go语言环境配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../Chapter3/">
+            
+                <a href="../../Chapter3/">
+            
+                    
+                        <b>1.4.</b>
+                    
+                    深入理解JVM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../Chapter4/">
+            
+                <a href="../../Chapter4/">
+            
+                    
+                        <b>1.5.</b>
+                    
+                    算法知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../Chapter5/">
+            
+                <a href="../../Chapter5/">
+            
+                    
+                        <b>1.6.</b>
+                    
+                    SPRING系列
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../Chapter5/Spring.html">
+            
+                <a href="../../Chapter5/Spring.html">
+            
+                    
+                        <b>1.6.1.</b>
+                    
+                    Spring
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../Chapter5/SpringBoot.html">
+            
+                <a href="../../Chapter5/SpringBoot.html">
+            
+                    
+                        <b>1.6.2.</b>
+                    
+                    SpringBoot
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../../Chapter5/SpringCloud.html">
+            
+                <a href="../../Chapter5/SpringCloud.html">
+            
+                    
+                        <b>1.6.3.</b>
+                    
+                    SpringCloud
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../Chapter6/">
+            
+                <a href="../../Chapter6/">
+            
+                    
+                        <b>1.7.</b>
+                    
+                    DOCKER
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../Chapter7/">
+            
+                <a href="../../Chapter7/">
+            
+                    
+                        <b>1.8.</b>
+                    
+                    NETTY
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../../Chapter8/">
+            
+                <a href="../../Chapter8/">
+            
+                    
+                        <b>1.9.</b>
+                    
+                    Kafka
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >NIO</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#nio-&#x4ECB;&#x7ECD;"><b></b>NIO &#x4ECB;&#x7ECD;</a></li><li><span class="title-icon "></span><a href="#nio-&#x4E0E;-io-&#x7684;&#x4E3B;&#x8981;&#x533A;&#x522B;"><b></b>NIO &#x4E0E; IO &#x7684;&#x4E3B;&#x8981;&#x533A;&#x522B;</a></li><li><span class="title-icon "></span><a href="#&#x901A;&#x9053;&#x4E0E;&#x7F13;&#x51B2;&#x533A;"><b></b>&#x901A;&#x9053;&#x4E0E;&#x7F13;&#x51B2;&#x533A;</a></li></ul></div><a href="#nio-&#x4ECB;&#x7ECD;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="nio-&#x4ECB;&#x7ECD;"><a name="nio-&#x4ECB;&#x7ECD;" class="anchor-navigation-ex-anchor" href="#nio-&#x4ECB;&#x7ECD;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="nio-&#x4ECB;&#x7ECD;" class="plugin-anchor" href="#nio-&#x4ECB;&#x7ECD;"><i class="fa fa-link" aria-hidden="true"></i></a>NIO &#x4ECB;&#x7ECD;</h1>
+<p>Java NIO&#xFF08;New IO&#xFF09;&#x662F;&#x4ECE;Java 1.4&#x7248;&#x672C;&#x5F00;&#x59CB;&#x5F15;&#x5165;&#x7684;&#x4E00;&#x4E2A;&#x65B0;&#x7684;IO API,&#x53EF;&#x4EE5;&#x66FF;&#x4EE3;&#x6807;&#x51C6;&#x7684;Java IO API.<br>NIO&#x4E0E;&#x539F;&#x6765;&#x7684;IO&#x6709;&#x540C;&#x6837;&#x7684;&#x4F5C;&#x7528;&#x548C;&#x76EE;&#x7684;,&#x4F46;&#x662F;&#x4F7F;&#x7528;&#x7684;&#x65B9;&#x5F0F;&#x5B8C;&#x5168;&#x4E0D;&#x540C;,NIO&#x652F;&#x6301;&#x9762;&#x5411;&#x7F13;&#x51B2;&#x533A;&#x7684;&#x3001;&#x57FA;&#x4E8E;&#x901A;&#x9053;&#x7684;IO&#x64CD;&#x4F5C;.<br>NIO&#x5C06;&#x4EE5;&#x66F4;&#x52A0;&#x9AD8;&#x6548;&#x7684;&#x65B9;&#x5F0F;&#x8FDB;&#x884C;&#x6587;&#x4EF6;&#x7684;&#x8BFB;&#x5199;&#x64CD;&#x4F5C;.</p>
+<h1 id="nio-&#x4E0E;-io-&#x7684;&#x4E3B;&#x8981;&#x533A;&#x522B;"><a name="nio-&#x4E0E;-io-&#x7684;&#x4E3B;&#x8981;&#x533A;&#x522B;" class="anchor-navigation-ex-anchor" href="#nio-&#x4E0E;-io-&#x7684;&#x4E3B;&#x8981;&#x533A;&#x522B;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="nio-&#x4E0E;-io-&#x7684;&#x4E3B;&#x8981;&#x533A;&#x522B;" class="plugin-anchor" href="#nio-&#x4E0E;-io-&#x7684;&#x4E3B;&#x8981;&#x533A;&#x522B;"><i class="fa fa-link" aria-hidden="true"></i></a>NIO &#x4E0E; IO &#x7684;&#x4E3B;&#x8981;&#x533A;&#x522B;</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">IO</th>
+<th style="text-align:left">NIO</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x9762;&#x5411;&#x6D41;(Stream Oriented)</td>
+<td style="text-align:left">&#x9762;&#x5411;&#x7F13;&#x51B2;&#x533A;(Buffer Oriented)</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x963B;&#x585E;IO(Blocking IO)</td>
+<td style="text-align:left">&#x975E;&#x963B;&#x585E;IO(NonBlocking IO)</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x65E0;</td>
+<td style="text-align:left">&#x9009;&#x62E9;&#x5668;(Selectors)</td>
+</tr>
+</tbody>
+</table>
+<h1 id="&#x901A;&#x9053;&#x4E0E;&#x7F13;&#x51B2;&#x533A;"><a name="&#x901A;&#x9053;&#x4E0E;&#x7F13;&#x51B2;&#x533A;" class="anchor-navigation-ex-anchor" href="#&#x901A;&#x9053;&#x4E0E;&#x7F13;&#x51B2;&#x533A;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x901A;&#x9053;&#x4E0E;&#x7F13;&#x51B2;&#x533A;" class="plugin-anchor" href="#&#x901A;&#x9053;&#x4E0E;&#x7F13;&#x51B2;&#x533A;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x901A;&#x9053;&#x4E0E;&#x7F13;&#x51B2;&#x533A;</h1>
+<p>Java NIO&#x7CFB;&#x7EDF;&#x7684;&#x6838;&#x5FC3;&#x5728;&#x4E8E;&#xFF1A;&#x901A;&#x9053;(Channel)&#x548C;&#x7F13;&#x51B2;&#x533A;(Buffer)&#x3002;&#x901A;&#x9053;&#x8868;&#x793A;&#x6253;&#x5F00;&#x5230;IO &#x8BBE;&#x5907;(&#x4F8B;&#x5982;&#xFF1A;&#x6587;&#x4EF6;&#x3001;&#x5957;&#x63A5;&#x5B57;)&#x7684;&#x8FDE;&#x63A5;&#x3002;<br>&#x82E5;&#x9700;&#x8981;&#x4F7F;&#x7528;NIO &#x7CFB;&#x7EDF;&#xFF0C;&#x9700;&#x8981;&#x83B7;&#x53D6;&#x7528;&#x4E8E;&#x8FDE;&#x63A5;IO &#x8BBE;&#x5907;&#x7684;&#x901A;&#x9053;&#x4EE5;&#x53CA;&#x7528;&#x4E8E;&#x5BB9;&#x7EB3;&#x6570;&#x636E;&#x7684;&#x7F13;&#x51B2;&#x533A;&#x3002;&#x7136;&#x540E;&#x64CD;&#x4F5C;&#x7F13;&#x51B2;&#x533A;&#xFF0C;&#x5BF9;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x5904;&#x7406;.<br>&#x5373;channel&#x8D1F;&#x8D23;&#x4F20;&#x8F93;, buffer&#x8D1F;&#x8D23;&#x5B58;&#x50A8;</p>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; zhaojq 2019 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x672C;&#x4E66;&#x53D1;&#x5E03;&#x65F6;&#x95F4;&#xFF1A;
+2020-06-29 23:25:37
+</span></footer> <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"> <script>     window.klipse_settings = {         selector: ".language-klipse, .lang-eval-clojure",         selector_eval_js: ".lang-eval-js",         selector_eval_python_client: ".lang-eval-python",         selector_eval_php: ".lang-eval-php",         selector_eval_scheme: ".lang-eval-scheme",         selector_eval_ruby: ".lang-eval-ruby",         selector_reagent: ".lang-reagent",        selector_google_charts: ".lang-google-chart",        selector_es2017: ".lang-eval-es2017",        selector_jsx: ".lang-eval-jsx",        selector_transpile_jsx: ".lang-transpile-jsx",        selector_render_jsx: ".lang-render-jsx",        selector_react: ".lang-react",        selector_eval_markdown: ".lang-render-markdown",        selector_eval_lambdaway: ".lang-render-lambdaway",        selector_eval_cpp: ".lang-eval-cpp",        selector_eval_html: ".lang-render-html",        selector_sql: ".lang-eval-sql",        selector_brainfuck: "lang-eval-brainfuck",        selector_js: ".lang-transpile-cljs"    }; </script> <script src="https://storage.googleapis.com/app.klipse.tech/plugin/js/klipse_plugin.js"></script>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../" class="navigation navigation-prev " aria-label="Previous page: JAVA技术">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="缓冲区.html" class="navigation navigation-next " aria-label="Next page: Buffer(缓冲区)">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"NIO","level":"1.2.1","depth":2,"next":{"title":"Buffer(缓冲区)","level":"1.2.1.1","depth":3,"path":"Chapter1/nio/缓冲区.md","ref":"Chapter1/nio/缓冲区.md","articles":[]},"previous":{"title":"JAVA技术","level":"1.2","depth":1,"path":"Chapter1/README.md","ref":"Chapter1/README.md","articles":[{"title":"NIO","level":"1.2.1","depth":2,"path":"Chapter1/nio/NIO.md","ref":"Chapter1/nio/NIO.md","articles":[{"title":"Buffer(缓冲区)","level":"1.2.1.1","depth":3,"path":"Chapter1/nio/缓冲区.md","ref":"Chapter1/nio/缓冲区.md","articles":[]},{"title":"Channel(通道)","level":"1.2.1.2","depth":3,"path":"Chapter1/nio/通道.md","ref":"Chapter1/nio/通道.md","articles":[]}]},{"title":"JUC","level":"1.2.2","depth":2,"path":"Chapter1/juc/JUC.md","ref":"Chapter1/juc/JUC.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["anchors","anchor-navigation-ex","auto-scroll-table","advanced-emoji","code","chapter-fold","donate","expandable-chapters-small","favicon","fontsettings","github","github-buttons","klipse","-livereload","-lunr","pageview-count","page-toc-button","popup","sharing-plus","-sharing","splitter","-search","search-pro","toggle-chapters","tbfed-pagefooter","todo","hide-element"],"styles":{"website":"./style/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © zhaojq 2019","modify_label":"本书发布时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"github":{"url":"https://github.com/zhao-xiaoer"},"todo":{},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"auto-scroll-table":{},"popup":{},"code":{"copyButtons":true},"donate":{"alipay":"/gitbook/source/images/alipay.jpeg","alipayText":"支付宝打赏","button":"😀","title":"感谢支持","wechat":"/gitbook/source/images/wechat.jpeg","wechatText":"微信打赏"},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"family":"sans","size":2,"theme":"white"},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"","bookmark":""},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"pageview-count":{},"github-buttons":{"buttons":[{"user":"zhao-xiaoer","repo":"gitbook","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"klipse":{"myConfigKey":"it's the default value"},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":true,"all":["weibo","qq","qzone","douban","facebook","google","linkedin","twitter","whatsapp"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"toggle-chapters":{}},"theme":"default","author":"古道长亭","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"古道长亭","language":"zh-hans","links":{"sidebar":{"回到博客":"https://blog.zhaojq.top"}},"gitbook":"3.2.3","description":"welcome to my docs"},"file":{"path":"Chapter1/nio/NIO.md","mtime":"2020-06-29T15:25:37.192Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-29T16:26:27.136Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-auto-scroll-table/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-page-toc-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+
+    </body>
+</html>
+

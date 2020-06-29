@@ -2,6 +2,10 @@
 
 * [前言](README.md)
 * [JAVA技术](Chapter1/README.md)
+    * [NIO](Chapter1/nio/NIO.md)
+        * [Buffer(缓冲区)](Chapter1/nio/缓冲区.md)
+        * [Channel(通道)](Chapter1/nio/通道.md)
+    * [JUC](Chapter1/juc/JUC.md)
 * [GO技术](Chapter2/README.md)
     * [Go语言环境配置](Chapter2/go语言环境配置.md)
 * [深入理解JVM](Chapter3/README.md)
