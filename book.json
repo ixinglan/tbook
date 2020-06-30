@@ -17,7 +17,7 @@
     },
     "plugins": [
         "anchors",
-        "anchor-navigation-ex",
+        "-anchor-navigation-ex",
         "auto-scroll-table",
         "advanced-emoji",       
         "code",
@@ -39,7 +39,7 @@
         "splitter",
         "-search",
         "search-pro",
-        "toggle-chapters",
+        "-toggle-chapters",
         "tbfed-pagefooter",
         "todo",
         "hide-element"
