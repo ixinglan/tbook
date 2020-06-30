@@ -17,7 +17,7 @@
     },
     "plugins": [
         "anchors",
-        "-anchor-navigation-ex",
+        "anchor-navigation-ex",
         "auto-scroll-table",
         "advanced-emoji",       
         "code",
@@ -32,7 +32,7 @@
         "-livereload",
         "-lunr",
         "pageview-count",
-        "page-toc-button",
+        "-page-toc-button",
         "popup",
         "sharing-plus",
         "-sharing",
