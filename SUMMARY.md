@@ -15,5 +15,6 @@
     * [SpringBoot](Chapter5/SpringBoot.md)
     * [SpringCloud](Chapter5/SpringCloud.md)
 * [DOCKER](Chapter6/README.md)
+    * [Docker的安装](Chapter6/CentOS8安装docker.md)
 * [NETTY](Chapter7/README.md)
 * [Kafka](Chapter8/README.md)

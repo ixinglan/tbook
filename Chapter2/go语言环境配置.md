@@ -1,4 +1,4 @@
-#go语言环境配置
+# go语言环境配置
 
 1.使用brew安装最新稳定版本的go 1.13
 ```
@@ -108,4 +108,27 @@ source .bash_profile
 再次使用go env查看, 即可看到刚才配置的信息  
 到此go就完全安装完成了, 常用工具用GoLand, 开始你的go编程之路吧
 
+3.linux配置
+以上是mac os系统配置go, linux的go环境配置相当简单
+```shell
+# step1 下载包
+wget https://dl.google.com/go/go1.14.4.linux-amd64.tar.gz
+# step2 解压
+tar -C /usr/local -xzf go1.14.4.linux-amd64.tar.gz
+# step3 环境变量配置 在/etc/profile文件追加
+export PATH=$PATH:/usr/local/go/bin
+# step4 测试安装 创建一个hello.go文件,包含以下代码
+package main
+
+import "fmt"
+
+func main() {
+	fmt.Printf("hello, world\n")
+}
+
+# 编译
+go build hello.go
+# 运行,成功后输入hello, world
+./hello 
+```
 
