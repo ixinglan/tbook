@@ -5,6 +5,8 @@
     * [NIO](Chapter1/nio/NIO.md)
         * [Buffer(缓冲区)](Chapter1/nio/缓冲区.md)
         * [Channel(通道)](Chapter1/nio/通道.md)
+            * [网络通信](Chapter1/nio/网络通信.md)
+            * [NIO.2](Chapter1/nio/NIO2.md)
     * [JUC](Chapter1/juc/JUC.md)
 * [GO技术](Chapter2/README.md)
     * [Go语言环境配置](Chapter2/go语言环境配置.md)

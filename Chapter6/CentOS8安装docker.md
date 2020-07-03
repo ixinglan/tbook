@@ -1,6 +1,7 @@
 # CentOS8安装docker-ce
 Docker现在分为两个版本，Docker CE和Docker EE
 其中Docker CE为开源版，Docker EE为企业版
+
 ## 安装
 ```shell
 # step 1: 安装必要的一些系统工具
@@ -49,6 +50,7 @@ sudo service docker start
 # Step2: 安装指定版本的Docker-CE: (VERSION例如上面的17.03.0.ce.1-1.el7.centos)
 # sudo yum -y install docker-ce-[VERSION]
 ```
+
 ## 安装校验
 ```shell
 docker version
