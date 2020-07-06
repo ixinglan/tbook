@@ -2,6 +2,7 @@
 
 * [前言](README.md)
 * [JAVA技术](Chapter1/README.md)
+    * [Java各版本特性](Chapter1/java_version/VERSION.md)
     * [NIO](Chapter1/nio/NIO.md)
         * [Buffer(缓冲区)](Chapter1/nio/缓冲区.md)
         * [Channel(通道)](Chapter1/nio/通道.md)
