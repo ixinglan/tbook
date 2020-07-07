@@ -9,3 +9,181 @@
  * 	map(Function f): 如果有值对其处理，并返回处理后的Optional，否则返回 Optional.empty()
  * 	flatMap(Function mapper):与 map 类似，要求返回值必须是Optional
 
+```java
+//测试类1
+public class NewMan {
+
+    private Optional<Godness> godness = Optional.empty();
+
+    private Godness god;
+
+    public Optional<Godness> getGod() {
+        return Optional.of(god);
+    }
+
+    public NewMan() {
+    }
+
+    public NewMan(Optional<Godness> godness) {
+        this.godness = godness;
+    }
+
+    public Optional<Godness> getGodness() {
+        return godness;
+    }
+
+    public void setGodness(Optional<Godness> godness) {
+        this.godness = godness;
+    }
+
+    @Override
+    public String toString() {
+        return "NewMan [godness=" + godness + "]";
+    }
+
+}
+//测试类2
+public class NewMan {
+
+    private Optional<Godness> godness = Optional.empty();
+
+    private Godness god;
+
+    public Optional<Godness> getGod() {
+        return Optional.of(god);
+    }
+
+    public NewMan() {
+    }
+
+    public NewMan(Optional<Godness> godness) {
+        this.godness = godness;
+    }
+
+    public Optional<Godness> getGodness() {
+        return godness;
+    }
+
+    public void setGodness(Optional<Godness> godness) {
+        this.godness = godness;
+    }
+
+    @Override
+    public String toString() {
+        return "NewMan [godness=" + godness + "]";
+    }
+
+}
+//测试3
+public class Godness {
+
+    private String name;
+
+    public Godness() {
+    }
+
+    public Godness(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "Godness [name=" + name + "]";
+    }
+
+}
+```
+
+```java
+//Optional示例
+public class TestOptional {
+
+    @Test
+    public void test4() {
+        Optional<Employee> op = Optional.of(new Employee(101, "张三", 18, 9999.99));
+
+        Optional<String> op2 = op.map(Employee::getName);
+        System.out.println(op2.get());
+
+        Optional<String> op3 = op.flatMap((e) -> Optional.of(e.getName()));
+        System.out.println(op3.get());
+    }
+
+    @Test
+    public void test3() {
+        Optional<Employee> op = Optional.ofNullable(new Employee());
+
+        if (op.isPresent()) {//判断是否有值
+            System.out.println(op.get());
+        }
+
+        Employee emp = op.orElse(new Employee("张三"));
+        System.out.println(emp);
+
+        Employee emp2 = op.orElseGet(() -> new Employee());
+        System.out.println(emp2);
+    }
+
+    @Test
+    public void test2() {
+		Optional<Employee> op = Optional.ofNullable(new Employee());//of 和 empty的综合
+		System.out.println(op.get());
+
+		Optional<Employee> op2 = Optional.empty();
+		System.out.println(op2.get());
+    }
+
+    @Test
+    public void test1() {
+        Optional<Employee> op = Optional.of(new Employee());
+        Employee emp = op.get();
+        System.out.println(emp);
+    }
+
+    @Test
+    public void test5() {
+        Man man = new Man();
+
+        String name = getGodnessName(man);
+        System.out.println(name);
+    }
+
+    //需求：获取一个名字
+    public String getGodnessName(Man man) {
+        if (man != null) {
+            Godness g = man.getGod();
+
+            if (g != null) {
+                return g.getName();
+            }
+        }
+
+        return "赵小二";
+    }
+
+    //运用 Optional 的实体类
+    @Test
+    public void test6() {
+        Optional<Godness> godness = Optional.ofNullable(new Godness("林志玲"));
+
+        Optional<NewMan> op = Optional.ofNullable(new NewMan(godness));
+        String name = getGodnessName2(op);
+        System.out.println(name);
+    }
+
+    public String getGodnessName2(Optional<NewMan> man) {
+        return man.orElse(new NewMan())
+                .getGodness()
+                .orElse(new Godness("赵小二"))
+                .getName();
+    }
+}
+```
