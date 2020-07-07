@@ -7,6 +7,7 @@
 > Stream 操作是延迟执行的。这意味着他们会等到需要结果的时候才执行
 
 ## 创建stream
+
 ```java
 @Test
 public void test1(){
@@ -329,6 +330,7 @@ public class TestStreamAPI2 {
 ```
 
 ### 归约
+
 |方法|描述|
 |:---|:---|
 |reduce(T iden, BinaryOperator b)|可以将流中元素反复结合起来，得到一个值。返回T|
@@ -377,6 +379,7 @@ public void test2(){
 ```
 
 ### 收集
+
 |方法|描述|
 |:---|:---|
 |collect(Collector c)|将流转换为其他形式。接收一个Collector接口的实现，用于给Stream中元素做汇总的方法|

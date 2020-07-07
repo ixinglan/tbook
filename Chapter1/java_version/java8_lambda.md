@@ -2,7 +2,8 @@
 Lambda 是一个匿名函数，我们可以把 Lambda 表达式理解为是一段可以传递的代码（将代码像数据一样进行传递）。可以写出更简洁、更灵活的代码。作为一种更紧凑的代码风格，使Java的语言表达能力得到了提升。
 
 ## 原来的写法与lambda表达式对比
-1. 匿名内部类
+1.匿名内部类
+
 ```java
 //原来的匿名内部类
 @Test
@@ -32,7 +33,9 @@ public void test2(){
     TreeSet<String> ts = new TreeSet<>(com);
 }
 ```
-2. 集合操作
+
+2.集合操作  
+
 ```java
 List<Employee> emps = Arrays.asList(
         new Employee(101, "张三", 18, 9999.99),
@@ -126,13 +129,13 @@ public void test7(){
 > 左侧:ambda 表达式的参数列表
 > 右侧:Lambda 表达式中所需执行的功能， 即 Lambda 体
 * 语法格式
-> 1. 无参数,无返回值 () -> System.out.println("Hello Lambda!")
-> 2. 有1个参数,无返回值,有1个参数时,小括号可不写 (x) -> System.out.println(x)/ x-> System.out.println(x);
+> 1. 无参数,无返回值 `() -> System.out.println("Hello Lambda!")`
+> 2. 有1个参数,无返回值,有1个参数时,小括号可不写 `(x) -> System.out.println(x)/ x-> System.out.println(x)`;
 > 3. 有两个以上的参数，有返回值，并且 Lambda 体中有多条语句
-     Comparator<Integer> com = (x, y) -> {  
-          System.out.println("函数式接口");  
-          return Integer.compare(x, y);  
-     };
+>>     Comparator<Integer> com = (x, y) -> {  
+>>          System.out.println("函数式接口");  
+>>          return Integer.compare(x, y);  
+>>     };
 > 4. 若 Lambda 体中只有一条语句， return 和 大括号都可以省略不写 `Comparator<Integer> com = (x, y) -> Integer.compare(x, y)`
 > 5. Lambda 表达式的参数列表的数据类型可以省略不写，因为JVM编译器通过上下文推断出，数据类型，即“类型推断” `(Integer x, Integer y) -> Integer.compare(x, y)`
 * lambda表达式需要“函数式接口”的支持
@@ -209,14 +212,14 @@ public class TestLambda2 {
 ```
 
 ## java8内置的四大核心函数式接口
-1. Consumer<T> : 消费型接口  
-`void accept(T t)`
-2. Supplier<T> : 供给型接口  
-`T get()`
-3. Function<T, R> : 函数型接口  
-`R apply(T t)`
-4. Predicate<T> : 断言型接口  
-`boolean test(T t)`
+1.Consumer<T> : 消费型接口  
+`void accept(T t)`  
+2.Supplier<T> : 供给型接口  
+`T get()`  
+3.Function<T, R> : 函数型接口  
+`R apply(T t)`  
+4.Predicate<T> : 断言型接口  
+`boolean test(T t)`  
 
 ```java
 public class TestLambda3 {
@@ -294,7 +297,7 @@ public class TestLambda3 {
 }
 ```
 
-5. 其他接口  
+5.其他接口  
 
 |函数式接口|参数类型|返回类型|用途|
 |:---|:---|:---|:---|
