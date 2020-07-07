@@ -1,0 +1,1398 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Lambda · 古道长亭</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="古道长亭">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-auto-scroll-table/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../style/website.css">
+        
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="java8_方法与构造器引用.html" />
+    
+    
+    <link rel="prev" href="java8.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"zhao-xiaoer","repo":"gitbook","type":"star","size":"small","count":true}]};
+    </script>
+
+    
+    
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://blog.zhaojq.top" target="_blank" class="custom-link">回到博客</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                        <b>1.2.</b>
+                    
+                    JAVA技术
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="VERSION.html">
+            
+                <a href="VERSION.html">
+            
+                    
+                        <b>1.2.1.</b>
+                    
+                    Java各版本特性
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="java8.html">
+            
+                <a href="java8.html">
+            
+                    
+                        <b>1.2.1.1.</b>
+                    
+                    java8
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.2.1.1.1" data-path="java8_lambda.html">
+            
+                <a href="java8_lambda.html">
+            
+                    
+                        <b>1.2.1.1.1.</b>
+                    
+                    Lambda
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.1.2" data-path="java8_方法与构造器引用.html">
+            
+                <a href="java8_方法与构造器引用.html">
+            
+                    
+                        <b>1.2.1.1.2.</b>
+                    
+                    方法与构造器引用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.1.3" data-path="java8_Stream.html">
+            
+                <a href="java8_Stream.html">
+            
+                    
+                        <b>1.2.1.1.3.</b>
+                    
+                    Stream
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.1.4" data-path="java8_Stream并行流与串行流.html">
+            
+                <a href="java8_Stream并行流与串行流.html">
+            
+                    
+                        <b>1.2.1.1.4.</b>
+                    
+                    并行流与串行流
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.1.5" data-path="java8_Optional.html">
+            
+                <a href="java8_Optional.html">
+            
+                    
+                        <b>1.2.1.1.5.</b>
+                    
+                    Optional
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="java9.html">
+            
+                <a href="java9.html">
+            
+                    
+                        <b>1.2.1.2.</b>
+                    
+                    java9
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="java10.html">
+            
+                <a href="java10.html">
+            
+                    
+                        <b>1.2.1.3.</b>
+                    
+                    java10
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4" data-path="java11.html">
+            
+                <a href="java11.html">
+            
+                    
+                        <b>1.2.1.4.</b>
+                    
+                    java11
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5" data-path="java12.html">
+            
+                <a href="java12.html">
+            
+                    
+                        <b>1.2.1.5.</b>
+                    
+                    java12
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.6" data-path="java13.html">
+            
+                <a href="java13.html">
+            
+                    
+                        <b>1.2.1.6.</b>
+                    
+                    java13
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.7" data-path="java14.html">
+            
+                <a href="java14.html">
+            
+                    
+                        <b>1.2.1.7.</b>
+                    
+                    java814
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../nio/NIO.html">
+            
+                <a href="../nio/NIO.html">
+            
+                    
+                        <b>1.2.2.</b>
+                    
+                    NIO
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../nio/缓冲区.html">
+            
+                <a href="../nio/缓冲区.html">
+            
+                    
+                        <b>1.2.2.1.</b>
+                    
+                    Buffer(缓冲区)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="../nio/通道.html">
+            
+                <a href="../nio/通道.html">
+            
+                    
+                        <b>1.2.2.2.</b>
+                    
+                    Channel(通道)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.2.1" data-path="../nio/网络通信.html">
+            
+                <a href="../nio/网络通信.html">
+            
+                    
+                        <b>1.2.2.2.1.</b>
+                    
+                    网络通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2.2" data-path="../nio/NIO2.html">
+            
+                <a href="../nio/NIO2.html">
+            
+                    
+                        <b>1.2.2.2.2.</b>
+                    
+                    NIO.2
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../juc/JUC.html">
+            
+                <a href="../juc/JUC.html">
+            
+                    
+                        <b>1.2.3.</b>
+                    
+                    JUC
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1" data-path="../juc/1_volatile.html">
+            
+                <a href="../juc/1_volatile.html">
+            
+                    
+                        <b>1.2.3.1.</b>
+                    
+                    volatile
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.2" data-path="../juc/2_原子变量与CAS算法.html">
+            
+                <a href="../juc/2_原子变量与CAS算法.html">
+            
+                    
+                        <b>1.2.3.2.</b>
+                    
+                    原子变量与CAS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.3" data-path="../juc/3_ConcurrentHashMap.html">
+            
+                <a href="../juc/3_ConcurrentHashMap.html">
+            
+                    
+                        <b>1.2.3.3.</b>
+                    
+                    ConcurrentHashMap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.4" data-path="../juc/4_CountDownLatch.html">
+            
+                <a href="../juc/4_CountDownLatch.html">
+            
+                    
+                        <b>1.2.3.4.</b>
+                    
+                    CountDownLatch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.5" data-path="../juc/5_Callable.html">
+            
+                <a href="../juc/5_Callable.html">
+            
+                    
+                        <b>1.2.3.5.</b>
+                    
+                    Callable
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.6" data-path="../juc/6_Lock.html">
+            
+                <a href="../juc/6_Lock.html">
+            
+                    
+                        <b>1.2.3.6.</b>
+                    
+                    Lock
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.7" data-path="../juc/7_生产者消费者案例-虚假唤醒.html">
+            
+                <a href="../juc/7_生产者消费者案例-虚假唤醒.html">
+            
+                    
+                        <b>1.2.3.7.</b>
+                    
+                    生产者消费者案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.8" data-path="../juc/8_Condition.html">
+            
+                <a href="../juc/8_Condition.html">
+            
+                    
+                        <b>1.2.3.8.</b>
+                    
+                    Condition
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.9" data-path="../juc/9_ReadWriteLock.html">
+            
+                <a href="../juc/9_ReadWriteLock.html">
+            
+                    
+                        <b>1.2.3.9.</b>
+                    
+                    ReadWriteLock
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.10" data-path="../juc/10_线程8锁.html">
+            
+                <a href="../juc/10_线程8锁.html">
+            
+                    
+                        <b>1.2.3.10.</b>
+                    
+                    线程8锁
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.11" data-path="../juc/11_线程池.html">
+            
+                <a href="../juc/11_线程池.html">
+            
+                    
+                        <b>1.2.3.11.</b>
+                    
+                    线程池
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.12" data-path="../juc/12_ForkJoinPool.html">
+            
+                <a href="../juc/12_ForkJoinPool.html">
+            
+                    
+                        <b>1.2.3.12.</b>
+                    
+                    Fork/Join
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../Chapter2/">
+            
+                <a href="../../Chapter2/">
+            
+                    
+                        <b>1.3.</b>
+                    
+                    GO技术
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../Chapter2/go语言环境配置.html">
+            
+                <a href="../../Chapter2/go语言环境配置.html">
+            
+                    
+                        <b>1.3.1.</b>
+                    
+                    Go语言环境配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../Chapter3/">
+            
+                <a href="../../Chapter3/">
+            
+                    
+                        <b>1.4.</b>
+                    
+                    深入理解JVM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../Chapter4/">
+            
+                <a href="../../Chapter4/">
+            
+                    
+                        <b>1.5.</b>
+                    
+                    算法知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../Chapter5/">
+            
+                <a href="../../Chapter5/">
+            
+                    
+                        <b>1.6.</b>
+                    
+                    SPRING系列
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../Chapter5/Spring.html">
+            
+                <a href="../../Chapter5/Spring.html">
+            
+                    
+                        <b>1.6.1.</b>
+                    
+                    Spring
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../Chapter5/SpringBoot.html">
+            
+                <a href="../../Chapter5/SpringBoot.html">
+            
+                    
+                        <b>1.6.2.</b>
+                    
+                    SpringBoot
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../../Chapter5/SpringCloud.html">
+            
+                <a href="../../Chapter5/SpringCloud.html">
+            
+                    
+                        <b>1.6.3.</b>
+                    
+                    SpringCloud
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../Chapter6/">
+            
+                <a href="../../Chapter6/">
+            
+                    
+                        <b>1.7.</b>
+                    
+                    DOCKER
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../Chapter6/CentOS8安装docker.html">
+            
+                <a href="../../Chapter6/CentOS8安装docker.html">
+            
+                    
+                        <b>1.7.1.</b>
+                    
+                    Docker的安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../../Chapter6/镜像加速.html">
+            
+                <a href="../../Chapter6/镜像加速.html">
+            
+                    
+                        <b>1.7.2.</b>
+                    
+                    镜像加速
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../Chapter7/">
+            
+                <a href="../../Chapter7/">
+            
+                    
+                        <b>1.8.</b>
+                    
+                    NETTY
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../../Chapter8/">
+            
+                <a href="../../Chapter8/">
+            
+                    
+                        <b>1.9.</b>
+                    
+                    Kafka
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Lambda</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#lambda&#x8868;&#x8FBE;&#x5F0F;"><b></b>Lambda&#x8868;&#x8FBE;&#x5F0F;</a></li><ul><li><span class="title-icon "></span><a href="#&#x539F;&#x6765;&#x7684;&#x5199;&#x6CD5;&#x4E0E;lambda&#x8868;&#x8FBE;&#x5F0F;&#x5BF9;&#x6BD4;"><b></b>&#x539F;&#x6765;&#x7684;&#x5199;&#x6CD5;&#x4E0E;lambda&#x8868;&#x8FBE;&#x5F0F;&#x5BF9;&#x6BD4;</a></li><li><span class="title-icon "></span><a href="#lambda&#x8BED;&#x6CD5;"><b></b>lambda&#x8BED;&#x6CD5;</a></li><li><span class="title-icon "></span><a href="#java8&#x5185;&#x7F6E;&#x7684;&#x56DB;&#x5927;&#x6838;&#x5FC3;&#x51FD;&#x6570;&#x5F0F;&#x63A5;&#x53E3;"><b></b>java8&#x5185;&#x7F6E;&#x7684;&#x56DB;&#x5927;&#x6838;&#x5FC3;&#x51FD;&#x6570;&#x5F0F;&#x63A5;&#x53E3;</a></li></ul></ul></div><a href="#lambda&#x8868;&#x8FBE;&#x5F0F;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="lambda&#x8868;&#x8FBE;&#x5F0F;"><a name="lambda&#x8868;&#x8FBE;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#lambda&#x8868;&#x8FBE;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="lambda&#x8868;&#x8FBE;&#x5F0F;" class="plugin-anchor" href="#lambda&#x8868;&#x8FBE;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>Lambda&#x8868;&#x8FBE;&#x5F0F;</h1>
+<p>Lambda &#x662F;&#x4E00;&#x4E2A;&#x533F;&#x540D;&#x51FD;&#x6570;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x628A; Lambda &#x8868;&#x8FBE;&#x5F0F;&#x7406;&#x89E3;&#x4E3A;&#x662F;&#x4E00;&#x6BB5;&#x53EF;&#x4EE5;&#x4F20;&#x9012;&#x7684;&#x4EE3;&#x7801;&#xFF08;&#x5C06;&#x4EE3;&#x7801;&#x50CF;&#x6570;&#x636E;&#x4E00;&#x6837;&#x8FDB;&#x884C;&#x4F20;&#x9012;&#xFF09;&#x3002;&#x53EF;&#x4EE5;&#x5199;&#x51FA;&#x66F4;&#x7B80;&#x6D01;&#x3001;&#x66F4;&#x7075;&#x6D3B;&#x7684;&#x4EE3;&#x7801;&#x3002;&#x4F5C;&#x4E3A;&#x4E00;&#x79CD;&#x66F4;&#x7D27;&#x51D1;&#x7684;&#x4EE3;&#x7801;&#x98CE;&#x683C;&#xFF0C;&#x4F7F;Java&#x7684;&#x8BED;&#x8A00;&#x8868;&#x8FBE;&#x80FD;&#x529B;&#x5F97;&#x5230;&#x4E86;&#x63D0;&#x5347;&#x3002;</p>
+<h2 id="&#x539F;&#x6765;&#x7684;&#x5199;&#x6CD5;&#x4E0E;lambda&#x8868;&#x8FBE;&#x5F0F;&#x5BF9;&#x6BD4;"><a name="&#x539F;&#x6765;&#x7684;&#x5199;&#x6CD5;&#x4E0E;lambda&#x8868;&#x8FBE;&#x5F0F;&#x5BF9;&#x6BD4;" class="anchor-navigation-ex-anchor" href="#&#x539F;&#x6765;&#x7684;&#x5199;&#x6CD5;&#x4E0E;lambda&#x8868;&#x8FBE;&#x5F0F;&#x5BF9;&#x6BD4;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x539F;&#x6765;&#x7684;&#x5199;&#x6CD5;&#x4E0E;lambda&#x8868;&#x8FBE;&#x5F0F;&#x5BF9;&#x6BD4;" class="plugin-anchor" href="#&#x539F;&#x6765;&#x7684;&#x5199;&#x6CD5;&#x4E0E;lambda&#x8868;&#x8FBE;&#x5F0F;&#x5BF9;&#x6BD4;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x539F;&#x6765;&#x7684;&#x5199;&#x6CD5;&#x4E0E;lambda&#x8868;&#x8FBE;&#x5F0F;&#x5BF9;&#x6BD4;</h2>
+<p>1.&#x533F;&#x540D;&#x5185;&#x90E8;&#x7C7B;</p>
+<pre><code class="lang-java"><span class="hljs-comment">//&#x539F;&#x6765;&#x7684;&#x533F;&#x540D;&#x5185;&#x90E8;&#x7C7B;</span>
+<span class="hljs-meta">@Test</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">test1</span><span class="hljs-params">()</span></span>{
+    Comparator&lt;String&gt; com = <span class="hljs-keyword">new</span> Comparator&lt;String&gt;(){
+        <span class="hljs-meta">@Override</span>
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">compare</span><span class="hljs-params">(String o1, String o2)</span> </span>{
+            <span class="hljs-keyword">return</span> Integer.compare(o1.length(), o2.length());
+        }
+    };
+
+    TreeSet&lt;String&gt; ts = <span class="hljs-keyword">new</span> TreeSet&lt;&gt;(com);
+
+    TreeSet&lt;String&gt; ts2 = <span class="hljs-keyword">new</span> TreeSet&lt;&gt;(<span class="hljs-keyword">new</span> Comparator&lt;String&gt;(){
+        <span class="hljs-meta">@Override</span>
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">compare</span><span class="hljs-params">(String o1, String o2)</span> </span>{
+            <span class="hljs-keyword">return</span> Integer.compare(o1.length(), o2.length());
+        }
+
+    });
+}
+
+<span class="hljs-comment">//&#x73B0;&#x5728;&#x7684; Lambda &#x8868;&#x8FBE;&#x5F0F;</span>
+<span class="hljs-meta">@Test</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">test2</span><span class="hljs-params">()</span></span>{
+    Comparator&lt;String&gt; com = (x, y) -&gt; Integer.compare(x.length(), y.length());
+    TreeSet&lt;String&gt; ts = <span class="hljs-keyword">new</span> TreeSet&lt;&gt;(com);
+}
+</code></pre>
+<p>2.&#x96C6;&#x5408;&#x64CD;&#x4F5C;  </p>
+<pre><code class="lang-java">List&lt;Employee&gt; emps = Arrays.asList(
+        <span class="hljs-keyword">new</span> Employee(<span class="hljs-number">101</span>, <span class="hljs-string">&quot;&#x5F20;&#x4E09;&quot;</span>, <span class="hljs-number">18</span>, <span class="hljs-number">9999.99</span>),
+        <span class="hljs-keyword">new</span> Employee(<span class="hljs-number">102</span>, <span class="hljs-string">&quot;&#x674E;&#x56DB;&quot;</span>, <span class="hljs-number">59</span>, <span class="hljs-number">6666.66</span>),
+        <span class="hljs-keyword">new</span> Employee(<span class="hljs-number">103</span>, <span class="hljs-string">&quot;&#x738B;&#x4E94;&quot;</span>, <span class="hljs-number">28</span>, <span class="hljs-number">3333.33</span>),
+        <span class="hljs-keyword">new</span> Employee(<span class="hljs-number">104</span>, <span class="hljs-string">&quot;&#x8D75;&#x516D;&quot;</span>, <span class="hljs-number">8</span>, <span class="hljs-number">7777.77</span>),
+        <span class="hljs-keyword">new</span> Employee(<span class="hljs-number">105</span>, <span class="hljs-string">&quot;&#x7530;&#x4E03;&quot;</span>, <span class="hljs-number">38</span>, <span class="hljs-number">5555.55</span>)
+);
+
+<span class="hljs-comment">//&#x9700;&#x6C42;&#xFF1A;&#x83B7;&#x53D6;&#x516C;&#x53F8;&#x4E2D;&#x5E74;&#x9F84;&#x5C0F;&#x4E8E; 35 &#x7684;&#x5458;&#x5DE5;&#x4FE1;&#x606F;</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> List&lt;Employee&gt; <span class="hljs-title">filterEmployeeAge</span><span class="hljs-params">(List&lt;Employee&gt; emps)</span></span>{
+    List&lt;Employee&gt; list = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+
+    <span class="hljs-keyword">for</span> (Employee emp : emps) {
+        <span class="hljs-keyword">if</span>(emp.getAge() &lt;= <span class="hljs-number">35</span>){
+            list.add(emp);
+        }
+    }
+
+    <span class="hljs-keyword">return</span> list;
+}
+
+<span class="hljs-meta">@Test</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">test3</span><span class="hljs-params">()</span></span>{
+    List&lt;Employee&gt; list = filterEmployeeAge(emps);
+
+    <span class="hljs-keyword">for</span> (Employee employee : list) {
+        System.out.println(employee);
+    }
+}
+
+<span class="hljs-comment">//&#x9700;&#x6C42;&#xFF1A;&#x83B7;&#x53D6;&#x516C;&#x53F8;&#x4E2D;&#x5DE5;&#x8D44;&#x5927;&#x4E8E; 5000 &#x7684;&#x5458;&#x5DE5;&#x4FE1;&#x606F;</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> List&lt;Employee&gt; <span class="hljs-title">filterEmployeeSalary</span><span class="hljs-params">(List&lt;Employee&gt; emps)</span></span>{
+    List&lt;Employee&gt; list = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+
+    <span class="hljs-keyword">for</span> (Employee emp : emps) {
+        <span class="hljs-keyword">if</span>(emp.getSalary() &gt;= <span class="hljs-number">5000</span>){
+            list.add(emp);
+        }
+    }
+
+    <span class="hljs-keyword">return</span> list;
+}
+
+<span class="hljs-comment">//&#x4F18;&#x5316;&#x65B9;&#x5F0F;&#x4E8C;&#xFF1A;&#x533F;&#x540D;&#x5185;&#x90E8;&#x7C7B;, &#x9700;&#x5199;&#x63A5;&#x53E3;&#x548C;&#x5B9E;&#x73B0;&#x7C7B;,&#x5177;&#x4F53;&#x770B;java-learning&#x4EE3;&#x7801;</span>
+<span class="hljs-meta">@Test</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">test5</span><span class="hljs-params">()</span></span>{
+    List&lt;Employee&gt; list = filterEmployee(emps, <span class="hljs-keyword">new</span> MyPredicate&lt;Employee&gt;() {
+        <span class="hljs-meta">@Override</span>
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">test</span><span class="hljs-params">(Employee t)</span> </span>{
+            <span class="hljs-keyword">return</span> t.getId() &lt;= <span class="hljs-number">103</span>;
+        }
+    });
+
+    <span class="hljs-keyword">for</span> (Employee employee : list) {
+        System.out.println(employee);
+    }
+}
+
+<span class="hljs-comment">//&#x4F18;&#x5316;&#x65B9;&#x5F0F;&#x4E09;&#xFF1A;Lambda &#x8868;&#x8FBE;&#x5F0F;</span>
+<span class="hljs-meta">@Test</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">test6</span><span class="hljs-params">()</span></span>{
+    List&lt;Employee&gt; list = filterEmployee(emps, (e) -&gt; e.getAge() &lt;= <span class="hljs-number">35</span>);
+    list.forEach(System.out::println);
+
+    System.out.println(<span class="hljs-string">&quot;------------------------------------------&quot;</span>);
+
+    List&lt;Employee&gt; list2 = filterEmployee(emps, (e) -&gt; e.getSalary() &gt;= <span class="hljs-number">5000</span>);
+    list2.forEach(System.out::println);
+}
+
+<span class="hljs-comment">//&#x4F18;&#x5316;&#x65B9;&#x5F0F;&#x56DB;&#xFF1A;Stream API</span>
+<span class="hljs-meta">@Test</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">test7</span><span class="hljs-params">()</span></span>{
+    emps.stream()
+        .filter((e) -&gt; e.getAge() &lt;= <span class="hljs-number">35</span>)
+        .forEach(System.out::println);
+
+    System.out.println(<span class="hljs-string">&quot;----------------------------------------------&quot;</span>);
+
+    emps.stream()
+        .map(Employee::getName)
+        .limit(<span class="hljs-number">3</span>)
+        .sorted()
+        .forEach(System.out::println);
+}
+</code></pre>
+<h2 id="lambda&#x8BED;&#x6CD5;"><a name="lambda&#x8BED;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#lambda&#x8BED;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="lambda&#x8BED;&#x6CD5;" class="plugin-anchor" href="#lambda&#x8BED;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>lambda&#x8BED;&#x6CD5;</h2>
+<ul>
+<li>Java8&#x4E2D;&#x5F15;&#x5165;&#x4E86;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x64CD;&#x4F5C;&#x7B26; &quot;-&gt;&quot; &#x8BE5;&#x64CD;&#x4F5C;&#x7B26;&#x79F0;&#x4E3A;&#x7BAD;&#x5934;&#x64CD;&#x4F5C;&#x7B26;&#x6216; Lambda &#x64CD;&#x4F5C;&#x7B26;&#x7BAD;&#x5934;&#x64CD;&#x4F5C;&#x7B26;&#x5C06; Lambda &#x8868;&#x8FBE;&#x5F0F;&#x62C6;&#x5206;&#x6210;&#x4E24;&#x90E8;&#x5206;, &#x5176;&#x4E2D;:<blockquote>
+<p>&#x5DE6;&#x4FA7;:ambda &#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x53C2;&#x6570;&#x5217;&#x8868;
+&#x53F3;&#x4FA7;:Lambda &#x8868;&#x8FBE;&#x5F0F;&#x4E2D;&#x6240;&#x9700;&#x6267;&#x884C;&#x7684;&#x529F;&#x80FD;&#xFF0C; &#x5373; Lambda &#x4F53;</p>
+</blockquote>
+</li>
+<li>&#x8BED;&#x6CD5;&#x683C;&#x5F0F;<blockquote>
+<ol>
+<li>&#x65E0;&#x53C2;&#x6570;,&#x65E0;&#x8FD4;&#x56DE;&#x503C; <code>() -&gt; System.out.println(&quot;Hello Lambda!&quot;)</code></li>
+<li>&#x6709;1&#x4E2A;&#x53C2;&#x6570;,&#x65E0;&#x8FD4;&#x56DE;&#x503C;,&#x6709;1&#x4E2A;&#x53C2;&#x6570;&#x65F6;,&#x5C0F;&#x62EC;&#x53F7;&#x53EF;&#x4E0D;&#x5199; <code>(x) -&gt; System.out.println(x)/ x-&gt; System.out.println(x)</code>;</li>
+<li>&#x6709;&#x4E24;&#x4E2A;&#x4EE5;&#x4E0A;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x6709;&#x8FD4;&#x56DE;&#x503C;&#xFF0C;&#x5E76;&#x4E14; Lambda &#x4F53;&#x4E2D;&#x6709;&#x591A;&#x6761;&#x8BED;&#x53E5;<blockquote>
+<pre><code>Comparator&lt;Integer&gt; com = (x, y) -&gt; {  
+     System.out.println(&quot;&#x51FD;&#x6570;&#x5F0F;&#x63A5;&#x53E3;&quot;);  
+     return Integer.compare(x, y);  
+};
+</code></pre></blockquote>
+</li>
+<li>&#x82E5; Lambda &#x4F53;&#x4E2D;&#x53EA;&#x6709;&#x4E00;&#x6761;&#x8BED;&#x53E5;&#xFF0C; return &#x548C; &#x5927;&#x62EC;&#x53F7;&#x90FD;&#x53EF;&#x4EE5;&#x7701;&#x7565;&#x4E0D;&#x5199; <code>Comparator&lt;Integer&gt; com = (x, y) -&gt; Integer.compare(x, y)</code></li>
+<li>Lambda &#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x53C2;&#x6570;&#x5217;&#x8868;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x53EF;&#x4EE5;&#x7701;&#x7565;&#x4E0D;&#x5199;&#xFF0C;&#x56E0;&#x4E3A;JVM&#x7F16;&#x8BD1;&#x5668;&#x901A;&#x8FC7;&#x4E0A;&#x4E0B;&#x6587;&#x63A8;&#x65AD;&#x51FA;&#xFF0C;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF0C;&#x5373;&#x201C;&#x7C7B;&#x578B;&#x63A8;&#x65AD;&#x201D; <code>(Integer x, Integer y) -&gt; Integer.compare(x, y)</code></li>
+</ol>
+</blockquote>
+</li>
+<li>lambda&#x8868;&#x8FBE;&#x5F0F;&#x9700;&#x8981;&#x201C;&#x51FD;&#x6570;&#x5F0F;&#x63A5;&#x53E3;&#x201D;&#x7684;&#x652F;&#x6301;<blockquote>
+<p>&#x51FD;&#x6570;&#x5F0F;&#x63A5;&#x53E3;&#xFF1A;&#x63A5;&#x53E3;&#x4E2D;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x62BD;&#x8C61;&#x65B9;&#x6CD5;&#x7684;&#x63A5;&#x53E3;&#xFF0C;&#x79F0;&#x4E3A;&#x51FD;&#x6570;&#x5F0F;&#x63A5;&#x53E3;&#x3002; &#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x6CE8;&#x89E3; @FunctionalInterface &#x4FEE;&#x9970;,&#x53EF;&#x4EE5;&#x68C0;&#x67E5;&#x662F;&#x5426;&#x662F;&#x51FD;&#x6570;&#x5F0F;&#x63A5;&#x53E3;</p>
+</blockquote>
+</li>
+</ul>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TestLambda2</span> </span>{
+
+    <span class="hljs-meta">@Test</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">test1</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-keyword">int</span> num = <span class="hljs-number">0</span>;<span class="hljs-comment">//jdk 1.7 &#x524D;&#xFF0C;&#x5FC5;&#x987B;&#x662F; final</span>
+
+        Runnable r = <span class="hljs-keyword">new</span> Runnable() {
+            <span class="hljs-meta">@Override</span>
+            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">run</span><span class="hljs-params">()</span> </span>{
+                System.out.println(<span class="hljs-string">&quot;Hello World!&quot;</span> + num);
+            }
+        };
+
+        r.run();
+
+        System.out.println(<span class="hljs-string">&quot;-------------------------------&quot;</span>);
+
+        Runnable r1 = () -&gt; System.out.println(<span class="hljs-string">&quot;Hello Lambda!&quot;</span>);
+        r1.run();
+    }
+
+    <span class="hljs-meta">@Test</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">test2</span><span class="hljs-params">()</span></span>{
+        Consumer&lt;String&gt; con = x -&gt; System.out.println(x);
+        con.accept(<span class="hljs-string">&quot;&#x6211;&#x548C;&#x6211;&#x7684;&#x7956;&#x56FD;&#xFF01;&quot;</span>);
+    }
+
+    <span class="hljs-meta">@Test</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">test3</span><span class="hljs-params">()</span></span>{
+        Comparator&lt;Integer&gt; com = (x, y) -&gt; {
+            System.out.println(<span class="hljs-string">&quot;&#x6D4B;&#x8BD5;&#x591A;&#x884C;&#x4EE3;&#x7801;&quot;</span>);
+            <span class="hljs-keyword">return</span> Integer.compare(x, y);
+        };
+    }
+
+    <span class="hljs-meta">@Test</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">test4</span><span class="hljs-params">()</span></span>{
+        Comparator&lt;Integer&gt; com = (x, y) -&gt; Integer.compare(x, y);
+    }
+
+    <span class="hljs-comment">//&#x7C7B;&#x578B;&#x62A2;&#x65AD;&#x793A;&#x4F8B;</span>
+    <span class="hljs-meta">@Test</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">test5</span><span class="hljs-params">()</span></span>{
+        String[] strs = {<span class="hljs-string">&quot;aaa&quot;</span>, <span class="hljs-string">&quot;bbb&quot;</span>, <span class="hljs-string">&quot;ccc&quot;</span>};
+
+        List&lt;String&gt; list = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+
+        show(<span class="hljs-keyword">new</span> HashMap&lt;&gt;());
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">show</span><span class="hljs-params">(Map&lt;String, Integer&gt; map)</span></span>{
+
+    }
+
+    <span class="hljs-comment">//&#x9700;&#x6C42;&#xFF1A;&#x5BF9;&#x4E00;&#x4E2A;&#x6570;&#x8FDB;&#x884C;&#x8FD0;&#x7B97;</span>
+    <span class="hljs-meta">@Test</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">test6</span><span class="hljs-params">()</span></span>{
+        Integer num = operation(<span class="hljs-number">100</span>, (x) -&gt; x * x);
+        System.out.println(num);
+
+        System.out.println(operation(<span class="hljs-number">200</span>, (y) -&gt; y + <span class="hljs-number">200</span>));
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> Integer <span class="hljs-title">operation</span><span class="hljs-params">(Integer num, Function&lt;Integer, Integer&gt; function)</span></span>{
+        <span class="hljs-keyword">return</span> function.apply(num);
+    }
+}
+</code></pre>
+<h2 id="java8&#x5185;&#x7F6E;&#x7684;&#x56DB;&#x5927;&#x6838;&#x5FC3;&#x51FD;&#x6570;&#x5F0F;&#x63A5;&#x53E3;"><a name="java8&#x5185;&#x7F6E;&#x7684;&#x56DB;&#x5927;&#x6838;&#x5FC3;&#x51FD;&#x6570;&#x5F0F;&#x63A5;&#x53E3;" class="anchor-navigation-ex-anchor" href="#java8&#x5185;&#x7F6E;&#x7684;&#x56DB;&#x5927;&#x6838;&#x5FC3;&#x51FD;&#x6570;&#x5F0F;&#x63A5;&#x53E3;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="java8&#x5185;&#x7F6E;&#x7684;&#x56DB;&#x5927;&#x6838;&#x5FC3;&#x51FD;&#x6570;&#x5F0F;&#x63A5;&#x53E3;" class="plugin-anchor" href="#java8&#x5185;&#x7F6E;&#x7684;&#x56DB;&#x5927;&#x6838;&#x5FC3;&#x51FD;&#x6570;&#x5F0F;&#x63A5;&#x53E3;"><i class="fa fa-link" aria-hidden="true"></i></a>java8&#x5185;&#x7F6E;&#x7684;&#x56DB;&#x5927;&#x6838;&#x5FC3;&#x51FD;&#x6570;&#x5F0F;&#x63A5;&#x53E3;</h2>
+<p>1.Consumer<t> : &#x6D88;&#x8D39;&#x578B;&#x63A5;&#x53E3;<br><code>void accept(T t)</code><br>2.Supplier<t> : &#x4F9B;&#x7ED9;&#x578B;&#x63A5;&#x53E3;<br><code>T get()</code><br>3.Function<t, r=""> : &#x51FD;&#x6570;&#x578B;&#x63A5;&#x53E3;<br><code>R apply(T t)</code><br>4.Predicate<t> : &#x65AD;&#x8A00;&#x578B;&#x63A5;&#x53E3;<br><code>boolean test(T t)</code>  </t></t,></t></t></p>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TestLambda3</span> </span>{
+
+    <span class="hljs-comment">//Predicate&lt;T&gt; &#x65AD;&#x8A00;&#x578B;&#x63A5;&#x53E3;&#xFF1A;</span>
+    <span class="hljs-meta">@Test</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">test4</span><span class="hljs-params">()</span></span>{
+        List&lt;String&gt; list = Arrays.asList(<span class="hljs-string">&quot;Hello&quot;</span>, <span class="hljs-string">&quot;atguigu&quot;</span>, <span class="hljs-string">&quot;Lambda&quot;</span>, <span class="hljs-string">&quot;www&quot;</span>, <span class="hljs-string">&quot;ok&quot;</span>);
+        List&lt;String&gt; strList = filterStr(list, (s) -&gt; s.length() &gt; <span class="hljs-number">3</span>);
+
+        <span class="hljs-keyword">for</span> (String str : strList) {
+            System.out.println(str);
+        }
+    }
+
+    <span class="hljs-comment">//&#x9700;&#x6C42;&#xFF1A;&#x5C06;&#x6EE1;&#x8DB3;&#x6761;&#x4EF6;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x653E;&#x5165;&#x96C6;&#x5408;&#x4E2D;</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> List&lt;String&gt; <span class="hljs-title">filterStr</span><span class="hljs-params">(List&lt;String&gt; list, Predicate&lt;String&gt; pre)</span></span>{
+        List&lt;String&gt; strList = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+
+        <span class="hljs-keyword">for</span> (String str : list) {
+            <span class="hljs-keyword">if</span>(pre.test(str)){
+                strList.add(str);
+            }
+        }
+
+        <span class="hljs-keyword">return</span> strList;
+    }
+
+    <span class="hljs-comment">//Function&lt;T, R&gt; &#x51FD;&#x6570;&#x578B;&#x63A5;&#x53E3;&#xFF1A;</span>
+    <span class="hljs-meta">@Test</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">test3</span><span class="hljs-params">()</span></span>{
+        String newStr = strHandler(<span class="hljs-string">&quot;\t\t\t &#x6211;&#x7231;&#x6211;&#x7684;&#x7956;&#x56FD;   &quot;</span>, (str) -&gt; str.trim());
+        System.out.println(newStr);
+
+        String subStr = strHandler(<span class="hljs-string">&quot;&#x6211;&#x7231;&#x6211;&#x7684;&#x7956;&#x56FD;&quot;</span>, (str) -&gt; str.substring(<span class="hljs-number">2</span>, <span class="hljs-number">5</span>));
+        System.out.println(subStr);
+    }
+
+    <span class="hljs-comment">//&#x9700;&#x6C42;&#xFF1A;&#x7528;&#x4E8E;&#x5904;&#x7406;&#x5B57;&#x7B26;&#x4E32;</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">strHandler</span><span class="hljs-params">(String str, Function&lt;String, String&gt; fun)</span></span>{
+        <span class="hljs-keyword">return</span> fun.apply(str);
+    }
+
+    <span class="hljs-comment">//Supplier&lt;T&gt; &#x4F9B;&#x7ED9;&#x578B;&#x63A5;&#x53E3; :</span>
+    <span class="hljs-meta">@Test</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">test2</span><span class="hljs-params">()</span></span>{
+        List&lt;Integer&gt; numList = getNumList(<span class="hljs-number">10</span>, () -&gt; (<span class="hljs-keyword">int</span>)(Math.random() * <span class="hljs-number">100</span>));
+
+        <span class="hljs-keyword">for</span> (Integer num : numList) {
+            System.out.println(num);
+        }
+    }
+
+    <span class="hljs-comment">//&#x9700;&#x6C42;&#xFF1A;&#x4EA7;&#x751F;&#x6307;&#x5B9A;&#x4E2A;&#x6570;&#x7684;&#x6574;&#x6570;&#xFF0C;&#x5E76;&#x653E;&#x5165;&#x96C6;&#x5408;&#x4E2D;</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> List&lt;Integer&gt; <span class="hljs-title">getNumList</span><span class="hljs-params">(<span class="hljs-keyword">int</span> num, Supplier&lt;Integer&gt; sup)</span></span>{
+        List&lt;Integer&gt; list = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; num; i++) {
+            Integer n = sup.get();
+            list.add(n);
+        }
+
+        <span class="hljs-keyword">return</span> list;
+    }
+
+    <span class="hljs-comment">//Consumer&lt;T&gt; &#x6D88;&#x8D39;&#x578B;&#x63A5;&#x53E3; :</span>
+    <span class="hljs-meta">@Test</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">test1</span><span class="hljs-params">()</span></span>{
+        happy(<span class="hljs-number">10000</span>, (m) -&gt; System.out.println(<span class="hljs-string">&quot;&#x4E70;&#x897F;&#x74DC;&#x82B1;&#x4E86;&#xFF1A;&quot;</span> + m + <span class="hljs-string">&quot;&#x5143;&quot;</span>));
+    } 
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">happy</span><span class="hljs-params">(<span class="hljs-keyword">double</span> money, Consumer&lt;Double&gt; con)</span></span>{
+        con.accept(money);
+    }
+}
+</code></pre>
+<p>5.&#x5176;&#x4ED6;&#x63A5;&#x53E3;  </p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x51FD;&#x6570;&#x5F0F;&#x63A5;&#x53E3;</th>
+<th style="text-align:left">&#x53C2;&#x6570;&#x7C7B;&#x578B;</th>
+<th style="text-align:left">&#x8FD4;&#x56DE;&#x7C7B;&#x578B;</th>
+<th style="text-align:left">&#x7528;&#x9014;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">BiFunction<t,u,r></t,u,r></td>
+<td style="text-align:left">T,U</td>
+<td style="text-align:left">R</td>
+<td style="text-align:left">&#x5BF9;&#x7C7B;&#x578B;&#x4E3A;T,U&#x53C2;&#x6570;&#x5E94;&#x7528;&#x64CD;&#x4F5C;&#xFF0C;&#x8FD4;&#x56DE;R&#x7C7B;&#x578B;&#x7684;&#x7ED3;&#x679C;&#x3002;&#x5305;&#x542B;&#x65B9;&#x6CD5;&#x4E3A;R apply(T t,U u);</td>
+</tr>
+<tr>
+<td style="text-align:left">UnaryOperator<t>(Function&#x5B50;&#x63A5;&#x53E3;)</t></td>
+<td style="text-align:left">T</td>
+<td style="text-align:left">T</td>
+<td style="text-align:left">&#x5BF9;&#x7C7B;&#x578B;&#x4E3A;T&#x7684;&#x5BF9;&#x8C61;&#x8FDB;&#x884C;&#x4E00;&#x5143;&#x8FD0;&#x7B97;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;T&#x7C7B;&#x578B;&#x7684;&#x7ED3;&#x679C;&#x3002;&#x5305;&#x542B;&#x65B9;&#x6CD5;&#x4E3A;T apply(T t);</td>
+</tr>
+<tr>
+<td style="text-align:left">BinaryOperator<t>(BiFunction&#x5B50;&#x63A5;&#x53E3;)</t></td>
+<td style="text-align:left">T,T</td>
+<td style="text-align:left">T</td>
+<td style="text-align:left">&#x5BF9;&#x7C7B;&#x578B;&#x4E3A;T&#x7684;&#x5BF9;&#x8C61;&#x8FDB;&#x884C;&#x4E8C;&#x5143;&#x8FD0;&#x7B97;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;T&#x7C7B;&#x578B;&#x7684;&#x7ED3;&#x679C;&#x3002;&#x5305;&#x542B;&#x65B9;&#x6CD5;&#x4E3A;T apply(T t1,T t2);</td>
+</tr>
+<tr>
+<td style="text-align:left">BiConsumer<t,u></t,u></td>
+<td style="text-align:left">T,U</td>
+<td style="text-align:left">void</td>
+<td style="text-align:left">&#x5BF9;&#x7C7B;&#x578B;&#x4E3A;T,U&#x53C2;&#x6570;&#x5E94;&#x7528;&#x64CD;&#x4F5C;&#x3002;&#x5305;&#x542B;&#x65B9;&#x6CD5;&#x4E3A;void accept(T t,U u);</td>
+</tr>
+<tr>
+<td style="text-align:left">ToIntFunction<t>  ToLongFunction<t> ToDoubleFunction<t></t></t></t></td>
+<td style="text-align:left">T</td>
+<td style="text-align:left">int,long,double</td>
+<td style="text-align:left">&#x5206;&#x522B;&#x8BA1;&#x7B97;int&#x3001;long&#x3001;double&#x3001;&#x503C;&#x7684;&#x51FD;&#x6570;</td>
+</tr>
+<tr>
+<td style="text-align:left">IntFunction<r> LongFunction<r> DoubleFunction<r></r></r></r></td>
+<td style="text-align:left">int,long,double</td>
+<td style="text-align:left">R</td>
+<td style="text-align:left">&#x53C2;&#x6570;&#x5206;&#x522B;&#x4E3A;int&#x3001;long&#x3001;double&#x7C7B;&#x578B;&#x7684;&#x51FD;&#x6570;</td>
+</tr>
+</tbody>
+</table>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; zhaojq 2019 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x672C;&#x4E66;&#x53D1;&#x5E03;&#x65F6;&#x95F4;&#xFF1A;
+2020-07-07 10:18:07
+</span></footer> <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"> <script>     window.klipse_settings = {         selector: ".language-klipse, .lang-eval-clojure",         selector_eval_js: ".lang-eval-js",         selector_eval_python_client: ".lang-eval-python",         selector_eval_php: ".lang-eval-php",         selector_eval_scheme: ".lang-eval-scheme",         selector_eval_ruby: ".lang-eval-ruby",         selector_reagent: ".lang-reagent",        selector_google_charts: ".lang-google-chart",        selector_es2017: ".lang-eval-es2017",        selector_jsx: ".lang-eval-jsx",        selector_transpile_jsx: ".lang-transpile-jsx",        selector_render_jsx: ".lang-render-jsx",        selector_react: ".lang-react",        selector_eval_markdown: ".lang-render-markdown",        selector_eval_lambdaway: ".lang-render-lambdaway",        selector_eval_cpp: ".lang-eval-cpp",        selector_eval_html: ".lang-render-html",        selector_sql: ".lang-eval-sql",        selector_brainfuck: "lang-eval-brainfuck",        selector_js: ".lang-transpile-cljs"    }; </script> <script src="https://storage.googleapis.com/app.klipse.tech/plugin/js/klipse_plugin.js"></script>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="java8.html" class="navigation navigation-prev " aria-label="Previous page: java8">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="java8_方法与构造器引用.html" class="navigation navigation-next " aria-label="Next page: 方法与构造器引用">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Lambda","level":"1.2.1.1.1","depth":4,"next":{"title":"方法与构造器引用","level":"1.2.1.1.2","depth":4,"path":"Chapter1/java_version/java8_方法与构造器引用.md","ref":"Chapter1/java_version/java8_方法与构造器引用.md","articles":[]},"previous":{"title":"java8","level":"1.2.1.1","depth":3,"path":"Chapter1/java_version/java8.md","ref":"Chapter1/java_version/java8.md","articles":[{"title":"Lambda","level":"1.2.1.1.1","depth":4,"path":"Chapter1/java_version/java8_lambda.md","ref":"Chapter1/java_version/java8_lambda.md","articles":[]},{"title":"方法与构造器引用","level":"1.2.1.1.2","depth":4,"path":"Chapter1/java_version/java8_方法与构造器引用.md","ref":"Chapter1/java_version/java8_方法与构造器引用.md","articles":[]},{"title":"Stream","level":"1.2.1.1.3","depth":4,"path":"Chapter1/java_version/java8_Stream.md","ref":"Chapter1/java_version/java8_Stream.md","articles":[]},{"title":"并行流与串行流","level":"1.2.1.1.4","depth":4,"path":"Chapter1/java_version/java8_Stream并行流与串行流.md","ref":"Chapter1/java_version/java8_Stream并行流与串行流.md","articles":[]},{"title":"Optional","level":"1.2.1.1.5","depth":4,"path":"Chapter1/java_version/java8_Optional.md","ref":"Chapter1/java_version/java8_Optional.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["anchors","anchor-navigation-ex","auto-scroll-table","advanced-emoji","code","chapter-fold","donate","expandable-chapters-small","favicon","fontsettings","github","github-buttons","klipse","-livereload","-lunr","pageview-count","-page-toc-button","popup","sharing-plus","-sharing","splitter","-search","search-pro","-toggle-chapters","tbfed-pagefooter","todo","hide-element"],"styles":{"website":"./style/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © zhaojq 2019","modify_label":"本书发布时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"github":{"url":"https://github.com/zhao-xiaoer"},"todo":{},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"auto-scroll-table":{},"popup":{},"code":{"copyButtons":true},"donate":{"alipay":"/gitbook/source/images/alipay.jpeg","alipayText":"支付宝打赏","button":"😀","title":"感谢支持","wechat":"/gitbook/source/images/wechat.jpeg","wechatText":"微信打赏"},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"family":"sans","size":2,"theme":"white"},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"","bookmark":""},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"pageview-count":{},"github-buttons":{"buttons":[{"user":"zhao-xiaoer","repo":"gitbook","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"klipse":{"myConfigKey":"it's the default value"},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":true,"all":["weibo","qq","qzone","douban","facebook","google","linkedin","twitter","whatsapp"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{}},"theme":"default","author":"古道长亭","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"古道长亭","language":"zh-hans","links":{"sidebar":{"回到博客":"https://blog.zhaojq.top"}},"gitbook":"3.2.3","description":"welcome to my docs"},"file":{"path":"Chapter1/java_version/java8_lambda.md","mtime":"2020-07-07T02:18:07.843Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-07T02:28:30.781Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-auto-scroll-table/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+
+    </body>
+</html>
+
