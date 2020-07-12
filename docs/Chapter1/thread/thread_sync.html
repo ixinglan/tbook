@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>异常 · 古道长亭</title>
+        <title>线程同步 · 古道长亭</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -95,10 +95,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../thread/" />
+    <link rel="next" href="thread_post.html" />
     
     
-    <link rel="prev" href="../" />
+    <link rel="prev" href="thread.html" />
     
 
     <style>
@@ -183,9 +183,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.2.1" data-path="Exception.html">
+        <li class="chapter " data-level="1.2.1" data-path="../exception/Exception.html">
             
-                <a href="Exception.html">
+                <a href="../exception/Exception.html">
             
                     
                         <b>1.2.1.</b>
@@ -198,9 +198,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2" data-path="../thread/">
+        <li class="chapter " data-level="1.2.2" data-path="./">
             
-                <a href="../thread/">
+                <a href="./">
             
                     
                         <b>1.2.2.</b>
@@ -214,9 +214,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.2.1" data-path="../thread/thread.html">
+        <li class="chapter " data-level="1.2.2.1" data-path="thread.html">
             
-                <a href="../thread/thread.html">
+                <a href="thread.html">
             
                     
                         <b>1.2.2.1.</b>
@@ -229,9 +229,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2.2" data-path="../thread/thread_sync.html">
+        <li class="chapter active" data-level="1.2.2.2" data-path="thread_sync.html">
             
-                <a href="../thread/thread_sync.html">
+                <a href="thread_sync.html">
             
                     
                         <b>1.2.2.2.</b>
@@ -244,9 +244,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2.3" data-path="../thread/thread_post.html">
+        <li class="chapter " data-level="1.2.2.3" data-path="thread_post.html">
             
-                <a href="../thread/thread_post.html">
+                <a href="thread_post.html">
             
                     
                         <b>1.2.2.3.</b>
@@ -1316,7 +1316,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >异常</a>
+        <a href="../.." >线程同步</a>
     </h1>
 </div>
 
@@ -1331,36 +1331,181 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x5F02;&#x5E38;"><b></b>&#x5F02;&#x5E38;</a></li><ul><li><span class="title-icon "></span><a href="#&#x5206;&#x7C7B;"><b></b>&#x5206;&#x7C7B;</a></li><li><span class="title-icon "></span><a href="#exception"><b></b>Exception</a></li></ul></ul></div><a href="#&#x5F02;&#x5E38;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x5F02;&#x5E38;"><a name="&#x5F02;&#x5E38;" class="anchor-navigation-ex-anchor" href="#&#x5F02;&#x5E38;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5F02;&#x5E38;" class="plugin-anchor" href="#&#x5F02;&#x5E38;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5F02;&#x5E38;</h1>
-<p>Java&#x8BED;&#x8A00;&#x4E2D;,&#x7A0B;&#x5E8F;&#x6267;&#x884C;&#x4E2D;&#x53D1;&#x751F;&#x7684;&#x4E0D;&#x6B63;&#x5E38;&#x7684;&#x60C5;&#x51B5;</p>
-<h2 id="&#x5206;&#x7C7B;"><a name="&#x5206;&#x7C7B;" class="anchor-navigation-ex-anchor" href="#&#x5206;&#x7C7B;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5206;&#x7C7B;" class="plugin-anchor" href="#&#x5206;&#x7C7B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5206;&#x7C7B;</h2>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x7EBF;&#x7A0B;&#x540C;&#x6B65;"><b></b>&#x7EBF;&#x7A0B;&#x540C;&#x6B65;</a></li><ul><li><span class="title-icon "></span><a href="#&#x540C;&#x6B65;&#x4EE3;&#x7801;&#x5757;"><b></b>&#x540C;&#x6B65;&#x4EE3;&#x7801;&#x5757;</a></li><li><span class="title-icon "></span><a href="#&#x540C;&#x6B65;&#x65B9;&#x6CD5;"><b></b>&#x540C;&#x6B65;&#x65B9;&#x6CD5;</a></li><li><span class="title-icon "></span><a href="#lock&#x9501;"><b></b>Lock&#x9501;</a></li><li><span class="title-icon "></span><a href="#&#x91CA;&#x653E;&#x9501;&#x64CD;&#x4F5C;"><b></b>&#x91CA;&#x653E;&#x9501;&#x64CD;&#x4F5C;</a></li><li><span class="title-icon "></span><a href="#&#x7EBF;&#x7A0B;&#x6B7B;&#x9501;"><b></b>&#x7EBF;&#x7A0B;&#x6B7B;&#x9501;</a></li></ul></ul></div><a href="#&#x7EBF;&#x7A0B;&#x540C;&#x6B65;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x7EBF;&#x7A0B;&#x540C;&#x6B65;"><a name="&#x7EBF;&#x7A0B;&#x540C;&#x6B65;" class="anchor-navigation-ex-anchor" href="#&#x7EBF;&#x7A0B;&#x540C;&#x6B65;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x7EBF;&#x7A0B;&#x540C;&#x6B65;" class="plugin-anchor" href="#&#x7EBF;&#x7A0B;&#x540C;&#x6B65;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7EBF;&#x7A0B;&#x540C;&#x6B65;</h1>
+<h2 id="&#x540C;&#x6B65;&#x4EE3;&#x7801;&#x5757;"><a name="&#x540C;&#x6B65;&#x4EE3;&#x7801;&#x5757;" class="anchor-navigation-ex-anchor" href="#&#x540C;&#x6B65;&#x4EE3;&#x7801;&#x5757;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x540C;&#x6B65;&#x4EE3;&#x7801;&#x5757;" class="plugin-anchor" href="#&#x540C;&#x6B65;&#x4EE3;&#x7801;&#x5757;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x540C;&#x6B65;&#x4EE3;&#x7801;&#x5757;</h2>
+<pre><code class="lang-java">    <span class="hljs-keyword">synchronized</span>(&#x540C;&#x6B65;&#x76D1;&#x89C6;&#x5668;){
+       <span class="hljs-comment">//&#x9700;&#x8981;&#x88AB;&#x540C;&#x6B65;&#x7684;&#x4EE3;&#x7801;</span>
+    }
+</code></pre>
+<p>&#x8BF4;&#x660E;&#xFF1A;<br>1.&#x64CD;&#x4F5C;&#x5171;&#x4EAB;&#x6570;&#x636E;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x5373;&#x4E3A;&#x9700;&#x8981;&#x88AB;&#x540C;&#x6B65;&#x7684;&#x4EE3;&#x7801;&#x3002;  --&gt;&#x4E0D;&#x80FD;&#x5305;&#x542B;&#x4EE3;&#x7801;&#x591A;&#x4E86;&#xFF0C;&#x4E5F;&#x4E0D;&#x80FD;&#x5305;&#x542B;&#x4EE3;&#x7801;&#x5C11;&#x4E86;&#x3002;<br>2.&#x5171;&#x4EAB;&#x6570;&#x636E;&#xFF1A;&#x591A;&#x4E2A;&#x7EBF;&#x7A0B;&#x5171;&#x540C;&#x64CD;&#x4F5C;&#x7684;&#x53D8;&#x91CF;&#x3002;&#x6BD4;&#x5982;&#xFF1A;ticket&#x5C31;&#x662F;&#x5171;&#x4EAB;&#x6570;&#x636E;&#x3002;<br>3.&#x540C;&#x6B65;&#x76D1;&#x89C6;&#x5668;&#xFF0C;&#x4FD7;&#x79F0;&#xFF1A;&#x9501;&#x3002;&#x4EFB;&#x4F55;&#x4E00;&#x4E2A;&#x7C7B;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x90FD;&#x53EF;&#x4EE5;&#x5145;&#x5F53;&#x9501;&#x3002;<br>4.&#x8981;&#x6C42;&#xFF1A;&#x591A;&#x4E2A;&#x7EBF;&#x7A0B;&#x5FC5;&#x987B;&#x8981;&#x5171;&#x7528;&#x540C;&#x4E00;&#x628A;&#x9501;&#x3002;<br>&#x8865;&#x5145;&#xFF1A;&#x5728;&#x5B9E;&#x73B0;Runnable&#x63A5;&#x53E3;&#x521B;&#x5EFA;&#x591A;&#x7EBF;&#x7A0B;&#x7684;&#x65B9;&#x5F0F;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x8003;&#x8651;&#x4F7F;&#x7528;this&#x5145;&#x5F53;&#x540C;&#x6B65;&#x76D1;&#x89C6;&#x5668;&#x3002;  </p>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SyncTest1</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        Window1 w = <span class="hljs-keyword">new</span> Window1();
+
+        Thread t1 = <span class="hljs-keyword">new</span> Thread(w);
+        Thread t2 = <span class="hljs-keyword">new</span> Thread(w);
+        Thread t3 = <span class="hljs-keyword">new</span> Thread(w);
+
+        t1.setName(<span class="hljs-string">&quot;&#x7A97;&#x53E3;1&quot;</span>);
+        t2.setName(<span class="hljs-string">&quot;&#x7A97;&#x53E3;2&quot;</span>);
+        t3.setName(<span class="hljs-string">&quot;&#x7A97;&#x53E3;3&quot;</span>);
+
+        t1.start();
+        t2.start();
+        t3.start();
+    }
+
+}
+<span class="hljs-comment">//&#x5904;&#x7406;&#x5B9E;&#x73B0;Runnable&#x63A5;&#x53E3;&#x7684;&#x7EAF;&#x79CD;&#x5B89;&#x5168;</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Window1</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Runnable</span></span>{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> ticket = <span class="hljs-number">100</span>;
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">run</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">while</span>(<span class="hljs-keyword">true</span>){
+            <span class="hljs-keyword">synchronized</span> (<span class="hljs-keyword">this</span>){
+                <span class="hljs-keyword">if</span> (ticket &gt; <span class="hljs-number">0</span>) {
+                    <span class="hljs-keyword">try</span> {
+                        Thread.sleep(<span class="hljs-number">100</span>);
+                    } <span class="hljs-keyword">catch</span> (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+
+                    System.out.println(Thread.currentThread().getName() + <span class="hljs-string">&quot;:&#x5356;&#x7968;&#xFF0C;&#x7968;&#x53F7;&#x4E3A;&#xFF1A;&quot;</span> + ticket);
+
+                    ticket--;
+                } <span class="hljs-keyword">else</span> {
+                    <span class="hljs-keyword">break</span>;
+                }
+            }
+        }
+    }
+}
+</code></pre>
+<h2 id="&#x540C;&#x6B65;&#x65B9;&#x6CD5;"><a name="&#x540C;&#x6B65;&#x65B9;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#&#x540C;&#x6B65;&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x540C;&#x6B65;&#x65B9;&#x6CD5;" class="plugin-anchor" href="#&#x540C;&#x6B65;&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x540C;&#x6B65;&#x65B9;&#x6CD5;</h2>
+<p>1.&#x540C;&#x6B65;&#x65B9;&#x6CD5;&#x4ECD;&#x7136;&#x6D89;&#x53CA;&#x5230;&#x540C;&#x6B65;&#x76D1;&#x89C6;&#x5668;&#xFF0C;&#x53EA;&#x662F;&#x4E0D;&#x9700;&#x8981;&#x6211;&#x4EEC;&#x663E;&#x5F0F;&#x7684;&#x58F0;&#x660E;&#x3002;<br>2.&#x975E;&#x9759;&#x6001;&#x7684;&#x540C;&#x6B65;&#x65B9;&#x6CD5;&#xFF0C;&#x540C;&#x6B65;&#x76D1;&#x89C6;&#x5668;&#x662F;&#xFF1A;this<br>3.&#x9759;&#x6001;&#x7684;&#x540C;&#x6B65;&#x65B9;&#x6CD5;&#xFF0C;&#x540C;&#x6B65;&#x76D1;&#x89C6;&#x5668;&#x662F;&#xFF1A;&#x5F53;&#x524D;&#x7C7B;&#x672C;&#x8EAB;  </p>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SyncTest3</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        Window3 w = <span class="hljs-keyword">new</span> Window3();
+
+        Thread t1 = <span class="hljs-keyword">new</span> Thread(w);
+        Thread t2 = <span class="hljs-keyword">new</span> Thread(w);
+        Thread t3 = <span class="hljs-keyword">new</span> Thread(w);
+
+        t1.setName(<span class="hljs-string">&quot;&#x7A97;&#x53E3;1&quot;</span>);
+        t2.setName(<span class="hljs-string">&quot;&#x7A97;&#x53E3;2&quot;</span>);
+        t3.setName(<span class="hljs-string">&quot;&#x7A97;&#x53E3;3&quot;</span>);
+
+        t1.start();
+        t2.start();
+        t3.start();
+    }
+}
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Window3</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Runnable</span> </span>{
+
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> ticket = <span class="hljs-number">100</span>;
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">run</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">while</span> (<span class="hljs-keyword">true</span>) {
+            show();
+        }
+    }
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">synchronized</span> <span class="hljs-keyword">void</span> <span class="hljs-title">show</span><span class="hljs-params">()</span></span>{<span class="hljs-comment">//&#x540C;&#x6B65;&#x76D1;&#x89C6;&#x5668;&#xFF1A;this</span>
+        <span class="hljs-comment">//synchronized (this){</span>
+
+        <span class="hljs-keyword">if</span> (ticket &gt; <span class="hljs-number">0</span>) {
+
+            <span class="hljs-keyword">try</span> {
+                Thread.sleep(<span class="hljs-number">100</span>);
+            } <span class="hljs-keyword">catch</span> (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+            System.out.println(Thread.currentThread().getName() + <span class="hljs-string">&quot;:&#x5356;&#x7968;&#xFF0C;&#x7968;&#x53F7;&#x4E3A;&#xFF1A;&quot;</span> + ticket);
+
+            ticket--;
+        }
+        <span class="hljs-comment">//}</span>
+    }
+}
+</code></pre>
+<h2 id="lock&#x9501;"><a name="lock&#x9501;" class="anchor-navigation-ex-anchor" href="#lock&#x9501;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="lock&#x9501;" class="plugin-anchor" href="#lock&#x9501;"><i class="fa fa-link" aria-hidden="true"></i></a>Lock&#x9501;</h2>
+<p>&#x53C2;&#x8003;juc &#x4E2D;&#x7684;Lock&#x9501;</p>
+<h2 id="&#x91CA;&#x653E;&#x9501;&#x64CD;&#x4F5C;"><a name="&#x91CA;&#x653E;&#x9501;&#x64CD;&#x4F5C;" class="anchor-navigation-ex-anchor" href="#&#x91CA;&#x653E;&#x9501;&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x91CA;&#x653E;&#x9501;&#x64CD;&#x4F5C;" class="plugin-anchor" href="#&#x91CA;&#x653E;&#x9501;&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x91CA;&#x653E;&#x9501;&#x64CD;&#x4F5C;</h2>
 <ul>
-<li>Error<br>java&#x865A;&#x62DF;&#x673A;&#x65E0;&#x6CD5;&#x89E3;&#x51B3;&#x7684;&#x4E25;&#x91CD;&#x95EE;&#x9898;,&#x5982;:&#x7CFB;&#x7EDF;&#x5185;&#x90E8;&#x9519;&#x8BEF;,&#x8D44;&#x6E90;&#x8017;&#x5C3D;&#x7B49;,StackOverFlow&#x548C;OOM(OutOfMemory)</li>
-<li>Exception<br>&#x56E0;&#x7F16;&#x7A0B;&#x9519;&#x8BEF;&#x548C;&#x5916;&#x5728;&#x56E0;&#x7D20;&#x5BFC;&#x81F4;&#x7684;&#x4E00;&#x822C;&#x6027;&#x95EE;&#x9898;,&#x53EF;&#x4EE5;&#x7528;&#x9488;&#x5BF9;&#x6027;&#x7684;&#x4EE3;&#x7801;&#x8FDB;&#x884C;&#x5904;&#x7406;,&#x5982;&#x7A7A;&#x6307;&#x9488;,&#x8BD5;&#x56FE;&#x8BFB;&#x53D6;&#x7684;&#x6587;&#x4EF6;&#x4E0D;&#x5B58;&#x5728;,&#x7F51;&#x7EDC;&#x8FDE;&#x63A5;&#x4E2D;&#x65AD;,&#x6570;&#x7EC4;&#x4E0B;&#x6807;&#x8D8A;&#x754C;&#x7B49;</li>
+<li>&#x5F53;&#x524D; &#x7EBF;&#x7A0B;&#x7684;&#x540C;&#x6B65;&#x65B9;&#x6CD5;&#x3001;&#x540C;&#x6B65;&#x4EE3;&#x7801;&#x5757; &#x6267;&#x884C;&#x7ED3;&#x675F;&#x3002;</li>
+<li>&#x5F53;&#x524D; &#x7EBF;&#x7A0B;&#x5728;&#x540C;&#x6B65;&#x4EE3;&#x7801;&#x5757;&#x3001;&#x540C;&#x6B65;&#x65B9;&#x6CD5;&#x4E2D;&#x9047;&#x5230; break &#x3001; return &#x7EC8;&#x6B62;&#x4E86;&#x8BE5;&#x4EE3;&#x7801;&#x5757;&#x3001;&#x8BE5;&#x65B9;&#x6CD5;&#x7684;&#x7EE7;&#x7EED;&#x6267;&#x884C;&#x3002;</li>
+<li>&#x5F53;&#x524D; &#x7EBF;&#x7A0B;&#x5728;&#x540C;&#x6B65;&#x4EE3;&#x7801;&#x5757;&#x3001;&#x540C;&#x6B65;&#x65B9;&#x6CD5;&#x4E2D;&#x51FA;&#x73B0;&#x4E86;&#x672A;&#x5904;&#x7406;&#x7684; Error &#x6216; Exception &#x5BFC;&#x81F4;&#x5F02;&#x5E38;&#x7ED3;&#x675F;&#x3002;</li>
+<li>&#x5F53;&#x524D; &#x7EBF;&#x7A0B;&#x5728;&#x540C;&#x6B65;&#x4EE3;&#x7801;&#x5757;&#x3001;&#x540C;&#x6B65;&#x65B9;&#x6CD5;&#x4E2D;&#x6267;&#x884C;&#x4E86;&#x7EBF;&#x7A0B;&#x5BF9;&#x8C61;&#x7684; wait() &#x65B9;&#x6CD5;&#xFF0C;&#x5F53;&#x524D;&#x7EBF;&#x7A0B;&#x6682;&#x505C;&#xFF0C;&#x5E76;&#x91CA;&#x653E;&#x9501;&#x3002;</li>
 </ul>
-<h2 id="exception"><a name="exception" class="anchor-navigation-ex-anchor" href="#exception"><i class="fa fa-link" aria-hidden="true"></i></a><a name="exception" class="plugin-anchor" href="#exception"><i class="fa fa-link" aria-hidden="true"></i></a>Exception</h2>
+<h2 id="&#x7EBF;&#x7A0B;&#x6B7B;&#x9501;"><a name="&#x7EBF;&#x7A0B;&#x6B7B;&#x9501;" class="anchor-navigation-ex-anchor" href="#&#x7EBF;&#x7A0B;&#x6B7B;&#x9501;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x7EBF;&#x7A0B;&#x6B7B;&#x9501;" class="plugin-anchor" href="#&#x7EBF;&#x7A0B;&#x6B7B;&#x9501;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7EBF;&#x7A0B;&#x6B7B;&#x9501;</h2>
 <ul>
-<li>&#x7F16;&#x8BD1;&#x65F6;&#x5F02;&#x5E38;(checked)  <blockquote>
-<p>IOException</p>
-<blockquote>
-<p>FileNotFoundException </p>
-</blockquote>
-<p>ClassNotFoundException<br>......</p>
+<li>&#x6B7B;&#x9501;<blockquote>
+<p>&#x4E0D;&#x540C;&#x7684;&#x7EBF;&#x7A0B;&#x5206;&#x522B;&#x5360;&#x7528;&#x5BF9;&#x65B9;&#x9700;&#x8981;&#x7684;&#x540C;&#x6B65;&#x8D44;&#x6E90;&#x4E0D;&#x653E;&#x5F03;&#xFF0C;&#x90FD;&#x5728;&#x7B49;&#x5F85;&#x5BF9;&#x65B9;&#x653E;&#x5F03;&#x81EA;&#x5DF1;&#x9700;&#x8981;&#x7684;&#x540C;&#x6B65;&#x8D44;&#x6E90;&#xFF0C;&#x5C31;&#x5F62;&#x6210;&#x4E86;&#x7EBF;&#x7A0B;&#x7684;&#x6B7B;&#x9501;<br>&#x51FA;&#x73B0;&#x6B7B;&#x9501;&#x540E;&#xFF0C;&#x4E0D;&#x4F1A;&#x51FA;&#x73B0;&#x5F02;&#x5E38;&#xFF0C;&#x4E0D;&#x4F1A;&#x51FA;&#x73B0;&#x63D0;&#x793A;&#xFF0C;&#x53EA;&#x662F;&#x6240;&#x6709;&#x7684;&#x7EBF;&#x7A0B;&#x90FD;&#x5904;&#x4E8E;&#x963B;&#x585E;&#x72B6;&#x6001;&#xFF0C;&#x65E0;&#x6CD5;&#x7EE7;&#x7EED;  </p>
 </blockquote>
 </li>
-<li><p>&#x8FD0;&#x884C;&#x65F6;&#x5F02;&#x5E38;(unchecked)  </p>
-<blockquote>
-<p>NullPointerException<br>ArrayIndexOutOfBoundsException<br>ClassCastException<br>NumberFormatException<br>InputMismatchException<br>ArithmeticException<br>......  </p>
-</blockquote>
-</li>
-<li><p>&#x5904;&#x7406;&#x65B9;&#x6CD5;  </p>
-<blockquote>
-<p>try-catch-finally<br>throws</p>
+<li>&#x89E3;&#x51B3;&#x65B9;&#x6CD5;<blockquote>
+<p>&#x4E13;&#x95E8;&#x7684;&#x7B97;&#x6CD5;&#x3001;&#x539F;&#x5219;<br>&#x5C3D;&#x91CF;&#x51CF;&#x5C11;&#x540C;&#x6B65;&#x8D44;&#x6E90;&#x7684;&#x5B9A;&#x4E49;<br>&#x5C3D;&#x91CF;&#x907F;&#x514D;&#x5D4C;&#x5957;&#x540C;&#x6B65;</p>
 </blockquote>
 </li>
 </ul>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DeadLockTest</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        StringBuffer s1 = <span class="hljs-keyword">new</span> StringBuffer();
+        StringBuffer s2 = <span class="hljs-keyword">new</span> StringBuffer();
+
+        <span class="hljs-keyword">new</span> Thread() {
+            <span class="hljs-meta">@Override</span>
+            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">run</span><span class="hljs-params">()</span> </span>{
+                <span class="hljs-keyword">synchronized</span> (s1) {
+                    s1.append(<span class="hljs-string">&quot;a&quot;</span>);
+                    s2.append(<span class="hljs-string">&quot;1&quot;</span>);
+                    <span class="hljs-keyword">try</span> {
+                        Thread.sleep(<span class="hljs-number">100</span>);
+                    } <span class="hljs-keyword">catch</span> (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    <span class="hljs-keyword">synchronized</span> (s2) {
+                        s1.append(<span class="hljs-string">&quot;b&quot;</span>);
+                        s2.append(<span class="hljs-string">&quot;2&quot;</span>);
+
+                        System.out.println(s1);
+                        System.out.println(s2);
+                    }
+
+
+                }
+
+            }
+        }.start();
+
+
+        <span class="hljs-keyword">new</span> Thread(<span class="hljs-keyword">new</span> Runnable() {
+            <span class="hljs-meta">@Override</span>
+            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">run</span><span class="hljs-params">()</span> </span>{
+                <span class="hljs-keyword">synchronized</span> (s2) {
+                    s1.append(<span class="hljs-string">&quot;c&quot;</span>);
+                    s2.append(<span class="hljs-string">&quot;3&quot;</span>);
+                    <span class="hljs-keyword">try</span> {
+                        Thread.sleep(<span class="hljs-number">100</span>);
+                    } <span class="hljs-keyword">catch</span> (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    <span class="hljs-keyword">synchronized</span> (s1) {
+                        s1.append(<span class="hljs-string">&quot;d&quot;</span>);
+                        s2.append(<span class="hljs-string">&quot;4&quot;</span>);
+
+                        System.out.println(s1);
+                        System.out.println(s2);
+                    }
+                }
+            }
+        }).start();
+    }
+}
+</code></pre>
 <footer class="page-footer"><span class="copyright">Copyright &#xA9; zhaojq 2019 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x672C;&#x4E66;&#x53D1;&#x5E03;&#x65F6;&#x95F4;&#xFF1A;
-2020-07-08 23:54:06
+2020-07-13 01:13:30
 </span></footer> <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"> <script>     window.klipse_settings = {         selector: ".language-klipse, .lang-eval-clojure",         selector_eval_js: ".lang-eval-js",         selector_eval_python_client: ".lang-eval-python",         selector_eval_php: ".lang-eval-php",         selector_eval_scheme: ".lang-eval-scheme",         selector_eval_ruby: ".lang-eval-ruby",         selector_reagent: ".lang-reagent",        selector_google_charts: ".lang-google-chart",        selector_es2017: ".lang-eval-es2017",        selector_jsx: ".lang-eval-jsx",        selector_transpile_jsx: ".lang-transpile-jsx",        selector_render_jsx: ".lang-render-jsx",        selector_react: ".lang-react",        selector_eval_markdown: ".lang-render-markdown",        selector_eval_lambdaway: ".lang-render-lambdaway",        selector_eval_cpp: ".lang-eval-cpp",        selector_eval_html: ".lang-render-html",        selector_sql: ".lang-eval-sql",        selector_brainfuck: "lang-eval-brainfuck",        selector_js: ".lang-transpile-cljs"    }; </script> <script src="https://storage.googleapis.com/app.klipse.tech/plugin/js/klipse_plugin.js"></script>
 <script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
                                 
@@ -1389,12 +1534,12 @@
 
             
                 
-                <a href="../" class="navigation navigation-prev " aria-label="Previous page: JAVA技术">
+                <a href="thread.html" class="navigation navigation-prev " aria-label="Previous page: 线程创建">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../thread/" class="navigation navigation-next " aria-label="Next page: 多线程">
+                <a href="thread_post.html" class="navigation navigation-next " aria-label="Next page: 线程通信">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1405,7 +1550,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"异常","level":"1.2.1","depth":2,"next":{"title":"多线程","level":"1.2.2","depth":2,"path":"Chapter1/thread/README.md","ref":"Chapter1/thread/README.md","articles":[{"title":"线程创建","level":"1.2.2.1","depth":3,"path":"Chapter1/thread/thread.md","ref":"Chapter1/thread/thread.md","articles":[]},{"title":"线程同步","level":"1.2.2.2","depth":3,"path":"Chapter1/thread/thread_sync.md","ref":"Chapter1/thread/thread_sync.md","articles":[]},{"title":"线程通信","level":"1.2.2.3","depth":3,"path":"Chapter1/thread/thread_post.md","ref":"Chapter1/thread/thread_post.md","articles":[]}]},"previous":{"title":"JAVA技术","level":"1.2","depth":1,"path":"Chapter1/README.md","ref":"Chapter1/README.md","articles":[{"title":"异常","level":"1.2.1","depth":2,"path":"Chapter1/exception/Exception.md","ref":"Chapter1/exception/Exception.md","articles":[]},{"title":"多线程","level":"1.2.2","depth":2,"path":"Chapter1/thread/README.md","ref":"Chapter1/thread/README.md","articles":[{"title":"线程创建","level":"1.2.2.1","depth":3,"path":"Chapter1/thread/thread.md","ref":"Chapter1/thread/thread.md","articles":[]},{"title":"线程同步","level":"1.2.2.2","depth":3,"path":"Chapter1/thread/thread_sync.md","ref":"Chapter1/thread/thread_sync.md","articles":[]},{"title":"线程通信","level":"1.2.2.3","depth":3,"path":"Chapter1/thread/thread_post.md","ref":"Chapter1/thread/thread_post.md","articles":[]}]},{"title":"常用类","level":"1.2.3","depth":2,"path":"Chapter1/common_class/README.md","ref":"Chapter1/common_class/README.md","articles":[{"title":"String","level":"1.2.3.1","depth":3,"path":"Chapter1/common_class/String.md","ref":"Chapter1/common_class/String.md","articles":[]},{"title":"System","level":"1.2.3.2","depth":3,"path":"Chapter1/common_class/System.md","ref":"Chapter1/common_class/System.md","articles":[]},{"title":"Math","level":"1.2.3.3","depth":3,"path":"Chapter1/common_class/Math.md","ref":"Chapter1/common_class/Math.md","articles":[]},{"title":"BigInteger","level":"1.2.3.4","depth":3,"path":"Chapter1/common_class/BigInteger.md","ref":"Chapter1/common_class/BigInteger.md","articles":[]},{"title":"BigDecimal","level":"1.2.3.5","depth":3,"path":"Chapter1/common_class/BigDecimal.md","ref":"Chapter1/common_class/BigDecimal.md","articles":[]}]},{"title":"枚举和注解","level":"1.2.4","depth":2,"path":"Chapter1/enum_annotation/README.md","ref":"Chapter1/enum_annotation/README.md","articles":[{"title":"枚举","level":"1.2.4.1","depth":3,"path":"Chapter1/enum_annotation/enum.md","ref":"Chapter1/enum_annotation/enum.md","articles":[]},{"title":"注解","level":"1.2.4.2","depth":3,"path":"Chapter1/enum_annotation/annotation.md","ref":"Chapter1/enum_annotation/annotation.md","articles":[]}]},{"title":"集合","level":"1.2.5","depth":2,"path":"Chapter1/collection/README.md","ref":"Chapter1/collection/README.md","articles":[{"title":"Collection","level":"1.2.5.1","depth":3,"path":"Chapter1/collection/collection.md","ref":"Chapter1/collection/collection.md","articles":[{"title":"List","level":"1.2.5.1.1","depth":4,"path":"Chapter1/collection/collection_List.md","ref":"Chapter1/collection/collection_List.md","articles":[]},{"title":"Set","level":"1.2.5.1.2","depth":4,"path":"Chapter1/collection/collection_Set.md","ref":"Chapter1/collection/collection_Set.md","articles":[]}]},{"title":"Map","level":"1.2.5.2","depth":3,"path":"Chapter1/collection/map.md","ref":"Chapter1/collection/map.md","articles":[]}]},{"title":"Java各版本特性","level":"1.2.6","depth":2,"path":"Chapter1/java_version/VERSION.md","ref":"Chapter1/java_version/VERSION.md","articles":[{"title":"java8","level":"1.2.6.1","depth":3,"path":"Chapter1/java_version/java8.md","ref":"Chapter1/java_version/java8.md","articles":[{"title":"Lambda","level":"1.2.6.1.1","depth":4,"path":"Chapter1/java_version/java8_lambda.md","ref":"Chapter1/java_version/java8_lambda.md","articles":[]},{"title":"方法与构造器引用","level":"1.2.6.1.2","depth":4,"path":"Chapter1/java_version/java8_方法与构造器引用.md","ref":"Chapter1/java_version/java8_方法与构造器引用.md","articles":[]},{"title":"Stream","level":"1.2.6.1.3","depth":4,"path":"Chapter1/java_version/java8_Stream.md","ref":"Chapter1/java_version/java8_Stream.md","articles":[]},{"title":"并行流与串行流","level":"1.2.6.1.4","depth":4,"path":"Chapter1/java_version/java8_Stream并行流与串行流.md","ref":"Chapter1/java_version/java8_Stream并行流与串行流.md","articles":[]},{"title":"Optional","level":"1.2.6.1.5","depth":4,"path":"Chapter1/java_version/java8_Optional.md","ref":"Chapter1/java_version/java8_Optional.md","articles":[]},{"title":"接口默认方法和静态方法","level":"1.2.6.1.6","depth":4,"path":"Chapter1/java_version/java8_接口默认和静态方法.md","ref":"Chapter1/java_version/java8_接口默认和静态方法.md","articles":[]},{"title":"新时间日期API","level":"1.2.6.1.7","depth":4,"path":"Chapter1/java_version/java8_新时间日期.md","ref":"Chapter1/java_version/java8_新时间日期.md","articles":[]},{"title":"重复注解与类型注解","level":"1.2.6.1.8","depth":4,"path":"Chapter1/java_version/java8_重复注解与类型注解.md","ref":"Chapter1/java_version/java8_重复注解与类型注解.md","articles":[]}]},{"title":"java9","level":"1.2.6.2","depth":3,"path":"Chapter1/java_version/java9.md","ref":"Chapter1/java_version/java9.md","articles":[]},{"title":"java10","level":"1.2.6.3","depth":3,"path":"Chapter1/java_version/java10.md","ref":"Chapter1/java_version/java10.md","articles":[]},{"title":"java11","level":"1.2.6.4","depth":3,"path":"Chapter1/java_version/java11.md","ref":"Chapter1/java_version/java11.md","articles":[]},{"title":"java12","level":"1.2.6.5","depth":3,"path":"Chapter1/java_version/java12.md","ref":"Chapter1/java_version/java12.md","articles":[]},{"title":"java13","level":"1.2.6.6","depth":3,"path":"Chapter1/java_version/java13.md","ref":"Chapter1/java_version/java13.md","articles":[]},{"title":"java814","level":"1.2.6.7","depth":3,"path":"Chapter1/java_version/java14.md","ref":"Chapter1/java_version/java14.md","articles":[]}]},{"title":"NIO","level":"1.2.7","depth":2,"path":"Chapter1/nio/NIO.md","ref":"Chapter1/nio/NIO.md","articles":[{"title":"Buffer(缓冲区)","level":"1.2.7.1","depth":3,"path":"Chapter1/nio/缓冲区.md","ref":"Chapter1/nio/缓冲区.md","articles":[]},{"title":"Channel(通道)","level":"1.2.7.2","depth":3,"path":"Chapter1/nio/通道.md","ref":"Chapter1/nio/通道.md","articles":[{"title":"网络通信","level":"1.2.7.2.1","depth":4,"path":"Chapter1/nio/网络通信.md","ref":"Chapter1/nio/网络通信.md","articles":[]},{"title":"NIO.2","level":"1.2.7.2.2","depth":4,"path":"Chapter1/nio/NIO2.md","ref":"Chapter1/nio/NIO2.md","articles":[]}]}]},{"title":"JUC","level":"1.2.8","depth":2,"path":"Chapter1/juc/JUC.md","ref":"Chapter1/juc/JUC.md","articles":[{"title":"volatile","level":"1.2.8.1","depth":3,"path":"Chapter1/juc/1_volatile.md","ref":"Chapter1/juc/1_volatile.md","articles":[]},{"title":"原子变量与CAS","level":"1.2.8.2","depth":3,"path":"Chapter1/juc/2_原子变量与CAS算法.md","ref":"Chapter1/juc/2_原子变量与CAS算法.md","articles":[]},{"title":"ConcurrentHashMap","level":"1.2.8.3","depth":3,"path":"Chapter1/juc/3_ConcurrentHashMap.md","ref":"Chapter1/juc/3_ConcurrentHashMap.md","articles":[]},{"title":"CountDownLatch","level":"1.2.8.4","depth":3,"path":"Chapter1/juc/4_CountDownLatch.md","ref":"Chapter1/juc/4_CountDownLatch.md","articles":[]},{"title":"Callable","level":"1.2.8.5","depth":3,"path":"Chapter1/juc/5_Callable.md","ref":"Chapter1/juc/5_Callable.md","articles":[]},{"title":"Lock","level":"1.2.8.6","depth":3,"path":"Chapter1/juc/6_Lock.md","ref":"Chapter1/juc/6_Lock.md","articles":[]},{"title":"生产者消费者案例","level":"1.2.8.7","depth":3,"path":"Chapter1/juc/7_生产者消费者案例-虚假唤醒.md","ref":"Chapter1/juc/7_生产者消费者案例-虚假唤醒.md","articles":[]},{"title":"Condition","level":"1.2.8.8","depth":3,"path":"Chapter1/juc/8_Condition.md","ref":"Chapter1/juc//8_Condition.md","articles":[]},{"title":"ReadWriteLock","level":"1.2.8.9","depth":3,"path":"Chapter1/juc/9_ReadWriteLock.md","ref":"Chapter1/juc/9_ReadWriteLock.md","articles":[]},{"title":"线程8锁","level":"1.2.8.10","depth":3,"path":"Chapter1/juc/10_线程8锁.md","ref":"Chapter1/juc/10_线程8锁.md","articles":[]},{"title":"线程池","level":"1.2.8.11","depth":3,"path":"Chapter1/juc/11_线程池.md","ref":"Chapter1/juc/11_线程池.md","articles":[]},{"title":"Fork/Join","level":"1.2.8.12","depth":3,"path":"Chapter1/juc/12_ForkJoinPool.md","ref":"Chapter1/juc/12_ForkJoinPool.md","articles":[]}]}]},"dir":"ltr"},"config":{"plugins":["anchors","anchor-navigation-ex","auto-scroll-table","advanced-emoji","code","chapter-fold","donate","expandable-chapters-small","favicon","fontsettings","github","github-buttons","klipse","-livereload","-lunr","pageview-count","-page-toc-button","popup","sharing-plus","-sharing","splitter","-search","search-pro","-toggle-chapters","tbfed-pagefooter","todo","hide-element"],"styles":{"website":"./style/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © zhaojq 2019","modify_label":"本书发布时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"github":{"url":"https://github.com/zhao-xiaoer"},"todo":{},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"auto-scroll-table":{},"popup":{},"code":{"copyButtons":true},"donate":{"alipay":"/gitbook/source/images/alipay.jpeg","alipayText":"支付宝打赏","button":"😀","title":"感谢支持","wechat":"/gitbook/source/images/wechat.jpeg","wechatText":"微信打赏"},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"family":"sans","size":2,"theme":"white"},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"","bookmark":""},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"pageview-count":{},"github-buttons":{"buttons":[{"user":"zhao-xiaoer","repo":"gitbook","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"klipse":{"myConfigKey":"it's the default value"},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":true,"all":["weibo","qq","qzone","douban","facebook","google","linkedin","twitter","whatsapp"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{}},"theme":"default","author":"古道长亭","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"古道长亭","language":"zh-hans","links":{"sidebar":{"回到博客":"https://blog.zhaojq.top"}},"gitbook":"3.2.3","description":"welcome to my docs"},"file":{"path":"Chapter1/exception/Exception.md","mtime":"2020-07-08T15:54:06.048Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-12T17:32:58.393Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"线程同步","level":"1.2.2.2","depth":3,"next":{"title":"线程通信","level":"1.2.2.3","depth":3,"path":"Chapter1/thread/thread_post.md","ref":"Chapter1/thread/thread_post.md","articles":[]},"previous":{"title":"线程创建","level":"1.2.2.1","depth":3,"path":"Chapter1/thread/thread.md","ref":"Chapter1/thread/thread.md","articles":[]},"dir":"ltr"},"config":{"plugins":["anchors","anchor-navigation-ex","auto-scroll-table","advanced-emoji","code","chapter-fold","donate","expandable-chapters-small","favicon","fontsettings","github","github-buttons","klipse","-livereload","-lunr","pageview-count","-page-toc-button","popup","sharing-plus","-sharing","splitter","-search","search-pro","-toggle-chapters","tbfed-pagefooter","todo","hide-element"],"styles":{"website":"./style/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © zhaojq 2019","modify_label":"本书发布时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"github":{"url":"https://github.com/zhao-xiaoer"},"todo":{},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"auto-scroll-table":{},"popup":{},"code":{"copyButtons":true},"donate":{"alipay":"/gitbook/source/images/alipay.jpeg","alipayText":"支付宝打赏","button":"😀","title":"感谢支持","wechat":"/gitbook/source/images/wechat.jpeg","wechatText":"微信打赏"},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"family":"sans","size":2,"theme":"white"},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"","bookmark":""},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"pageview-count":{},"github-buttons":{"buttons":[{"user":"zhao-xiaoer","repo":"gitbook","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"klipse":{"myConfigKey":"it's the default value"},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":true,"all":["weibo","qq","qzone","douban","facebook","google","linkedin","twitter","whatsapp"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{}},"theme":"default","author":"古道长亭","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"古道长亭","language":"zh-hans","links":{"sidebar":{"回到博客":"https://blog.zhaojq.top"}},"gitbook":"3.2.3","description":"welcome to my docs"},"file":{"path":"Chapter1/thread/thread_sync.md","mtime":"2020-07-12T17:13:30.802Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-12T17:32:58.393Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
