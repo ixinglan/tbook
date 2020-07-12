@@ -54,6 +54,13 @@
     > 负载因子越小，就越容易触发扩容，数据密度也越小，意味着发生碰撞的几率越小，数组中的链表也就越短，查询和插入时比较的次数也越小，性能会更高。但是会浪费一定的内容空间。而且经常扩容也会影响性能，建议初始化预设大一点的空间。  
     > 按照其他语言的参考及研究经验，会考虑将负载因子设置为 0.7~0.75 ，此时平均检索长度接近于常数  
 
+**深入分析hashMap**
+<object data="https://blog.zhaojq.top/gitbook/Chapter1/collection/static/hashMap.pdf" type="application/pdf" width="800px" height="700px">
+    <embed src="https://blog.zhaojq.top/gitbook/Chapter1/collection/static/hashMap.pdf">
+        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="https://blog.zhaojq.top/gitbook/Chapter1/collection/static/hashMap.pdf">Download PDF</a>.</p>
+    </embed>
+</object>
+
 ## LinkedHashMap extends HashMap
 * LinkedHashMap 是 HashMap 的 子类  
 * 在 HashMap 存储结构的基础上，使用了一对双向链表来记录添加元素的顺序  
