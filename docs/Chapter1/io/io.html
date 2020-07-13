@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>String · 古道长亭</title>
+        <title>IO流 · 古道长亭</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -95,10 +95,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="System.html" />
+    <link rel="next" href="../java_version/VERSION.html" />
     
     
-    <link rel="prev" href="./" />
+    <link rel="prev" href="file.html" />
     
 
     <style>
@@ -264,9 +264,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.3" data-path="./">
+        <li class="chapter " data-level="1.2.3" data-path="../common_class/">
             
-                <a href="./">
+                <a href="../common_class/">
             
                     
                         <b>1.2.3.</b>
@@ -280,9 +280,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.2.3.1" data-path="String.html">
+        <li class="chapter " data-level="1.2.3.1" data-path="../common_class/String.html">
             
-                <a href="String.html">
+                <a href="../common_class/String.html">
             
                     
                         <b>1.2.3.1.</b>
@@ -295,9 +295,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.3.2" data-path="System.html">
+        <li class="chapter " data-level="1.2.3.2" data-path="../common_class/System.html">
             
-                <a href="System.html">
+                <a href="../common_class/System.html">
             
                     
                         <b>1.2.3.2.</b>
@@ -310,9 +310,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.3.3" data-path="Math.html">
+        <li class="chapter " data-level="1.2.3.3" data-path="../common_class/Math.html">
             
-                <a href="Math.html">
+                <a href="../common_class/Math.html">
             
                     
                         <b>1.2.3.3.</b>
@@ -325,9 +325,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.3.4" data-path="BigInteger.html">
+        <li class="chapter " data-level="1.2.3.4" data-path="../common_class/BigInteger.html">
             
-                <a href="BigInteger.html">
+                <a href="../common_class/BigInteger.html">
             
                     
                         <b>1.2.3.4.</b>
@@ -340,9 +340,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.3.5" data-path="BigDecimal.html">
+        <li class="chapter " data-level="1.2.3.5" data-path="../common_class/BigDecimal.html">
             
-                <a href="BigDecimal.html">
+                <a href="../common_class/BigDecimal.html">
             
                     
                         <b>1.2.3.5.</b>
@@ -529,9 +529,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.7.1" data-path="../io/file.html">
+        <li class="chapter " data-level="1.2.7.1" data-path="file.html">
             
-                <a href="../io/file.html">
+                <a href="file.html">
             
                     
                         <b>1.2.7.1.</b>
@@ -544,9 +544,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.7.2" data-path="../io/io.html">
+        <li class="chapter active" data-level="1.2.7.2" data-path="io.html">
             
-                <a href="../io/io.html">
+                <a href="io.html">
             
                     
                         <b>1.2.7.2.</b>
@@ -1382,7 +1382,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >String</a>
+        <a href="../.." >IO流</a>
     </h1>
 </div>
 
@@ -1397,215 +1397,9 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#string"><b></b>String</a></li><ul><li><span class="title-icon "></span><a href="#&#x5B9E;&#x4F8B;&#x5316;&#x65B9;&#x5F0F;"><b></b>&#x5B9E;&#x4F8B;&#x5316;&#x65B9;&#x5F0F;</a></li><li><span class="title-icon "></span><a href="#&#x5E38;&#x7528;&#x65B9;&#x6CD5;"><b></b>&#x5E38;&#x7528;&#x65B9;&#x6CD5;</a></li></ul><li><span class="title-icon "></span><a href="#stringbuffer"><b></b>StringBuffer</a></li><ul><li><span class="title-icon "></span><a href="#&#x5E38;&#x7528;&#x65B9;&#x6CD5;_1"><b></b>&#x5E38;&#x7528;&#x65B9;&#x6CD5;</a></li></ul><li><span class="title-icon "></span><a href="#stringbuilder"><b></b>StringBuilder</a></li><ul><li><span class="title-icon "></span><a href="#&#x5E38;&#x7528;&#x65B9;&#x6CD5;_2"><b></b>&#x5E38;&#x7528;&#x65B9;&#x6CD5;</a></li></ul><li><span class="title-icon "></span><a href="#&#x5E38;&#x89C1;&#x7B97;&#x6CD5;"><b></b>&#x5E38;&#x89C1;&#x7B97;&#x6CD5;</a></li></ul></div><a href="#string" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="string"><a name="string" class="anchor-navigation-ex-anchor" href="#string"><i class="fa fa-link" aria-hidden="true"></i></a><a name="string" class="plugin-anchor" href="#string"><i class="fa fa-link" aria-hidden="true"></i></a>String</h1>
-<p>&#x5B57;&#x7B26;&#x4E32;,&#x662F;&#x4E00;&#x4E2A;final&#x7C7B;,&#x4E0D;&#x53EF;&#x53D8;&#x5B57;&#x7B26;&#x5E8F;&#x5217;,&#x5B57;&#x7B26;&#x5185;&#x5BB9;&#x5B58;&#x50A8;&#x5728;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x6570;&#x7EC4;value[]&#x4E2D;</p>
-<ul>
-<li>&#x4E0D;&#x53EF;&#x53D8;&#x6027;</li>
-<li>char[]&#x5B58;&#x50A8;</li>
-</ul>
-<h2 id="&#x5B9E;&#x4F8B;&#x5316;&#x65B9;&#x5F0F;"><a name="&#x5B9E;&#x4F8B;&#x5316;&#x65B9;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#&#x5B9E;&#x4F8B;&#x5316;&#x65B9;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5B9E;&#x4F8B;&#x5316;&#x65B9;&#x5F0F;" class="plugin-anchor" href="#&#x5B9E;&#x4F8B;&#x5316;&#x65B9;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B9E;&#x4F8B;&#x5316;&#x65B9;&#x5F0F;</h2>
-<ul>
-<li>&#x5B57;&#x9762;&#x91CF;</li>
-<li>&#x6784;&#x9020;&#x5668;new</li>
-</ul>
-<h2 id="&#x5E38;&#x7528;&#x65B9;&#x6CD5;"><a name="&#x5E38;&#x7528;&#x65B9;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#&#x5E38;&#x7528;&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5E38;&#x7528;&#x65B9;&#x6CD5;" class="plugin-anchor" href="#&#x5E38;&#x7528;&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5E38;&#x7528;&#x65B9;&#x6CD5;</h2>
-<p>...&#x7565;&#x8FC7;</p>
-<h1 id="stringbuffer"><a name="stringbuffer" class="anchor-navigation-ex-anchor" href="#stringbuffer"><i class="fa fa-link" aria-hidden="true"></i></a><a name="stringbuffer" class="plugin-anchor" href="#stringbuffer"><i class="fa fa-link" aria-hidden="true"></i></a>StringBuffer</h1>
-<ul>
-<li>&#x53EF;&#x53D8;</li>
-<li>&#x7EBF;&#x7A0B;&#x5B89;&#x5168;,&#x6548;&#x7387;&#x4F4E;</li>
-<li>char[]&#x5B58;&#x50A8;</li>
-<li>&#x9ED8;&#x8BA4;capacity&#x4E3A;16,&#x4E0D;&#x591F;&#x65F6;&#x4F1A;&#x7EE7;&#x7EED;&#x6269;&#x5BB9;,&#x9ED8;&#x8BA4;&#x6269;&#x5BB9;&#x4E3A;capacity&lt;&lt;1 + 2,&#x5E76;&#x5C06;&#x539F;&#x6709;&#x5143;&#x7D20;&#x590D;&#x5236;&#x5230;&#x65B0;&#x6570;&#x7EC4;&#x4E2D;</li>
-</ul>
-<h2 id="&#x5E38;&#x7528;&#x65B9;&#x6CD5;_1"><a name="&#x5E38;&#x7528;&#x65B9;&#x6CD5;_1" class="anchor-navigation-ex-anchor" href="#&#x5E38;&#x7528;&#x65B9;&#x6CD5;_1"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5E38;&#x7528;&#x65B9;&#x6CD5;" class="plugin-anchor" href="#&#x5E38;&#x7528;&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5E38;&#x7528;&#x65B9;&#x6CD5;</h2>
-<p>...&#x7565;&#x8FC7;</p>
-<h1 id="stringbuilder"><a name="stringbuilder" class="anchor-navigation-ex-anchor" href="#stringbuilder"><i class="fa fa-link" aria-hidden="true"></i></a><a name="stringbuilder" class="plugin-anchor" href="#stringbuilder"><i class="fa fa-link" aria-hidden="true"></i></a>StringBuilder</h1>
-<ul>
-<li>&#x53EF;&#x53D8;</li>
-<li>&#x7EBF;&#x7A0B;&#x4E0D;&#x5B89;&#x5168;,&#x6548;&#x7387;&#x9AD8;</li>
-<li>jdk5.0&#x65B0;&#x589E;</li>
-<li>char[]&#x5B58;&#x50A8;</li>
-</ul>
-<h2 id="&#x5E38;&#x7528;&#x65B9;&#x6CD5;_2"><a name="&#x5E38;&#x7528;&#x65B9;&#x6CD5;_2" class="anchor-navigation-ex-anchor" href="#&#x5E38;&#x7528;&#x65B9;&#x6CD5;_2"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5E38;&#x7528;&#x65B9;&#x6CD5;" class="plugin-anchor" href="#&#x5E38;&#x7528;&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5E38;&#x7528;&#x65B9;&#x6CD5;</h2>
-<p>...&#x7565;&#x8FC7;</p>
-<blockquote>
-<p>&#x5EFA;&#x8BAE;:
-&#x4F7F;&#x7528; StringBuffer(int capacity) &#x6216; StringBuilder(int capacity)</p>
-</blockquote>
-<h1 id="&#x5E38;&#x89C1;&#x7B97;&#x6CD5;"><a name="&#x5E38;&#x89C1;&#x7B97;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#&#x5E38;&#x89C1;&#x7B97;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5E38;&#x89C1;&#x7B97;&#x6CD5;" class="plugin-anchor" href="#&#x5E38;&#x89C1;&#x7B97;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5E38;&#x89C1;&#x7B97;&#x6CD5;</h1>
-<ul>
-<li>&#x5C06;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x8FDB;&#x884C;&#x53CD;&#x8F6C;&#x3002;&#x5C06;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x6307;&#x5B9A;&#x90E8;&#x5206;&#x8FDB;&#x884C;&#x53CD;&#x8F6C;&#x3002;&#x6BD4;&#x5982;&#x201C;abcdefg&#x201D;&#x53CD;&#x8F6C;&#x4E3A;&#x201D;abfedcg&#x201D;</li>
-</ul>
-<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">StringDemo</span> </span>{
-    <span class="hljs-comment">//&#x65B9;&#x5F0F;&#x4E00;&#xFF1A;&#x8F6C;&#x6362;&#x4E3A;char[]</span>
-    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">reverse</span><span class="hljs-params">(String str, <span class="hljs-keyword">int</span> startIndex, <span class="hljs-keyword">int</span> endIndex)</span> </span>{
-
-        <span class="hljs-keyword">if</span> (str != <span class="hljs-keyword">null</span>) {
-            <span class="hljs-keyword">char</span>[] arr = str.toCharArray();
-            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> x = startIndex, y = endIndex; x &lt; y; x++, y--) {
-                <span class="hljs-keyword">char</span> temp = arr[x];
-                arr[x] = arr[y];
-                arr[y] = temp;
-            }
-
-            <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> String(arr);
-        }
-        <span class="hljs-keyword">return</span> <span class="hljs-keyword">null</span>;
-    }
-
-    <span class="hljs-comment">//&#x65B9;&#x5F0F;&#x4E8C;&#xFF1A;&#x4F7F;&#x7528;String&#x7684;&#x62FC;&#x63A5;</span>
-    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">reverse1</span><span class="hljs-params">(String str, <span class="hljs-keyword">int</span> startIndex, <span class="hljs-keyword">int</span> endIndex)</span> </span>{
-        <span class="hljs-keyword">if</span> (str != <span class="hljs-keyword">null</span>) {
-            <span class="hljs-comment">//&#x7B2C;1&#x90E8;&#x5206;</span>
-            String reverseStr = str.substring(<span class="hljs-number">0</span>, startIndex);
-            <span class="hljs-comment">//&#x7B2C;2&#x90E8;&#x5206;</span>
-            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = endIndex; i &gt;= startIndex; i--) {
-                reverseStr += str.charAt(i);
-            }
-            <span class="hljs-comment">//&#x7B2C;3&#x90E8;&#x5206;</span>
-            reverseStr += str.substring(endIndex + <span class="hljs-number">1</span>);
-
-            <span class="hljs-keyword">return</span> reverseStr;
-
-        }
-        <span class="hljs-keyword">return</span> <span class="hljs-keyword">null</span>;
-    }
-
-    <span class="hljs-comment">//&#x65B9;&#x5F0F;&#x4E09;&#xFF1A;&#x4F7F;&#x7528;StringBuffer/StringBuilder&#x66FF;&#x6362;String</span>
-    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">reverse2</span><span class="hljs-params">(String str, <span class="hljs-keyword">int</span> startIndex, <span class="hljs-keyword">int</span> endIndex)</span> </span>{
-        <span class="hljs-keyword">if</span> (str != <span class="hljs-keyword">null</span>) {
-            StringBuilder builder = <span class="hljs-keyword">new</span> StringBuilder(str.length());
-
-            <span class="hljs-comment">//&#x7B2C;1&#x90E8;&#x5206;</span>
-            builder.append(str.substring(<span class="hljs-number">0</span>, startIndex));
-            <span class="hljs-comment">//&#x7B2C;2&#x90E8;&#x5206;</span>
-            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = endIndex; i &gt;= startIndex; i--) {
-
-                builder.append(str.charAt(i));
-            }
-            <span class="hljs-comment">//&#x7B2C;3&#x90E8;&#x5206;</span>
-            builder.append(str.substring(endIndex + <span class="hljs-number">1</span>));
-
-            <span class="hljs-keyword">return</span> builder.toString();
-        }
-        <span class="hljs-keyword">return</span> <span class="hljs-keyword">null</span>;
-
-    }
-
-    <span class="hljs-meta">@Test</span>
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">testReverse</span><span class="hljs-params">()</span> </span>{
-        String str = <span class="hljs-string">&quot;abcdefg&quot;</span>;
-        String reverse = reverse1(str, <span class="hljs-number">2</span>, <span class="hljs-number">5</span>);
-        System.out.println(reverse);
-    }
-
-}
-</code></pre>
-<ul>
-<li>&#x83B7;&#x53D6;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x5728;&#x53E6;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x51FA;&#x73B0;&#x7684;&#x6B21;&#x6570;&#x3002;&#x6BD4;&#x5982;&#xFF1A;&#x83B7;&#x53D6;&#x201C;ab&#x201D;&#x5728; &#x201C;abkkcadkabkebfkaabkskab&#x201D; &#x4E2D;&#x51FA;&#x73B0;&#x7684;&#x6B21;&#x6570;</li>
-</ul>
-<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">StringDemo</span> </span>{
-    <span class="hljs-comment">/**
-     * &#x83B7;&#x53D6;subStr&#x5728;mainStr&#x4E2D;&#x51FA;&#x73B0;&#x7684;&#x6B21;&#x6570;
-     */</span>
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getCount</span><span class="hljs-params">(String mainStr, String subStr)</span> </span>{
-        <span class="hljs-keyword">int</span> mainLength = mainStr.length();
-        <span class="hljs-keyword">int</span> subLength = subStr.length();
-        <span class="hljs-keyword">int</span> count = <span class="hljs-number">0</span>;
-        <span class="hljs-keyword">int</span> index = <span class="hljs-number">0</span>;
-        <span class="hljs-keyword">if</span> (mainLength &gt;= subLength) {
-            <span class="hljs-comment">//&#x65B9;&#x5F0F;&#x4E00;&#xFF1A;</span>
-<span class="hljs-comment">//            while((index = mainStr.indexOf(subStr)) != -1){</span>
-<span class="hljs-comment">//                count++;</span>
-<span class="hljs-comment">//                mainStr = mainStr.substring(index + subStr.length());</span>
-<span class="hljs-comment">//            }</span>
-            <span class="hljs-comment">//&#x65B9;&#x5F0F;&#x4E8C;&#xFF1A;&#x5BF9;&#x65B9;&#x5F0F;&#x4E00;&#x7684;&#x6539;&#x8FDB;</span>
-            <span class="hljs-keyword">while</span> ((index = mainStr.indexOf(subStr, index)) != -<span class="hljs-number">1</span>) {
-                count++;
-                index += subLength;
-            }
-
-            <span class="hljs-keyword">return</span> count;
-        } <span class="hljs-keyword">else</span> {
-            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
-        }
-    }
-
-    <span class="hljs-meta">@Test</span>
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">testGetCount</span><span class="hljs-params">()</span> </span>{
-        String mainStr = <span class="hljs-string">&quot;abkkcadkabkebfkaabkskab&quot;</span>;
-        String subStr = <span class="hljs-string">&quot;ab&quot;</span>;
-        <span class="hljs-keyword">int</span> count = getCount(mainStr, subStr);
-        System.out.println(count);
-    }
-}
-</code></pre>
-<ul>
-<li>&#x83B7;&#x53D6;&#x4E24;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x6700;&#x5927;&#x76F8;&#x540C;&#x5B50;&#x4E32;&#x3002;&#x6BD4;&#x5982;&#xFF1A;str1 = &quot;abcwerthelloyuiodefabcdef&quot;;str2 = &quot;cvhellobnm&quot; &#x63D0;&#x793A;&#xFF1A;&#x5C06;&#x77ED;&#x7684;&#x90A3;&#x4E2A;&#x4E32;&#x8FDB;&#x884C;&#x957F;&#x5EA6;&#x4F9D;&#x6B21;&#x9012;&#x51CF;&#x7684;&#x5B50;&#x4E32;&#x4E0E;&#x8F83;&#x957F;&#x7684;&#x4E32;&#x6BD4;&#x8F83;&#x3002;</li>
-</ul>
-<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">StringDemo2</span> </span>{
-    <span class="hljs-comment">//&#x524D;&#x63D0;&#xFF1A;&#x4E24;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x6700;&#x5927;&#x76F8;&#x540C;&#x5B50;&#x4E32;</span>
-    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getMaxSameString</span><span class="hljs-params">(String str1, String str2)</span> </span>{
-        <span class="hljs-keyword">if</span> (str1 != <span class="hljs-keyword">null</span> &amp;&amp; str2 != <span class="hljs-keyword">null</span>) {
-            String maxStr = (str1.length() &gt;= str2.length()) ? str1 : str2;
-            String minStr = (str1.length() &lt; str2.length()) ? str1 : str2;
-            <span class="hljs-keyword">int</span> length = minStr.length();
-
-            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; length; i++) {
-                <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> x = <span class="hljs-number">0</span>, y = length - i; y &lt;= length; x++, y++) {
-                    String subStr = minStr.substring(x, y);
-                    <span class="hljs-keyword">if</span> (maxStr.contains(subStr)) {
-                        <span class="hljs-keyword">return</span> subStr;
-                    }
-
-                }
-            }
-
-        }
-        <span class="hljs-keyword">return</span> <span class="hljs-keyword">null</span>;
-    }
-
-    <span class="hljs-comment">// &#x5982;&#x679C;&#x5B58;&#x5728;&#x591A;&#x4E2A;&#x957F;&#x5EA6;&#x76F8;&#x540C;&#x7684;&#x6700;&#x5927;&#x76F8;&#x540C;&#x5B50;&#x4E32;</span>
-    <span class="hljs-comment">// &#x6B64;&#x65F6;&#x5148;&#x8FD4;&#x56DE;String[]&#xFF0C;&#x540E;&#x9762;&#x53EF;&#x4EE5;&#x7528;&#x96C6;&#x5408;&#x4E2D;&#x7684;ArrayList&#x66FF;&#x6362;&#xFF0C;&#x8F83;&#x65B9;&#x4FBF;</span>
-    <span class="hljs-keyword">public</span> String[] getMaxSameString1(String str1, String str2) {
-        <span class="hljs-keyword">if</span> (str1 != <span class="hljs-keyword">null</span> &amp;&amp; str2 != <span class="hljs-keyword">null</span>) {
-            StringBuffer sBuffer = <span class="hljs-keyword">new</span> StringBuffer();
-            String maxString = (str1.length() &gt; str2.length()) ? str1 : str2;
-            String minString = (str1.length() &gt; str2.length()) ? str2 : str1;
-
-            <span class="hljs-keyword">int</span> len = minString.length();
-            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; len; i++) {
-                <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> x = <span class="hljs-number">0</span>, y = len - i; y &lt;= len; x++, y++) {
-                    String subString = minString.substring(x, y);
-                    <span class="hljs-keyword">if</span> (maxString.contains(subString)) {
-                        sBuffer.append(subString + <span class="hljs-string">&quot;,&quot;</span>);
-                    }
-                }
-<span class="hljs-comment">//                System.out.println(sBuffer);</span>
-                <span class="hljs-keyword">if</span> (sBuffer.length() != <span class="hljs-number">0</span>) {
-                    <span class="hljs-keyword">break</span>;
-                }
-            }
-            String[] split = sBuffer.toString().replaceAll(<span class="hljs-string">&quot;,$&quot;</span>, <span class="hljs-string">&quot;&quot;</span>).split(<span class="hljs-string">&quot;\\,&quot;</span>);
-            <span class="hljs-keyword">return</span> split;
-        }
-
-        <span class="hljs-keyword">return</span> <span class="hljs-keyword">null</span>;
-    }
-
-    <span class="hljs-meta">@Test</span>
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">testGetMaxSameString</span><span class="hljs-params">()</span> </span>{
-        String str1 = <span class="hljs-string">&quot;abcwerthello1yuiodefabcdef&quot;</span>;
-        String str2 = <span class="hljs-string">&quot;cvhello1bnmabcdef&quot;</span>;
-        String[] maxSameStrings = getMaxSameString1(str1, str2);
-        System.out.println(Arrays.toString(maxSameStrings));
-
-    }
-
-}
-</code></pre>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#io&#x6D41;"><b></b>IO&#x6D41;</a></li></ul></div><a href="#io&#x6D41;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="io&#x6D41;"><a name="io&#x6D41;" class="anchor-navigation-ex-anchor" href="#io&#x6D41;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="io&#x6D41;" class="plugin-anchor" href="#io&#x6D41;"><i class="fa fa-link" aria-hidden="true"></i></a>IO&#x6D41;</h1>
 <footer class="page-footer"><span class="copyright">Copyright &#xA9; zhaojq 2019 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x672C;&#x4E66;&#x53D1;&#x5E03;&#x65F6;&#x95F4;&#xFF1A;
-2020-07-09 09:31:55
+2020-07-13 13:42:12
 </span></footer> <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"> <script>     window.klipse_settings = {         selector: ".language-klipse, .lang-eval-clojure",         selector_eval_js: ".lang-eval-js",         selector_eval_python_client: ".lang-eval-python",         selector_eval_php: ".lang-eval-php",         selector_eval_scheme: ".lang-eval-scheme",         selector_eval_ruby: ".lang-eval-ruby",         selector_reagent: ".lang-reagent",        selector_google_charts: ".lang-google-chart",        selector_es2017: ".lang-eval-es2017",        selector_jsx: ".lang-eval-jsx",        selector_transpile_jsx: ".lang-transpile-jsx",        selector_render_jsx: ".lang-render-jsx",        selector_react: ".lang-react",        selector_eval_markdown: ".lang-render-markdown",        selector_eval_lambdaway: ".lang-render-lambdaway",        selector_eval_cpp: ".lang-eval-cpp",        selector_eval_html: ".lang-render-html",        selector_sql: ".lang-eval-sql",        selector_brainfuck: "lang-eval-brainfuck",        selector_js: ".lang-transpile-cljs"    }; </script> <script src="https://storage.googleapis.com/app.klipse.tech/plugin/js/klipse_plugin.js"></script>
 <script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
                                 
@@ -1634,12 +1428,12 @@
 
             
                 
-                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 常用类">
+                <a href="file.html" class="navigation navigation-prev " aria-label="Previous page: File">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="System.html" class="navigation navigation-next " aria-label="Next page: System">
+                <a href="../java_version/VERSION.html" class="navigation navigation-next " aria-label="Next page: Java各版本特性">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1650,7 +1444,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"String","level":"1.2.3.1","depth":3,"next":{"title":"System","level":"1.2.3.2","depth":3,"path":"Chapter1/common_class/System.md","ref":"Chapter1/common_class/System.md","articles":[]},"previous":{"title":"常用类","level":"1.2.3","depth":2,"path":"Chapter1/common_class/README.md","ref":"Chapter1/common_class/README.md","articles":[{"title":"String","level":"1.2.3.1","depth":3,"path":"Chapter1/common_class/String.md","ref":"Chapter1/common_class/String.md","articles":[]},{"title":"System","level":"1.2.3.2","depth":3,"path":"Chapter1/common_class/System.md","ref":"Chapter1/common_class/System.md","articles":[]},{"title":"Math","level":"1.2.3.3","depth":3,"path":"Chapter1/common_class/Math.md","ref":"Chapter1/common_class/Math.md","articles":[]},{"title":"BigInteger","level":"1.2.3.4","depth":3,"path":"Chapter1/common_class/BigInteger.md","ref":"Chapter1/common_class/BigInteger.md","articles":[]},{"title":"BigDecimal","level":"1.2.3.5","depth":3,"path":"Chapter1/common_class/BigDecimal.md","ref":"Chapter1/common_class/BigDecimal.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["anchors","anchor-navigation-ex","auto-scroll-table","advanced-emoji","code","chapter-fold","donate","expandable-chapters-small","favicon","fontsettings","github","github-buttons","klipse","-livereload","-lunr","pageview-count","-page-toc-button","popup","sharing-plus","-sharing","splitter","-search","search-pro","-toggle-chapters","tbfed-pagefooter","todo","hide-element"],"styles":{"website":"./style/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © zhaojq 2019","modify_label":"本书发布时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"github":{"url":"https://github.com/zhao-xiaoer"},"todo":{},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"auto-scroll-table":{},"popup":{},"code":{"copyButtons":true},"donate":{"alipay":"/gitbook/source/images/alipay.jpeg","alipayText":"支付宝打赏","button":"😀","title":"感谢支持","wechat":"/gitbook/source/images/wechat.jpeg","wechatText":"微信打赏"},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"family":"sans","size":2,"theme":"white"},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"","bookmark":""},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"pageview-count":{},"github-buttons":{"buttons":[{"user":"zhao-xiaoer","repo":"gitbook","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"klipse":{"myConfigKey":"it's the default value"},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":true,"all":["weibo","qq","qzone","douban","facebook","google","linkedin","twitter","whatsapp"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{}},"theme":"default","author":"古道长亭","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"古道长亭","language":"zh-hans","links":{"sidebar":{"回到博客":"https://blog.zhaojq.top"}},"gitbook":"3.2.3","description":"welcome to my docs"},"file":{"path":"Chapter1/common_class/String.md","mtime":"2020-07-09T01:31:55.987Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-13T06:14:30.575Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"IO流","level":"1.2.7.2","depth":3,"next":{"title":"Java各版本特性","level":"1.2.8","depth":2,"path":"Chapter1/java_version/VERSION.md","ref":"Chapter1/java_version/VERSION.md","articles":[{"title":"java8","level":"1.2.8.1","depth":3,"path":"Chapter1/java_version/java8.md","ref":"Chapter1/java_version/java8.md","articles":[{"title":"Lambda","level":"1.2.8.1.1","depth":4,"path":"Chapter1/java_version/java8_lambda.md","ref":"Chapter1/java_version/java8_lambda.md","articles":[]},{"title":"方法与构造器引用","level":"1.2.8.1.2","depth":4,"path":"Chapter1/java_version/java8_方法与构造器引用.md","ref":"Chapter1/java_version/java8_方法与构造器引用.md","articles":[]},{"title":"Stream","level":"1.2.8.1.3","depth":4,"path":"Chapter1/java_version/java8_Stream.md","ref":"Chapter1/java_version/java8_Stream.md","articles":[]},{"title":"并行流与串行流","level":"1.2.8.1.4","depth":4,"path":"Chapter1/java_version/java8_Stream并行流与串行流.md","ref":"Chapter1/java_version/java8_Stream并行流与串行流.md","articles":[]},{"title":"Optional","level":"1.2.8.1.5","depth":4,"path":"Chapter1/java_version/java8_Optional.md","ref":"Chapter1/java_version/java8_Optional.md","articles":[]},{"title":"接口默认方法和静态方法","level":"1.2.8.1.6","depth":4,"path":"Chapter1/java_version/java8_接口默认和静态方法.md","ref":"Chapter1/java_version/java8_接口默认和静态方法.md","articles":[]},{"title":"新时间日期API","level":"1.2.8.1.7","depth":4,"path":"Chapter1/java_version/java8_新时间日期.md","ref":"Chapter1/java_version/java8_新时间日期.md","articles":[]},{"title":"重复注解与类型注解","level":"1.2.8.1.8","depth":4,"path":"Chapter1/java_version/java8_重复注解与类型注解.md","ref":"Chapter1/java_version/java8_重复注解与类型注解.md","articles":[]}]},{"title":"java9","level":"1.2.8.2","depth":3,"path":"Chapter1/java_version/java9.md","ref":"Chapter1/java_version/java9.md","articles":[]},{"title":"java10","level":"1.2.8.3","depth":3,"path":"Chapter1/java_version/java10.md","ref":"Chapter1/java_version/java10.md","articles":[]},{"title":"java11","level":"1.2.8.4","depth":3,"path":"Chapter1/java_version/java11.md","ref":"Chapter1/java_version/java11.md","articles":[]},{"title":"java12","level":"1.2.8.5","depth":3,"path":"Chapter1/java_version/java12.md","ref":"Chapter1/java_version/java12.md","articles":[]},{"title":"java13","level":"1.2.8.6","depth":3,"path":"Chapter1/java_version/java13.md","ref":"Chapter1/java_version/java13.md","articles":[]},{"title":"java814","level":"1.2.8.7","depth":3,"path":"Chapter1/java_version/java14.md","ref":"Chapter1/java_version/java14.md","articles":[]}]},"previous":{"title":"File","level":"1.2.7.1","depth":3,"path":"Chapter1/io/file.md","ref":"Chapter1/io/file.md","articles":[]},"dir":"ltr"},"config":{"plugins":["anchors","anchor-navigation-ex","auto-scroll-table","advanced-emoji","code","chapter-fold","donate","expandable-chapters-small","favicon","fontsettings","github","github-buttons","klipse","-livereload","-lunr","pageview-count","-page-toc-button","popup","sharing-plus","-sharing","splitter","-search","search-pro","-toggle-chapters","tbfed-pagefooter","todo","hide-element"],"styles":{"website":"./style/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © zhaojq 2019","modify_label":"本书发布时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"github":{"url":"https://github.com/zhao-xiaoer"},"todo":{},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"auto-scroll-table":{},"popup":{},"code":{"copyButtons":true},"donate":{"alipay":"/gitbook/source/images/alipay.jpeg","alipayText":"支付宝打赏","button":"😀","title":"感谢支持","wechat":"/gitbook/source/images/wechat.jpeg","wechatText":"微信打赏"},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"family":"sans","size":2,"theme":"white"},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"","bookmark":""},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"pageview-count":{},"github-buttons":{"buttons":[{"user":"zhao-xiaoer","repo":"gitbook","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"klipse":{"myConfigKey":"it's the default value"},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":true,"all":["weibo","qq","qzone","douban","facebook","google","linkedin","twitter","whatsapp"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{}},"theme":"default","author":"古道长亭","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"古道长亭","language":"zh-hans","links":{"sidebar":{"回到博客":"https://blog.zhaojq.top"}},"gitbook":"3.2.3","description":"welcome to my docs"},"file":{"path":"Chapter1/io/io.md","mtime":"2020-07-13T05:42:12.968Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-13T06:14:30.575Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
