@@ -21,6 +21,7 @@
             * [List](Chapter1/collection/collection_List.md)
             * [Set](Chapter1/collection/collection_Set.md)
         * [Map](Chapter1/collection/map.md)
+    * [泛型](Chapter1/genericity/README.md)
     * [Java各版本特性](Chapter1/java_version/VERSION.md)
         * [java8](Chapter1/java_version/java8.md)
             * [Lambda](Chapter1/java_version/java8_lambda.md)
