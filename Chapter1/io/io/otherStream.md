@@ -61,7 +61,7 @@
     > 提供了一系列重载的`print()`和`println()`方法，用于多种数据类型的输出  
     > PrintStream和PrintWriter的输出不会抛出IOException异常  
     > PrintStream和PrintWriter有自动flush功能  
-    > PrintStream 打印的所有字符都使用平台的默认字符编码转换为字节。在需要写入字符而不是写入字节的情况下，应该使用 PrintWriter 类。 
+    > PrintStream 打印的所有字符都使用平台的默认字符编码转换为字节。在需要写入字符而不是写入字节的情况下，应该使用 PrintWriter 类。   
     > `System.out`返回的是PrintStream的实例  
 
 ```java

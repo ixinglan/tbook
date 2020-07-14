@@ -21,3 +21,28 @@
     > `public OutputStreamWriter(OutputStream out)`  
     > `public OutputSreamWriter(OutputStream out,String charsetName)`  
 
+```java
+    @Test
+    public void test2() throws Exception {
+        //1.造文件、造流
+        File file1 = new File("src/io/io/static/hello1.txt");
+        File file2 = new File("src/io/io/static/hello4.txt");
+
+        FileInputStream fis = new FileInputStream(file1);
+        FileOutputStream fos = new FileOutputStream(file2);
+
+        InputStreamReader isr = new InputStreamReader(fis, "utf-8");
+        OutputStreamWriter osw = new OutputStreamWriter(fos, "gbk");
+
+        //2.读写过程
+        char[] cbuf = new char[20];
+        int len;
+        while ((len = isr.read(cbuf)) != -1) {
+            osw.write(cbuf, 0, len);
+        }
+
+        //3.关闭资源
+        isr.close();
+        osw.close();
+    }
+```

@@ -1,10 +1,11 @@
 # 缓冲流
 * 为了 提高数据读写的速度 Java API 提供了带缓冲功能的流类，在使用这些流类时，会创建一个内部 缓冲区数组，缺省使用 8192 个 字节 8Kb) 的缓冲区
 * 缓冲 流要“套接”在相应的节点流之上，根据 数据操作单位可以把缓冲流分为：
-    > BufferedInputStream 和 BufferedOutputStream
+    > BufferedInputStream 和 BufferedOutputStream  
     > BufferedReader 和 BufferedWriter
 * 当读取数据时，数据按块读入缓冲区，其后的读操作则直接访问缓冲区
-* 当使用BufferedInputStream读取字节文件时，BufferedInputStream会一次性从文件中读取8192个(8Kb)，存在缓冲区中，直到缓冲区装满了，才重新从文件中读取下一个8192个字节数组。 * 向流中写入字节时，不会直接写到文件，先写到缓冲区中直到缓冲区写满，BufferedOutputStream才会把缓冲区中的数据一次性写到文件里。使用方法flush()可以强制将缓冲区的内容全部写入输出流
+* 当使用BufferedInputStream读取字节文件时，BufferedInputStream会一次性从文件中读取8192个(8Kb)，存在缓冲区中，直到缓冲区装满了，才重新从文件中读取下一个8192个字节数组。 
+* 向流中写入字节时，不会直接写到文件，先写到缓冲区中直到缓冲区写满，BufferedOutputStream才会把缓冲区中的数据一次性写到文件里。使用方法flush()可以强制将缓冲区的内容全部写入输出流
 * 关闭流的顺序和打开流的顺序相反。只要关闭最外层流即可，关闭最外层流也会相应关闭内层节点流
 * `flush()`方法的使用：手动将buffer中内容写入文件
 * 如果是带缓冲区的流对象的`close()`方法，不但会关闭流，还会在关闭流之前刷新缓冲区，关闭后不能再写出

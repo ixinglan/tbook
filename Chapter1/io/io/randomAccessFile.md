@@ -9,8 +9,8 @@
 
 ## RandomAccessFie
 * 构造器
-    > `public RandomAccessFile(File file, String mode)` 
-    > `public RandomAccessFile(String name, String mode) `
+    > `public RandomAccessFile(File file, String mode)`   
+    > `public RandomAccessFile(String name, String mode)`  
 * 创建 RandomAccessFile 类实例需要指定一个 mode 参数，该参数指定 RandomAccessFile 的访问模式：
     > r: 以只读方式打开  
     > rw：打开以便读取和写入  
