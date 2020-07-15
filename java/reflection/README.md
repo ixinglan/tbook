@@ -58,7 +58,7 @@
   实例：`Class clazz = “www.atguigu.com”.getClass()`;
 * 前提：已知一个类的全类名，且该类在类路径下，可通过Class类的静态方法forName()获取，可能抛出ClassNotFoundException  
   实例：`Class clazz = Class.forName(“java.lang.String”)`;
-* 其他方式(不做要求)  
+* 其他方式
     > `ClassLoader cl = this.getClass().getClassLoader();`
     > `Class clazz4 = cl.loadClass(“类的全类名”);`
     ```java
@@ -74,7 +74,7 @@
 
         //方式三：调用Class的静态方法：forName(String classPath)
         Class clazz3 = Class.forName("reflection.ref_01.Person");
-//        clazz3 = Class.forName("java.lang.String");
+        //clazz3 = Class.forName("java.lang.String");
         System.out.println(clazz3);
 
         System.out.println(clazz1 == clazz2);
@@ -128,13 +128,13 @@ public void test3() throws ClassNotFoundException {
 
 * 加载：将class文件字节码内容加载到内存中，并将这些静态数据转换成方法区的运行时数据结构，然后生成一个代表这个类的java.lang.Class对象，作为方法区中类数据的访问入口（即引用地址）。所有需要访问和使用类数据只能通过这个Class对象。这个加载的过程需要类加载器参与。 
 * 链接：将Java类的二进制代码合并到JVM的运行状态之中的过程。
-    > 验证：确保加载的类信息符合JVM规范，例如：以cafe开头，没有安全方面的问题
-    > 准备：正式为类变量（static）分配内存并设置类变量默认初始值的阶段，这些内存都将在方法区中进行分配。 
-    > 解析：虚拟机常量池内的符号引用（常量名）替换为直接引用（地址）的过程。 
+    > 1.验证：确保加载的类信息符合JVM规范，例如：以cafe开头，没有安全方面的问题  
+    > 2.准备：正式为类变量（static）分配内存并设置类变量默认初始值的阶段，这些内存都将在方法区中进行分配。   
+    > 3.解析：虚拟机常量池内的符号引用（常量名）替换为直接引用（地址）的过程。   
 * 初始化：
-    > 执行类构造器<clinit>()方法的过程。类构造器<clinit>()方法是由编译期自动收集类中所有类变量的赋值动作和静态代码块中的语句合并产生的。（类构造器是构造类信息的，不是构造该类对象的构造器）
-    > 当初始化一个类的时候，如果发现其父类还没有进行初始化，则需要先触发其父类的初始化。 
-    > 虚拟机会保证一个类的<clinit>()方法在多线程环境中被正确加锁和同步。
+    > 1.执行类构造器<clinit>()方法的过程。类构造器<clinit>()方法是由编译期自动收集类中所有类变量的赋值动作和静态代码块中的语句合并产生的。（类构造器是构造类信息的，不是构造该类对象的构造器）  
+    > 2.当初始化一个类的时候，如果发现其父类还没有进行初始化，则需要先触发其父类的初始化。   
+    > 3.虚拟机会保证一个类的<clinit>()方法在多线程环境中被正确加锁和同步。  
 
 ### 了解ClassLoader
 加载器类型:  
@@ -198,10 +198,457 @@ public class ClassLoaderTest {
     > 类必须有一个无参数的构造器  
     > 类的构造器的访问权限需要足够  
 * 没有无参构造器时
-    > 通过Class类的getDeclaredConstructor(Class … parameterTypes)取得本类的指定形参类型的构造器  
-    > 向构造器的形参中传递一个对象数组进去，里面包含了构造器中所需的各个参数  
-    > 通过Constructor实例化对象  
+    > 1 通过Class类的getDeclaredConstructor(Class … parameterTypes)取得本类的指定形参类型的构造器  
+    > 2 向构造器的形参中传递一个对象数组进去，里面包含了构造器中所需的各个参数  
+    > 3 通过Constructor实例化对象  
 
 ## 获取运行时类的完整结构
-Field、Method、Constructor、Superclass、Interface、Annotation
+Field、Method、Constructor、Superclass、Interface、Annotation  
+先造一个完整的测试对象  
+```java
+//Person
+@MyAnnotation(value = "hi")
+public class Person extends Creature<String> implements Comparable<String>, MyInterface {
+    private String name;
+    int age;
+    public int id;
 
+    public Person() {
+    }
+
+    @MyAnnotation(value = "abc")
+    private Person(String name) {
+        this.name = name;
+    }
+
+    Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    @MyAnnotation
+    private String show(String nation) {
+        System.out.println("我的国籍是：" + nation);
+        return nation;
+    }
+
+    public String display(String interests, int age) throws NullPointerException, ClassCastException {
+        return interests + age;
+    }
+
+    @Override
+    public void info() {
+        System.out.println("我是一个人");
+    }
+
+    @Override
+    public int compareTo(String o) {
+        return 0;
+    }
+
+    private static void showDesc() {
+        System.out.println("我是一个可爱的人");
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", id=" + id +
+                '}';
+    }
+}
+
+//接口
+public interface MyInterface {
+    void info();
+}
+//注解
+@Target({TYPE, FIELD, METHOD, PARAMETER, CONSTRUCTOR, LOCAL_VARIABLE})
+@Retention(RetentionPolicy.RUNTIME)
+public @interface MyAnnotation {
+    String value() default "hello";
+
+}
+//父类
+public class Creature<T> implements Serializable {
+    private char gender;
+    public double weight;
+
+    Creature() {
+    }
+
+    private void breath() {
+        System.out.println("爱是一道光");
+    }
+
+    public void eat() {
+        System.out.println("吃点东西吧");
+    }
+
+}
+```
+
+### 获取运行时类的属性
+```java
+/**
+ * 获取当前运行时类的属性结构
+ */
+public class FieldTest {
+    @Test
+    public void test1() {
+        Class clazz = Person.class;
+        //获取属性结构
+        //getFields():获取当前运行时类及其父类中声明为public访问权限的属性
+        Field[] fields = clazz.getFields();
+        for (Field f : fields) {
+            System.out.println(f);
+        }
+        System.out.println();
+
+        //getDeclaredFields():获取当前运行时类中声明的所有属性。（不包含父类中声明的属性）
+        Field[] declaredFields = clazz.getDeclaredFields();
+        for (Field f : declaredFields) {
+            System.out.println(f);
+        }
+    }
+
+    //权限修饰符  数据类型 变量名
+    @Test
+    public void test2() {
+        Class clazz = Person.class;
+        Field[] declaredFields = clazz.getDeclaredFields();
+        for (Field f : declaredFields) {
+            //1.权限修饰符
+            int modifier = f.getModifiers();
+            System.out.print(Modifier.toString(modifier) + "\t");
+
+            //2.数据类型
+            Class type = f.getType();
+            System.out.print(type.getName() + "\t");
+
+            //3.变量名
+            String fName = f.getName();
+            System.out.print(fName);
+
+            System.out.println();
+        }
+    }
+}
+```
+
+### 获取运行时类的方法结构
+```java
+/**
+ * 获取运行时类的方法结构
+ */
+public class MethodTest {
+
+    @Test
+    public void test1() {
+        Class clazz = Person.class;
+
+        //getMethods():获取当前运行时类及其所有父类中声明为public权限的方法
+        /*Method[] methods = clazz.getMethods();
+        for (Method m : methods) {
+            System.out.println(m);
+        }*/
+        System.out.println();
+        //getDeclaredMethods():获取当前运行时类中声明的所有方法。（不包含父类中声明的方法）
+        Method[] declaredMethods = clazz.getDeclaredMethods();
+        for (Method m : declaredMethods) {
+            System.out.println(m);
+        }
+    }
+
+    /*
+    @Xxxx
+    权限修饰符  返回值类型  方法名(参数类型1 形参名1,...) throws XxxException{}
+     */
+    @Test
+    public void test2() {
+        Class clazz = Person.class;
+        Method[] declaredMethods = clazz.getDeclaredMethods();
+        for (Method m : declaredMethods) {
+            //1.获取方法声明的注解
+            Annotation[] annos = m.getAnnotations();
+            for (Annotation a : annos) {
+                System.out.println(a);
+            }
+
+            //2.权限修饰符
+            System.out.print(Modifier.toString(m.getModifiers()) + "\t");
+
+            //3.返回值类型
+            System.out.print(m.getReturnType().getName() + "\t");
+
+            //4.方法名
+            System.out.print(m.getName());
+            System.out.print("(");
+            //5.形参列表
+            Class[] parameterTypes = m.getParameterTypes();
+            if (!(parameterTypes == null && parameterTypes.length == 0)) {
+                for (int i = 0; i < parameterTypes.length; i++) {
+
+                    if (i == parameterTypes.length - 1) {
+                        System.out.print(parameterTypes[i].getName() + " args_" + i);
+                        break;
+                    }
+
+                    System.out.print(parameterTypes[i].getName() + " args_" + i + ",");
+                }
+            }
+            System.out.print(")");
+
+            //6.抛出的异常
+            Class[] exceptionTypes = m.getExceptionTypes();
+            if (exceptionTypes.length > 0) {
+                System.out.print("throws ");
+                for (int i = 0; i < exceptionTypes.length; i++) {
+                    if (i == exceptionTypes.length - 1) {
+                        System.out.print(exceptionTypes[i].getName());
+                        break;
+                    }
+
+                    System.out.print(exceptionTypes[i].getName() + ",");
+                }
+            }
+            System.out.println();
+        }
+
+
+    }
+}
+```
+
+### 获取构造器,父类,实现的接口,所在包,注解
+```java
+public class OtherTest {
+    /*
+    获取构造器结构
+     */
+    @Test
+    public void test1() throws NoSuchMethodException {
+        Class clazz = Person.class;
+        //getConstructors():获取当前运行时类中声明为public的构造器
+        Constructor[] constructors = clazz.getConstructors();
+        for (Constructor c : constructors) {
+            System.out.println(c);
+        }
+
+        System.out.println();
+        //getDeclaredConstructors():获取当前运行时类中声明的所有的构造器
+        Constructor[] declaredConstructors = clazz.getDeclaredConstructors();
+        for (Constructor c : declaredConstructors) {
+            System.out.println(c);
+        }
+    }
+
+    /*
+    获取运行时类的父类
+     */
+    @Test
+    public void test2() {
+        Class clazz = Person.class;
+
+        Class superclass = clazz.getSuperclass();
+        System.out.println(superclass);
+    }
+
+    /*
+    获取运行时类的带泛型的父类
+     */
+    @Test
+    public void test3() {
+        Class clazz = Person.class;
+
+        Type genericSuperclass = clazz.getGenericSuperclass();
+        System.out.println(genericSuperclass);
+    }
+
+    /*
+    获取运行时类的带泛型的父类的泛型
+    代码：逻辑性代码  vs 功能性代码
+     */
+    @Test
+    public void test4() {
+        Class clazz = Person.class;
+
+        Type genericSuperclass = clazz.getGenericSuperclass();
+        ParameterizedType paramType = (ParameterizedType) genericSuperclass;
+        //获取泛型类型
+        Type[] actualTypeArguments = paramType.getActualTypeArguments();
+//        System.out.println(actualTypeArguments[0].getTypeName());
+        System.out.println(((Class) actualTypeArguments[0]).getName());
+    }
+
+    /*
+    获取运行时类实现的接口
+     */
+    @Test
+    public void test5() {
+        Class clazz = Person.class;
+
+        Class[] interfaces = clazz.getInterfaces();
+        for (Class c : interfaces) {
+            System.out.println(c);
+        }
+
+        System.out.println();
+        //获取运行时类的父类实现的接口
+        Class[] interfaces1 = clazz.getSuperclass().getInterfaces();
+        for (Class c : interfaces1) {
+            System.out.println(c);
+        }
+
+    }
+
+    /*
+       获取运行时类所在的包
+     */
+    @Test
+    public void test6() {
+        Class clazz = Person.class;
+
+        Package pack = clazz.getPackage();
+        System.out.println(pack);
+    }
+
+    /*
+        获取运行时类声明的注解
+     */
+    @Test
+    public void test7() {
+        Class clazz = Person.class;
+
+        Annotation[] annotations = clazz.getAnnotations();
+        for (Annotation annos : annotations) {
+            System.out.println(annos.getClass());
+        }
+    }
+}
+```
+
+### 获取指定结构
+```java
+/**
+ * 调用运行时类中指定的结构：属性、方法、构造器
+ */
+public class ReflectionTest {
+    /*
+        不需要掌握
+     */
+    @Test
+    public void testField() throws Exception {
+        Class clazz = Person.class;
+
+        //创建运行时类的对象
+        Person p = (Person) clazz.newInstance();//1.9以后 clazz.getDeclaredConstructor().newInstance();
+
+
+        //获取指定的属性：要求运行时类中属性声明为public
+        //通常不采用此方法
+        Field id = clazz.getField("id");
+
+        /*
+        设置当前属性的值
+
+        set():参数1：指明设置哪个对象的属性   参数2：将此属性值设置为多少
+         */
+
+        id.set(p, 1001);
+
+        /*
+        获取当前属性的值
+        get():参数1：获取哪个对象的当前属性值
+         */
+        int pId = (int) id.get(p);
+        System.out.println(pId);
+
+
+    }
+
+    /*
+    如何操作运行时类中的指定的属性 -- 需要掌握
+     */
+    @Test
+    public void testField1() throws Exception {
+        Class clazz = Person.class;
+
+        //创建运行时类的对象
+        Person p = (Person) clazz.newInstance();
+
+        //1. getDeclaredField(String fieldName):获取运行时类中指定变量名的属性
+        Field name = clazz.getDeclaredField("name");
+
+        //2.保证当前属性是可访问的
+        name.setAccessible(true);
+        //3.获取、设置指定对象的此属性值
+        name.set(p, "Tom");
+
+        System.out.println(name.get(p));
+    }
+
+    /*
+    如何操作运行时类中的指定的方法 -- 需要掌握
+     */
+    @Test
+    public void testMethod() throws Exception {
+        Class clazz = Person.class;
+        //创建运行时类的对象
+        Person p = (Person) clazz.newInstance();
+
+        /*
+        1.获取指定的某个方法
+        getDeclaredMethod():参数1 ：指明获取的方法的名称  参数2：指明获取的方法的形参列表
+         */
+        Method show = clazz.getDeclaredMethod("show", String.class);
+        //2.保证当前方法是可访问的
+        show.setAccessible(true);
+
+        /*
+        3. 调用方法的invoke():参数1：方法的调用者  参数2：给方法形参赋值的实参
+        invoke()的返回值即为对应类中调用的方法的返回值。
+         */
+        Object returnValue = show.invoke(p, "CHN"); //String nation = p.show("CHN");
+        System.out.println(returnValue);
+
+        System.out.println("*************如何调用静态方法*****************");
+
+        // private static void showDesc()
+
+        Method showDesc = clazz.getDeclaredMethod("showDesc");
+        showDesc.setAccessible(true);
+        //如果调用的运行时类中的方法没有返回值，则此invoke()返回null
+//        Object returnVal = showDesc.invoke(null);
+        Object returnVal = showDesc.invoke(Person.class);
+        System.out.println(returnVal);//null
+
+    }
+
+    /*
+    如何调用运行时类中的指定的构造器
+     */
+    @Test
+    public void testConstructor() throws Exception {
+        Class clazz = Person.class;
+
+        //private Person(String name)
+        /*
+        1.获取指定的构造器
+        getDeclaredConstructor():参数：指明构造器的参数列表
+         */
+
+        Constructor constructor = clazz.getDeclaredConstructor(String.class);
+
+        //2.保证此构造器是可访问的
+        constructor.setAccessible(true);
+
+        //3.调用此构造器创建运行时类的对象
+        Person per = (Person) constructor.newInstance("Tom");
+        System.out.println(per);
+
+    }
+}
+```
