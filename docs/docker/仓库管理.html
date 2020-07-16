@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>DOCKER · 古道长亭</title>
+        <title>仓库管理 · 古道长亭</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -95,10 +95,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="CentOS8安装docker.html" />
+    <link rel="next" href="Dockerfile.html" />
     
     
-    <link rel="prev" href="../linux/" />
+    <link rel="prev" href="容器连接.html" />
     
 
     <style>
@@ -1481,7 +1481,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.13" data-path="./">
+        <li class="chapter " data-level="1.13" data-path="./">
             
                 <a href="./">
             
@@ -1587,7 +1587,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.13.7" data-path="仓库管理.html">
+        <li class="chapter active" data-level="1.13.7" data-path="仓库管理.html">
             
                 <a href="仓库管理.html">
             
@@ -1682,7 +1682,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >DOCKER</a>
+        <a href=".." >仓库管理</a>
     </h1>
 </div>
 
@@ -1697,57 +1697,43 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#docker"><b></b>DOCKER</a></li><ul><li><span class="title-icon "></span><a href="#&#x7B80;&#x4ECB;"><b></b>&#x7B80;&#x4ECB;</a></li><li><span class="title-icon "></span><a href="#&#x4F18;&#x70B9;"><b></b>&#x4F18;&#x70B9;</a></li><li><span class="title-icon "></span><a href="#&#x7EC4;&#x6210;"><b></b>&#x7EC4;&#x6210;</a></li></ul></ul></div><a href="#docker" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="docker"><a name="docker" class="anchor-navigation-ex-anchor" href="#docker"><i class="fa fa-link" aria-hidden="true"></i></a><a name="docker" class="plugin-anchor" href="#docker"><i class="fa fa-link" aria-hidden="true"></i></a>DOCKER</h1>
-<h2 id="&#x7B80;&#x4ECB;"><a name="&#x7B80;&#x4ECB;" class="anchor-navigation-ex-anchor" href="#&#x7B80;&#x4ECB;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x7B80;&#x4ECB;" class="plugin-anchor" href="#&#x7B80;&#x4ECB;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7B80;&#x4ECB;</h2>
-<p>Docker &#x662F;&#x4E00;&#x4E2A;&#x5F00;&#x6E90;&#x7684;&#x5E94;&#x7528;&#x5BB9;&#x5668;&#x5F15;&#x64CE;&#xFF0C;&#x57FA;&#x4E8E; Go &#x8BED;&#x8A00; &#x5E76;&#x9075;&#x4ECE; Apache2.0 &#x534F;&#x8BAE;&#x5F00;&#x6E90;&#x3002;<br>Docker &#x53EF;&#x4EE5;&#x8BA9;&#x5F00;&#x53D1;&#x8005;&#x6253;&#x5305;&#x4ED6;&#x4EEC;&#x7684;&#x5E94;&#x7528;&#x4EE5;&#x53CA;&#x4F9D;&#x8D56;&#x5305;&#x5230;&#x4E00;&#x4E2A;&#x8F7B;&#x91CF;&#x7EA7;&#x3001;&#x53EF;&#x79FB;&#x690D;&#x7684;&#x5BB9;&#x5668;&#x4E2D;&#xFF0C;&#x7136;&#x540E;&#x53D1;&#x5E03;&#x5230;&#x4EFB;&#x4F55;&#x6D41;&#x884C;&#x7684; Linux &#x673A;&#x5668;&#x4E0A;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x865A;&#x62DF;&#x5316;&#x3002;<br>&#x5BB9;&#x5668;&#x662F;&#x5B8C;&#x5168;&#x4F7F;&#x7528;&#x6C99;&#x7BB1;&#x673A;&#x5236;&#xFF0C;&#x76F8;&#x4E92;&#x4E4B;&#x95F4;&#x4E0D;&#x4F1A;&#x6709;&#x4EFB;&#x4F55;&#x63A5;&#x53E3;&#xFF08;&#x7C7B;&#x4F3C; iPhone &#x7684; app&#xFF09;,&#x66F4;&#x91CD;&#x8981;&#x7684;&#x662F;&#x5BB9;&#x5668;&#x6027;&#x80FD;&#x5F00;&#x9500;&#x6781;&#x4F4E;&#x3002;<br>Docker &#x4ECE; 17.03 &#x7248;&#x672C;&#x4E4B;&#x540E;&#x5206;&#x4E3A; CE&#xFF08;Community Edition: &#x793E;&#x533A;&#x7248;&#xFF09; &#x548C; EE&#xFF08;Enterprise Edition: &#x4F01;&#x4E1A;&#x7248;&#xFF09;</p>
-<h2 id="&#x4F18;&#x70B9;"><a name="&#x4F18;&#x70B9;" class="anchor-navigation-ex-anchor" href="#&#x4F18;&#x70B9;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x4F18;&#x70B9;" class="plugin-anchor" href="#&#x4F18;&#x70B9;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F18;&#x70B9;</h2>
-<ol>
-<li>&#x5FEB;&#x901F;&#xFF0C;&#x4E00;&#x81F4;&#x5730;&#x4EA4;&#x4ED8;&#x60A8;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;, &#x9002;&#x7528;&#x4E8E;ci/cd&#x6D41;&#x7A0B;</li>
-<li>&#x54CD;&#x5E94;&#x5F0F;&#x90E8;&#x7F72;&#x548C;&#x6269;&#x5C55;</li>
-<li>&#x5728;&#x540C;&#x4E00;&#x786C;&#x4EF6;&#x4E0A;&#x8FD0;&#x884C;&#x66F4;&#x591A;&#x5DE5;&#x4F5C;&#x8D1F;&#x8F7D;</li>
-</ol>
-<h2 id="&#x7EC4;&#x6210;"><a name="&#x7EC4;&#x6210;" class="anchor-navigation-ex-anchor" href="#&#x7EC4;&#x6210;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x7EC4;&#x6210;" class="plugin-anchor" href="#&#x7EC4;&#x6210;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7EC4;&#x6210;</h2>
-<ul>
-<li>&#x955C;&#x50CF;(image):Docker &#x955C;&#x50CF;&#xFF08;Image&#xFF09;&#xFF0C;&#x5C31;&#x76F8;&#x5F53;&#x4E8E;&#x662F;&#x4E00;&#x4E2A; root &#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x3002;&#x6BD4;&#x5982;&#x5B98;&#x65B9;&#x955C;&#x50CF; ubuntu:16.04 &#x5C31;&#x5305;&#x542B;&#x4E86;&#x5B8C;&#x6574;&#x7684;&#x4E00;&#x5957; Ubuntu16.04 &#x6700;&#x5C0F;&#x7CFB;&#x7EDF;&#x7684; root &#x6587;&#x4EF6;&#x7CFB;&#x7EDF;</li>
-<li>&#x5BB9;&#x5668;(container):&#x955C;&#x50CF;&#xFF08;Image&#xFF09;&#x548C;&#x5BB9;&#x5668;&#xFF08;Container&#xFF09;&#x7684;&#x5173;&#x7CFB;&#xFF0C;&#x5C31;&#x50CF;&#x662F;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7A0B;&#x5E8F;&#x8BBE;&#x8BA1;&#x4E2D;&#x7684;&#x7C7B;&#x548C;&#x5B9E;&#x4F8B;&#x4E00;&#x6837;&#xFF0C;&#x955C;&#x50CF;&#x662F;&#x9759;&#x6001;&#x7684;&#x5B9A;&#x4E49;&#xFF0C;&#x5BB9;&#x5668;&#x662F;&#x955C;&#x50CF;&#x8FD0;&#x884C;&#x65F6;&#x7684;&#x5B9E;&#x4F53;&#x3002;&#x5BB9;&#x5668;&#x53EF;&#x4EE5;&#x88AB;&#x521B;&#x5EFA;&#x3001;&#x542F;&#x52A8;&#x3001;&#x505C;&#x6B62;&#x3001;&#x5220;&#x9664;&#x3001;&#x6682;&#x505C;&#x7B49;</li>
-<li>&#x4ED3;&#x5E93;(repository):&#x4ED3;&#x5E93;&#x53EF;&#x770B;&#x6210;&#x4E00;&#x4E2A;&#x4EE3;&#x7801;&#x63A7;&#x5236;&#x4E2D;&#x5FC3;&#xFF0C;&#x7528;&#x6765;&#x4FDD;&#x5B58;&#x955C;&#x50CF;  </li>
-</ul>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">&#x6982;&#x5FF5;</th>
-<th style="text-align:left">&#x8BF4;&#x660E;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">Docker &#x955C;&#x50CF;(Images)</td>
-<td style="text-align:left">Docker &#x955C;&#x50CF;&#x662F;&#x7528;&#x4E8E;&#x521B;&#x5EFA; Docker &#x5BB9;&#x5668;&#x7684;&#x6A21;&#x677F;&#xFF0C;&#x6BD4;&#x5982; Ubuntu &#x7CFB;&#x7EDF;&#x3002;</td>
-</tr>
-<tr>
-<td style="text-align:left">Docker &#x5BB9;&#x5668;(Container)</td>
-<td style="text-align:left">&#x5BB9;&#x5668;&#x662F;&#x72EC;&#x7ACB;&#x8FD0;&#x884C;&#x7684;&#x4E00;&#x4E2A;&#x6216;&#x4E00;&#x7EC4;&#x5E94;&#x7528;&#xFF0C;&#x662F;&#x955C;&#x50CF;&#x8FD0;&#x884C;&#x65F6;&#x7684;&#x5B9E;&#x4F53;&#x3002;</td>
-</tr>
-<tr>
-<td style="text-align:left">Docker &#x5BA2;&#x6237;&#x7AEF;(Client)</td>
-<td style="text-align:left">Docker &#x5BA2;&#x6237;&#x7AEF;&#x901A;&#x8FC7;&#x547D;&#x4EE4;&#x884C;&#x6216;&#x8005;&#x5176;&#x4ED6;&#x5DE5;&#x5177;&#x4F7F;&#x7528; Docker SDK (<a href="https://docs.docker.com/develop/sdk/" target="_blank">https://docs.docker.com/develop/sdk/</a>) &#x4E0E; Docker &#x7684;&#x5B88;&#x62A4;&#x8FDB;&#x7A0B;&#x901A;&#x4FE1;&#x3002;</td>
-</tr>
-<tr>
-<td style="text-align:left">Docker &#x4E3B;&#x673A;(Host)</td>
-<td style="text-align:left">&#x4E00;&#x4E2A;&#x7269;&#x7406;&#x6216;&#x8005;&#x865A;&#x62DF;&#x7684;&#x673A;&#x5668;&#x7528;&#x4E8E;&#x6267;&#x884C; Docker &#x5B88;&#x62A4;&#x8FDB;&#x7A0B;&#x548C;&#x5BB9;&#x5668;&#x3002;</td>
-</tr>
-<tr>
-<td style="text-align:left">Docker Registry</td>
-<td style="text-align:left">Docker &#x4ED3;&#x5E93;&#x7528;&#x6765;&#x4FDD;&#x5B58;&#x955C;&#x50CF;&#xFF0C;&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x4E3A;&#x4EE3;&#x7801;&#x63A7;&#x5236;&#x4E2D;&#x7684;&#x4EE3;&#x7801;&#x4ED3;&#x5E93;&#x3002;Docker Hub(<a href="https://hub.docker.com" target="_blank">https://hub.docker.com</a>) &#x63D0;&#x4F9B;&#x4E86;&#x5E9E;&#x5927;&#x7684;&#x955C;&#x50CF;&#x96C6;&#x5408;&#x4F9B;&#x4F7F;&#x7528;&#x3002;&#x4E00;&#x4E2A; Docker Registry &#x4E2D;&#x53EF;&#x4EE5;&#x5305;&#x542B;&#x591A;&#x4E2A;&#x4ED3;&#x5E93;&#xFF08;Repository&#xFF09;&#xFF1B;&#x6BCF;&#x4E2A;&#x4ED3;&#x5E93;&#x53EF;&#x4EE5;&#x5305;&#x542B;&#x591A;&#x4E2A;&#x6807;&#x7B7E;&#xFF08;Tag&#xFF09;&#xFF1B;&#x6BCF;&#x4E2A;&#x6807;&#x7B7E;&#x5BF9;&#x5E94;&#x4E00;&#x4E2A;&#x955C;&#x50CF;&#x3002;&#x901A;&#x5E38;&#xFF0C;&#x4E00;&#x4E2A;&#x4ED3;&#x5E93;&#x4F1A;&#x5305;&#x542B;&#x540C;&#x4E00;&#x4E2A;&#x8F6F;&#x4EF6;&#x4E0D;&#x540C;&#x7248;&#x672C;&#x7684;&#x955C;&#x50CF;&#xFF0C;&#x800C;&#x6807;&#x7B7E;&#x5C31;&#x5E38;&#x7528;&#x4E8E;&#x5BF9;&#x5E94;&#x8BE5;&#x8F6F;&#x4EF6;&#x7684;&#x5404;&#x4E2A;&#x7248;&#x672C;&#x3002;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; &lt;&#x4ED3;&#x5E93;&#x540D;&gt;:&lt;&#x6807;&#x7B7E;&gt; &#x7684;&#x683C;&#x5F0F;&#x6765;&#x6307;&#x5B9A;&#x5177;&#x4F53;&#x662F;&#x8FD9;&#x4E2A;&#x8F6F;&#x4EF6;&#x54EA;&#x4E2A;&#x7248;&#x672C;&#x7684;&#x955C;&#x50CF;&#x3002;&#x5982;&#x679C;&#x4E0D;&#x7ED9;&#x51FA;&#x6807;&#x7B7E;&#xFF0C;&#x5C06;&#x4EE5; latest &#x4F5C;&#x4E3A;&#x9ED8;&#x8BA4;&#x6807;&#x7B7E;</td>
-</tr>
-<tr>
-<td style="text-align:left">Docker Machine</td>
-<td style="text-align:left">Docker Machine&#x662F;&#x4E00;&#x4E2A;&#x7B80;&#x5316;Docker&#x5B89;&#x88C5;&#x7684;&#x547D;&#x4EE4;&#x884C;&#x5DE5;&#x5177;&#xFF0C;&#x901A;&#x8FC7;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x547D;&#x4EE4;&#x884C;&#x5373;&#x53EF;&#x5728;&#x76F8;&#x5E94;&#x7684;&#x5E73;&#x53F0;&#x4E0A;&#x5B89;&#x88C5;Docker&#xFF0C;&#x6BD4;&#x5982;VirtualBox&#x3001; Digital Ocean&#x3001;Microsoft Azure&#x3002;</td>
-</tr>
-</tbody>
-</table>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x4ED3;&#x5E93;&#x7BA1;&#x7406;"><b></b>&#x4ED3;&#x5E93;&#x7BA1;&#x7406;</a></li><ul><li><span class="title-icon "></span><a href="#docker-hub"><b></b>Docker Hub</a></li><ul><li><span class="title-icon "></span><a href="#&#x6CE8;&#x518C;&#x8D26;&#x53F7;"><b></b>&#x6CE8;&#x518C;&#x8D26;&#x53F7;</a></li><li><span class="title-icon "></span><a href="#&#x767B;&#x5F55;"><b></b>&#x767B;&#x5F55;</a></li><li><span class="title-icon "></span><a href="#&#x767B;&#x51FA;"><b></b>&#x767B;&#x51FA;</a></li><li><span class="title-icon "></span><a href="#&#x63A8;&#x9001;&#x955C;&#x50CF;"><b></b>&#x63A8;&#x9001;&#x955C;&#x50CF;</a></li></ul></ul></ul></div><a href="#&#x4ED3;&#x5E93;&#x7BA1;&#x7406;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x4ED3;&#x5E93;&#x7BA1;&#x7406;"><a name="&#x4ED3;&#x5E93;&#x7BA1;&#x7406;" class="anchor-navigation-ex-anchor" href="#&#x4ED3;&#x5E93;&#x7BA1;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x4ED3;&#x5E93;&#x7BA1;&#x7406;" class="plugin-anchor" href="#&#x4ED3;&#x5E93;&#x7BA1;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4ED3;&#x5E93;&#x7BA1;&#x7406;</h1>
+<h2 id="docker-hub"><a name="docker-hub" class="anchor-navigation-ex-anchor" href="#docker-hub"><i class="fa fa-link" aria-hidden="true"></i></a><a name="docker-hub" class="plugin-anchor" href="#docker-hub"><i class="fa fa-link" aria-hidden="true"></i></a>Docker Hub</h2>
+<h3 id="&#x6CE8;&#x518C;&#x8D26;&#x53F7;"><a name="&#x6CE8;&#x518C;&#x8D26;&#x53F7;" class="anchor-navigation-ex-anchor" href="#&#x6CE8;&#x518C;&#x8D26;&#x53F7;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x6CE8;&#x518C;&#x8D26;&#x53F7;" class="plugin-anchor" href="#&#x6CE8;&#x518C;&#x8D26;&#x53F7;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6CE8;&#x518C;&#x8D26;&#x53F7;</h3>
+<p><a href="https://hub.docker.com/" target="_blank">Docker Hub</a></p>
+<h3 id="&#x767B;&#x5F55;"><a name="&#x767B;&#x5F55;" class="anchor-navigation-ex-anchor" href="#&#x767B;&#x5F55;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x767B;&#x5F55;" class="plugin-anchor" href="#&#x767B;&#x5F55;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x767B;&#x5F55;</h3>
+<pre><code class="lang-bash"> docker login 
+
+Login with your Docker ID to push and pull images from Docker Hub. If you don<span class="hljs-string">&apos;t have a Docker ID, head over to https://hub.docker.com to create one.
+Username: ixiaoqiang
+Password: [&#x6B64;&#x5904;&#x8F93;&#x5165;&#x5BC6;&#x7801;]
+WARNING! Your password will be stored unencrypted in /root/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+
+Login Succeeded
+</span></code></pre>
+<h3 id="&#x767B;&#x51FA;"><a name="&#x767B;&#x51FA;" class="anchor-navigation-ex-anchor" href="#&#x767B;&#x51FA;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x767B;&#x51FA;" class="plugin-anchor" href="#&#x767B;&#x51FA;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x767B;&#x51FA;</h3>
+<pre><code class="lang-bash">docker <span class="hljs-built_in">logout</span>
+
+Removing login credentials <span class="hljs-keyword">for</span> https://index.docker.io/v1/
+</code></pre>
+<h3 id="&#x63A8;&#x9001;&#x955C;&#x50CF;"><a name="&#x63A8;&#x9001;&#x955C;&#x50CF;" class="anchor-navigation-ex-anchor" href="#&#x63A8;&#x9001;&#x955C;&#x50CF;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x63A8;&#x9001;&#x955C;&#x50CF;" class="plugin-anchor" href="#&#x63A8;&#x9001;&#x955C;&#x50CF;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x63A8;&#x9001;&#x955C;&#x50CF;</h3>
+<pre><code class="lang-bash">docker push ixiaoqiang/ubuntu:1.0
+
+The push refers to repository [docker.io/ixiaoqiang/ubuntu]
+67da913fdc66: Pushed 
+05f3b67ed530: Pushed 
+ec1817c93e7c: Pushed 
+9e97312b63ff: Pushed 
+e1c75a5e0bfa: Pushed 
+
+<span class="hljs-comment">#&#x7B49;&#x5F85;&#x63A8;&#x9001;&#x5B8C;&#x6210;&#x5373;&#x53EF;</span>
+<span class="hljs-comment">#&#x6CE8;&#x610F;: &#x955C;&#x50CF;&#x540D;&#x79F0; &#x548C; &#x8D26;&#x6237;&#x540D;&#x79F0;&#x8981;&#x4E00;&#x81F4;,&#x5426;&#x5219;&#x7981;&#x6B62;&#x63A8;&#x9001;</span>
+</code></pre>
+<p>&#x6B64;&#x65F6;&#x5728;&#x8D26;&#x6237;&#x5373;&#x53EF;&#x770B;&#x5230;&#x63A8;&#x9001;&#x7684;&#x955C;&#x50CF;<br><img src="static/docker-hub@2x.png" alt="docker-hub"></p>
 <footer class="page-footer"><span class="copyright">Copyright &#xA9; zhaojq 2019 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x672C;&#x4E66;&#x53D1;&#x5E03;&#x65F6;&#x95F4;&#xFF1A;
-2020-07-14 22:33:20
+2020-07-16 22:15:31
 </span></footer> <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"> <script>     window.klipse_settings = {         selector: ".language-klipse, .lang-eval-clojure",         selector_eval_js: ".lang-eval-js",         selector_eval_python_client: ".lang-eval-python",         selector_eval_php: ".lang-eval-php",         selector_eval_scheme: ".lang-eval-scheme",         selector_eval_ruby: ".lang-eval-ruby",         selector_reagent: ".lang-reagent",        selector_google_charts: ".lang-google-chart",        selector_es2017: ".lang-eval-es2017",        selector_jsx: ".lang-eval-jsx",        selector_transpile_jsx: ".lang-transpile-jsx",        selector_render_jsx: ".lang-render-jsx",        selector_react: ".lang-react",        selector_eval_markdown: ".lang-render-markdown",        selector_eval_lambdaway: ".lang-render-lambdaway",        selector_eval_cpp: ".lang-eval-cpp",        selector_eval_html: ".lang-render-html",        selector_sql: ".lang-eval-sql",        selector_brainfuck: "lang-eval-brainfuck",        selector_js: ".lang-transpile-cljs"    }; </script> <script src="https://storage.googleapis.com/app.klipse.tech/plugin/js/klipse_plugin.js"></script>
 <script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
                                 
@@ -1776,12 +1762,12 @@
 
             
                 
-                <a href="../linux/" class="navigation navigation-prev " aria-label="Previous page: LINUX">
+                <a href="容器连接.html" class="navigation navigation-prev " aria-label="Previous page: 容器连接">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="CentOS8安装docker.html" class="navigation navigation-next " aria-label="Next page: Docker的安装">
+                <a href="Dockerfile.html" class="navigation navigation-next " aria-label="Next page: Dockerfile">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1792,7 +1778,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"DOCKER","level":"1.13","depth":1,"next":{"title":"Docker的安装","level":"1.13.1","depth":2,"path":"docker/CentOS8安装docker.md","ref":"docker/CentOS8安装docker.md","articles":[]},"previous":{"title":"LINUX","level":"1.12","depth":1,"path":"linux/README.md","ref":"linux/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["anchors","anchor-navigation-ex","auto-scroll-table","advanced-emoji","code","chapter-fold","donate","expandable-chapters-small","favicon","fontsettings","github","github-buttons","klipse","-livereload","-lunr","pageview-count","-page-toc-button","popup","sharing-plus","-sharing","splitter","-search","search-pro","-toggle-chapters","tbfed-pagefooter","todo","hide-element"],"styles":{"website":"./style/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © zhaojq 2019","modify_label":"本书发布时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"github":{"url":"https://github.com/zhao-xiaoer"},"todo":{},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"auto-scroll-table":{},"popup":{},"code":{"copyButtons":true},"donate":{"alipay":"/gitbook/source/images/alipay.jpeg","alipayText":"支付宝打赏","button":"😀","title":"感谢支持","wechat":"/gitbook/source/images/wechat.jpeg","wechatText":"微信打赏"},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"family":"sans","size":2,"theme":"white"},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"","bookmark":""},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"pageview-count":{},"github-buttons":{"buttons":[{"user":"zhao-xiaoer","repo":"gitbook","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"klipse":{"myConfigKey":"it's the default value"},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":true,"all":["weibo","qq","qzone","douban","facebook","google","linkedin","twitter","whatsapp"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{}},"theme":"default","author":"古道长亭","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"古道长亭","language":"zh-hans","links":{"sidebar":{"回到博客":"https://blog.zhaojq.top"}},"gitbook":"3.2.3","description":"welcome to my docs"},"file":{"path":"docker/README.md","mtime":"2020-07-14T14:33:20.507Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-16T14:32:01.316Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"仓库管理","level":"1.13.7","depth":2,"next":{"title":"Dockerfile","level":"1.13.8","depth":2,"path":"docker/Dockerfile.md","ref":"docker/Dockerfile.md","articles":[]},"previous":{"title":"容器连接","level":"1.13.6","depth":2,"path":"docker/容器连接.md","ref":"docker/容器连接.md","articles":[]},"dir":"ltr"},"config":{"plugins":["anchors","anchor-navigation-ex","auto-scroll-table","advanced-emoji","code","chapter-fold","donate","expandable-chapters-small","favicon","fontsettings","github","github-buttons","klipse","-livereload","-lunr","pageview-count","-page-toc-button","popup","sharing-plus","-sharing","splitter","-search","search-pro","-toggle-chapters","tbfed-pagefooter","todo","hide-element"],"styles":{"website":"./style/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © zhaojq 2019","modify_label":"本书发布时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"github":{"url":"https://github.com/zhao-xiaoer"},"todo":{},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"auto-scroll-table":{},"popup":{},"code":{"copyButtons":true},"donate":{"alipay":"/gitbook/source/images/alipay.jpeg","alipayText":"支付宝打赏","button":"😀","title":"感谢支持","wechat":"/gitbook/source/images/wechat.jpeg","wechatText":"微信打赏"},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"family":"sans","size":2,"theme":"white"},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"","bookmark":""},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"pageview-count":{},"github-buttons":{"buttons":[{"user":"zhao-xiaoer","repo":"gitbook","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"klipse":{"myConfigKey":"it's the default value"},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":true,"all":["weibo","qq","qzone","douban","facebook","google","linkedin","twitter","whatsapp"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{}},"theme":"default","author":"古道长亭","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"古道长亭","language":"zh-hans","links":{"sidebar":{"回到博客":"https://blog.zhaojq.top"}},"gitbook":"3.2.3","description":"welcome to my docs"},"file":{"path":"docker/仓库管理.md","mtime":"2020-07-16T14:15:31.836Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-16T14:32:01.316Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

@@ -122,19 +122,48 @@ RUN curl -SLO "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-
 **格式**: `ARG <参数名>[=<默认值>]`  
 
 ### VOLUME
-
+定义匿名数据卷。在启动容器时忘记挂载数据卷，会自动挂载到匿名卷。  
+作用：  
+* 避免重要的数据，因容器重启而丢失，这是非常致命的
+* 避免容器不断变大
+```bash
+VOLUME ["<路径1>", "<路径2>"...]
+VOLUME <路径>
+```
 
 ### EXPOSE
-
+仅仅只是声明端口。  
+作用：  
+* 帮助镜像使用者理解这个镜像服务的守护端口，以方便配置映射。
+* 在运行时使用随机端口映射时，也就是 docker run -P 时，会自动随机映射 EXPOSE 的端口
+```bash
+EXPOSE <端口1> [<端口2>...]
+```
 
 ### WORKDIR
-
+指定工作目录。用 WORKDIR 指定的工作目录，会在构建镜像的每一层中都存在。（WORKDIR 指定的工作目录，必须是提前创建好的)  
+docker build 构建镜像过程中的，每一个 RUN 命令都是新建的一层。只有通过 WORKDIR 创建的目录才会一直存在  
+```bash
+WORKDIR <工作目录路径>
+```
 
 ### USER
-
+用于指定执行后续命令的用户和用户组，这边只是切换后续命令执行的用户（用户和用户组必须提前已经存在
+```bash
+USER <用户名>[:<用户组>]
+```
 
 ### HEALTHCHECK
+用于指定某个程序或者指令来监控 docker 容器服务的运行状态
+```bash
+HEALTHCHECK [选项] CMD <命令>：设置检查容器健康状况的命令
+HEALTHCHECK NONE：如果基础镜像有健康检查指令，使用这行可以屏蔽掉其健康检查指令
 
+HEALTHCHECK [选项] CMD <命令> : 这边 CMD 后面跟随的命令使用，可以参考 CMD 的用法
+```
 
 ### ONBUILD
-
+用于延迟构建命令的执行。简单的说，就是 Dockerfile 里用 ONBUILD 指定的命令，在本次构建镜像的过程中不会执行（假设镜像为 test-build）。当有新的 Dockerfile 使用了之前构建的镜像 FROM test-build ，这是执行新镜像的 Dockerfile 构建时候，会执行 test-build 的 Dockerfile 里的 ONBUILD 指定的命令
+```bash
+ONBUILD <其它指令>
+```
