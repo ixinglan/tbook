@@ -92,5 +92,8 @@
     * [容器连接](docker/容器连接.md)
     * [仓库管理](docker/仓库管理.md)
     * [Dockerfile](docker/Dockerfile.md)
+    * [Compose](docker/Compose.md)
+    * [Machine](docker/machine.md)
+    * [Swarm集群管理](docker/swarm.md)
 * [K8S](k8s/README.md)
 * [DevOps](devops/README.md)
