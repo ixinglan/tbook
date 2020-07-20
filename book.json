@@ -42,7 +42,8 @@
         "-toggle-chapters",
         "tbfed-pagefooter",
         "todo",
-        "hide-element"
+        "hide-element",
+        "mermaid-gb3"
     ],
     "pluginsConfig": {
         "github": {
