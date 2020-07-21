@@ -1705,6 +1705,21 @@
             
         </li>
     
+        <li class="chapter " data-level="1.16" data-path="../../my/myself.html">
+            
+                <a href="../../my/myself.html">
+            
+                    
+                        <b>1.16.</b>
+                    
+                    我的
+            
+                </a>
+            
+
+            
+        </li>
+    
 
     
 
@@ -1750,9 +1765,60 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#jdk10"><b></b>jdk10</a></li></ul></div><a href="#jdk10" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="jdk10"><a name="jdk10" class="anchor-navigation-ex-anchor" href="#jdk10"><i class="fa fa-link" aria-hidden="true"></i></a><a name="jdk10" class="plugin-anchor" href="#jdk10"><i class="fa fa-link" aria-hidden="true"></i></a>jdk10</h1>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#jdk10"><b></b>jdk10</a></li><ul><li><span class="title-icon "></span><a href="#&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x7C7B;&#x578B;&#x63A8;&#x65AD;"><b></b>&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x7C7B;&#x578B;&#x63A8;&#x65AD;</a></li><li><span class="title-icon "></span><a href="#copyof"><b></b>copyOf()</a></li></ul></ul></div><a href="#jdk10" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="jdk10"><a name="jdk10" class="anchor-navigation-ex-anchor" href="#jdk10"><i class="fa fa-link" aria-hidden="true"></i></a><a name="jdk10" class="plugin-anchor" href="#jdk10"><i class="fa fa-link" aria-hidden="true"></i></a>jdk10</h1>
+<h2 id="&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x7C7B;&#x578B;&#x63A8;&#x65AD;"><a name="&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x7C7B;&#x578B;&#x63A8;&#x65AD;" class="anchor-navigation-ex-anchor" href="#&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x7C7B;&#x578B;&#x63A8;&#x65AD;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x7C7B;&#x578B;&#x63A8;&#x65AD;" class="plugin-anchor" href="#&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x7C7B;&#x578B;&#x63A8;&#x65AD;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x7C7B;&#x578B;&#x63A8;&#x65AD;</h2>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TenTest</span> </span>{
+    <span class="hljs-meta">@Test</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">t1</span><span class="hljs-params">()</span> </span>{
+        var num = <span class="hljs-number">10</span>;
+
+        var list = <span class="hljs-keyword">new</span> ArrayList&lt;Integer&gt;();
+        list.add(<span class="hljs-number">1</span>);
+        list.add(<span class="hljs-number">2</span>);
+        list.add(<span class="hljs-number">3</span>);
+
+        <span class="hljs-keyword">for</span> (var i : list) {
+            System.out.println(i);
+        }
+    }
+
+    <span class="hljs-meta">@Test</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">t2</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-comment">//&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x4E0D;&#x8D4B;&#x503C;,&#x4E0D;&#x80FD;&#x63A8;&#x65AD;</span>
+<span class="hljs-comment">//        var num;</span>
+
+        <span class="hljs-comment">//lambda&#x8868;&#x8FBE;&#x5F0F;,&#x5DE6;&#x8FB9;&#x4E0D;&#x80FD;&#x58F0;&#x660E;&#x4E3A;var</span>
+        Supplier&lt;Double&gt; supplier = ()-&gt;Math.random();
+<span class="hljs-comment">//        var sup = ()-&gt;Math.random();</span>
+
+        <span class="hljs-comment">//&#x65B9;&#x6CD5;&#x5F15;&#x7528;,&#x5DE6;&#x8FB9;&#x4E0D;&#x80FD;&#x4E3A;var</span>
+        Consumer&lt;String&gt; consumer = System.out::println;
+<span class="hljs-comment">//        var consumer = System.out::println;</span>
+
+        <span class="hljs-comment">//&#x6570;&#x7EC4;&#x7684;&#x9759;&#x6001;&#x521D;&#x59CB;&#x5316;,&#x4E0D;&#x80FD;&#x4E3A;var</span>
+        <span class="hljs-keyword">int</span>[] arr = {<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>};
+<span class="hljs-comment">//        var arr2 = {1,2,3,4};</span>
+    }
+
+    <span class="hljs-comment">//&#x65B9;&#x6CD5;&#x7684;&#x8FD4;&#x56DE;&#x7C7B;&#x578B;,&#x65B9;&#x6CD5;&#x53C2;&#x6570;,&#x6784;&#x9020;&#x5668;&#x53C2;&#x6570;,&#x5C5E;&#x6027;,catch&#x5757; &#x90FD;&#x4E0D;&#x80FD;&#x4F7F;&#x7528;</span>
+}
+</code></pre>
+<h2 id="copyof"><a name="copyof" class="anchor-navigation-ex-anchor" href="#copyof"><i class="fa fa-link" aria-hidden="true"></i></a><a name="copyof" class="plugin-anchor" href="#copyof"><i class="fa fa-link" aria-hidden="true"></i></a>copyOf()</h2>
+<pre><code class="lang-java">    <span class="hljs-comment">//&#x96C6;&#x5408;&#x4E2D;&#x65B0;&#x589E;&#x7684;copyOf(),&#x7528;&#x4E8E;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x53EA;&#x8BFB;&#x7684;&#x96C6;&#x5408;</span>
+    <span class="hljs-comment">//&#x5982;&#x679C;&#x672C;&#x8EAB;&#x662F;&#x53EA;&#x8BFB;,&#x5219;copyOf()&#x662F;&#x540C;&#x4E00;&#x4E2A;,&#x53CD;&#x4E4B;</span>
+    <span class="hljs-meta">@Test</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">t4</span><span class="hljs-params">()</span></span>{
+        var list1 = List.of(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>);
+        var list2 = List.copyOf(list1);
+        System.out.println(list1 == list2);
+
+        var list3 = <span class="hljs-keyword">new</span> ArrayList&lt;String&gt;();
+        var list4= List.copyOf(list3);
+        System.out.println(list3==list4);
+    }
+</code></pre>
 <footer class="page-footer"><span class="copyright">Copyright &#xA9; zhaojq 2019 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x672C;&#x4E66;&#x53D1;&#x5E03;&#x65F6;&#x95F4;&#xFF1A;
-2020-07-06 15:35:11
+2020-07-21 09:30:34
 </span></footer> <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"> <script>     window.klipse_settings = {         selector: ".language-klipse, .lang-eval-clojure",         selector_eval_js: ".lang-eval-js",         selector_eval_python_client: ".lang-eval-python",         selector_eval_php: ".lang-eval-php",         selector_eval_scheme: ".lang-eval-scheme",         selector_eval_ruby: ".lang-eval-ruby",         selector_reagent: ".lang-reagent",        selector_google_charts: ".lang-google-chart",        selector_es2017: ".lang-eval-es2017",        selector_jsx: ".lang-eval-jsx",        selector_transpile_jsx: ".lang-transpile-jsx",        selector_render_jsx: ".lang-render-jsx",        selector_react: ".lang-react",        selector_eval_markdown: ".lang-render-markdown",        selector_eval_lambdaway: ".lang-render-lambdaway",        selector_eval_cpp: ".lang-eval-cpp",        selector_eval_html: ".lang-render-html",        selector_sql: ".lang-eval-sql",        selector_brainfuck: "lang-eval-brainfuck",        selector_js: ".lang-transpile-cljs"    }; </script> <script src="https://storage.googleapis.com/app.klipse.tech/plugin/js/klipse_plugin.js"></script>
 <script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
                                 
@@ -1797,7 +1863,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"java10","level":"1.2.10.3","depth":3,"next":{"title":"java11","level":"1.2.10.4","depth":3,"path":"java/java_version/java11.md","ref":"java/java_version/java11.md","articles":[]},"previous":{"title":"java9","level":"1.2.10.2","depth":3,"path":"java/java_version/java9.md","ref":"java/java_version/java9.md","articles":[]},"dir":"ltr"},"config":{"plugins":["anchors","anchor-navigation-ex","auto-scroll-table","advanced-emoji","code","chapter-fold","donate","expandable-chapters-small","favicon","fontsettings","github","github-buttons","klipse","-livereload","-lunr","pageview-count","-page-toc-button","popup","sharing-plus","-sharing","splitter","-search","search-pro","-toggle-chapters","tbfed-pagefooter","todo","hide-element","mermaid-gb3"],"styles":{"website":"./style/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © zhaojq 2019","modify_label":"本书发布时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"github":{"url":"https://github.com/zhao-xiaoer"},"todo":{},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"auto-scroll-table":{},"popup":{},"code":{"copyButtons":true},"donate":{"alipay":"/gitbook/source/images/alipay.jpeg","alipayText":"支付宝打赏","button":"😀","title":"感谢支持","wechat":"/gitbook/source/images/wechat.jpeg","wechatText":"微信打赏"},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"family":"sans","size":2,"theme":"white"},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"","bookmark":""},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"pageview-count":{},"github-buttons":{"buttons":[{"user":"zhao-xiaoer","repo":"gitbook","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"klipse":{"myConfigKey":"it's the default value"},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":true,"all":["weibo","qq","qzone","douban","facebook","google","linkedin","twitter","whatsapp"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{}},"theme":"default","author":"古道长亭","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"古道长亭","language":"zh-hans","links":{"sidebar":{"回到博客":"https://blog.zhaojq.top"}},"gitbook":"3.2.3","description":"welcome to my docs"},"file":{"path":"java/java_version/java10.md","mtime":"2020-07-06T07:35:11.333Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-20T03:32:23.645Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"java10","level":"1.2.10.3","depth":3,"next":{"title":"java11","level":"1.2.10.4","depth":3,"path":"java/java_version/java11.md","ref":"java/java_version/java11.md","articles":[]},"previous":{"title":"java9","level":"1.2.10.2","depth":3,"path":"java/java_version/java9.md","ref":"java/java_version/java9.md","articles":[]},"dir":"ltr"},"config":{"plugins":["anchors","anchor-navigation-ex","auto-scroll-table","advanced-emoji","code","chapter-fold","donate","expandable-chapters-small","favicon","fontsettings","github","github-buttons","klipse","-livereload","-lunr","pageview-count","-page-toc-button","popup","sharing-plus","-sharing","splitter","-search","search-pro","-toggle-chapters","tbfed-pagefooter","todo","hide-element","mermaid-gb3"],"styles":{"website":"./style/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © zhaojq 2019","modify_label":"本书发布时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"github":{"url":"https://github.com/zhao-xiaoer"},"todo":{},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"auto-scroll-table":{},"popup":{},"code":{"copyButtons":true},"donate":{"alipay":"/gitbook/source/images/alipay.jpeg","alipayText":"支付宝打赏","button":"😀","title":"感谢支持","wechat":"/gitbook/source/images/wechat.jpeg","wechatText":"微信打赏"},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"family":"sans","size":2,"theme":"white"},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"","bookmark":""},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"pageview-count":{},"github-buttons":{"buttons":[{"user":"zhao-xiaoer","repo":"gitbook","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"klipse":{"myConfigKey":"it's the default value"},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":true,"all":["weibo","qq","qzone","douban","facebook","google","linkedin","twitter","whatsapp"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{}},"theme":"default","author":"古道长亭","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"古道长亭","language":"zh-hans","links":{"sidebar":{"回到博客":"https://blog.zhaojq.top"}},"gitbook":"3.2.3","description":"welcome to my docs"},"file":{"path":"java/java_version/java10.md","mtime":"2020-07-21T01:30:34.691Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-21T07:35:47.759Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
