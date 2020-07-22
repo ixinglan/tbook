@@ -1,6 +1,6 @@
 # jdk14
 `https://openjdk.java.net/projects/jdk/14/` --openjdk网站我们可以看到有以下16大特性
-```http request
+```
 305:	Pattern Matching for instanceof (Preview)
 343:	Packaging Tool (Incubator)
 345:	NUMA-Aware Memory Allocation for G1
