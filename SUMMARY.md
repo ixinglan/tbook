@@ -97,4 +97,4 @@
     * [Swarm集群管理](docker/swarm.md)
 * [K8S](k8s/README.md)
 * [DevOps](devops/README.md)
-<!-- * [我的](my/myself.md) -->
+* [我的简历](my/myself.md)
