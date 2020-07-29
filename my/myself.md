@@ -13,7 +13,6 @@
  - 技术博客：https://blog.zhaojq.top/gitbook
  - Github：https://github.com/zhao-xiaoer
  - 期望职位：Java高级开发工程师
- - 期望薪资：税前月薪25k~30k
  - 期望城市：北京
 
 ---
