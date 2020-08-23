@@ -1,19 +1,32 @@
-# 联系方式
+# 个人信息
 
+- 赵建强/男/1992 
 - 手机：13269982081
 - Email：13269982081@163.com
+- 统招一本/燕山大学 
+- 工作年限：5年
+- 期望职位：Java高级开发工程师/北京ß
+- 技术博客：https://blog.zhaojq.top/gitbook
+- Github：https://github.com/zhao-xiaoer
 
 ---
 
-# 个人信息
-
- - 赵建强/男/1992 
- - 统招一本/燕山大学 
- - 工作年限：5年
- - 技术博客：https://blog.zhaojq.top/gitbook
- - Github：https://github.com/zhao-xiaoer
- - 期望职位：Java高级开发工程师
- - 期望城市：北京
+# 技能清单
+- 熟练掌握Java语法,集合等基础框架
+- 熟练使用Mysql,MongoDb数据库.[事务,索引和Sql语句调优]
+- 熟练掌握多线程.[并发理论,关键字,锁,线程池]
+- 熟练掌握JVM原理.[内存结构,类加载,对象创建过程和内存分布,内存分配与垃圾回收]
+- 熟练掌握Spring,SpringMvc,SpringBoot等开源框架.[Ioc,AOP,SpringBoot自动装配原理]
+- 熟练掌握Dubbo,Zookeeper,Etcd开源分布式服务框架.[RPC通信原理,服务暴露,引用和调用过程的基本原理]
+- 熟练掌握中间件如: 消息队列Kafka,缓存Redis,索引Elasticsearch
+- 熟练掌握Docker容器化应用
+- 熟练掌握常用的设计模式
+- 熟练使用Maven项目构建工具,Git版本控制工具
+- 熟悉基本的数据结构和算法,了解基本的计算机网络协议,如Http,Tcp和UDP等
+- 熟练使用Linux常用命令,掌握Nginx的使用方法及负载均衡策略
+- 熟练使用DevOps敏捷开发流程: 基于GitLab的ci/cd持续集成与交付
+- 熟悉使用前端相关技术: html/css/js/jquery/vue
+- 熟悉小程序及公众号开发
 
 ---
 
@@ -82,23 +95,12 @@
 
 ---
 
-# 技能清单
-- 后端框架：spring,springboot
-- java：多线程,并发,集合
-- 微服务：springboot微服务项目开发,rpc通信,etcd服务注册与发现,docker容器化
-- 消息队列: kafka
-- 分布式搜索框架: elasticsearch
-- 数据库: mysql,mongodb,redis
-- DevOps: GitLab,ci/cd持续集成与交付
-- 工具: Maven,Git
-- Linux: 常用命令及维护
-- 负载均衡: nginx
-
----
-
 # 教育经历
 
-2011.07 - 2015.09  燕山大学   本科    土木工程   
+2011.09 - 2015.07  燕山大学   本科    土木工程  
+
+# 其他爱好
+打篮球,书法
 
 # 致谢
 感谢您花时间阅读我的简历，期待能有机会和您共事。
