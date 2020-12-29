@@ -99,4 +99,7 @@
     * [Swarm集群管理](docker/swarm.md)
 * [K8S](k8s/README.md)
 * [DevOps](devops/README.md)
+* [Maven](maven/maven.md)
+    * [settings 文件配置说明](docker/swarm.md)
+    * [pom 文件配置说明](docker/swarm.md)
 * [我的简历](my/myself.md)
