@@ -102,4 +102,3 @@
 * [Maven](maven/maven.md)
     * [settings 文件配置说明](docker/swarm.md)
     * [pom 文件配置说明](docker/swarm.md)
-* [我的简历](my/myself.md)
