@@ -112,8 +112,8 @@
             "showLevel": false
         },
         "favicon":{
-            "shortcut": "",
-            "bookmark": ""
+            "shortcut": "/gitbook/source/images/shortcut.jpeg",
+            "bookmark": "/gitbook/source/images/bookmark.jpeg"
         }
     }
 }
