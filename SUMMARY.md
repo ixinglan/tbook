@@ -100,5 +100,5 @@
 * [K8S](k8s/README.md)
 * [DevOps](devops/README.md)
 * [Maven](maven/maven.md)
-    * [settings 文件配置说明](docker/swarm.md)
-    * [pom 文件配置说明](docker/swarm.md)
+    * [settings 文件配置说明](maven/settings.md)
+    * [pom 文件配置说明](maven/pom.md)
