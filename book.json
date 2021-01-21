@@ -24,7 +24,7 @@
         "chapter-fold",
         "donate",
         "expandable-chapters-small",
-        "favicon",
+        "-favicon",
         "fontsettings",                        
         "github",
         "github-buttons",
@@ -112,8 +112,8 @@
             "showLevel": false
         },
         "favicon":{
-            "shortcut": "/tbook/source/images/shortcut.jpeg",
-            "bookmark": "/tbook/source/images/bookmark.jpeg"
+            "shortcut": "",
+            "bookmark": ""
         }
     }
 }
